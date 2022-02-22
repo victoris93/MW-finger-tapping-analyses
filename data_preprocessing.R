@@ -1,9 +1,7 @@
-
 library(knitr)
 library(dplyr)
 library(purrr)
 library(Rcpp)
-library(dplyr)
 library(ggplot2)
 library(readr)
 library(forcats)
@@ -17,13 +15,13 @@ data_files_randTMS=list.files(path=data.path, pattern=".*_randTMS_.*\\.csv", ful
 
 
 baseline_v <- do.call(rbind,
-                    lapply(data_files_baseline, function(fname){
-                      read.table(fname, sep=",", header=T, comment.char = "#", stringsAsFactors = F);
-                    }))
-rhTMS <- do.call(rbind,
-                      lapply(data_files_rhTMS, function(fname){
+                      lapply(data_files_baseline, function(fname){
                         read.table(fname, sep=",", header=T, comment.char = "#", stringsAsFactors = F);
                       }))
+rhTMS <- do.call(rbind,
+                 lapply(data_files_rhTMS, function(fname){
+                   read.table(fname, sep=",", header=T, comment.char = "#", stringsAsFactors = F);
+                 }))
 randTMS <- do.call(rbind,
                    lapply(data_files_randTMS, function(fname){
                      read.table(fname, sep=",", header=T, comment.char = "#", stringsAsFactors = F);
@@ -114,10 +112,6 @@ get.nback <- function(d, nback=20, which.apen.m=3, on.task.crit=2){
 
 all_data_nback <- get.nback(all_data, nback = 20, which.apen.m=2)
 
-d %>% 
-  filter(stimulus == "probe1") %>%
-  ggplot(aes(x = response)) +
-  geom_bar()
 
 #
 # trial-wise re-arrangement of data.
