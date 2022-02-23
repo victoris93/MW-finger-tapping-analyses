@@ -1,0 +1,1598 @@
+# {'participant': 'baseline_4,4,toni', 'session': 'baseline', 'EEG': 'Yes', 'date': '2022_Feb_08_1744', 'expName': 'FT-RSGT-rTMS', 'frameRate': 59.47927300199944}
+condition,block_num,subj, EEG,trial,time, stimulus, response
+baseline_4,4,toni,True,0,0.0001877820,stimulus,
+baseline_4,4,toni,True,1,0.7502375170,stimulus,
+baseline_4,4,toni, True,1,0.8211826870,tap,l
+baseline_4,4,toni,True,2,1.5003395930,stimulus,
+baseline_4,4,toni, True,2,1.5411032860,tap,l
+baseline_4,4,toni,True,3,2.2504453300,stimulus,
+baseline_4,4,toni, True,3,2.3173564130,tap,l
+baseline_4,4,toni,True,4,3.0005357240,stimulus,
+baseline_4,4,toni, True,4,3.0370843460,tap,s
+baseline_4,4,toni, True,4,3.7251430210,tap,s
+baseline_4,4,toni,True,5,3.7506324190,stimulus,
+baseline_4,4,toni, True,5,4.5012413310,tap,l
+baseline_4,4,toni,True,6,4.5015487490,stimulus,
+baseline_4,4,toni, True,6,5.2293724750,tap,l
+baseline_4,4,toni,True,7,5.2516879920,stimulus,
+baseline_4,4,toni,True,8,6.0018136240,stimulus,
+baseline_4,4,toni, True,8,6.0135252560,tap,s
+baseline_4,4,toni, True,8,6.7253049430,tap,l
+baseline_4,4,toni,True,9,6.7519072040,stimulus,
+baseline_4,4,toni, True,9,7.4852173950,tap,s
+baseline_4,4,toni,True,10,7.5019693690,stimulus,
+baseline_4,4,toni, True,10,8.2051590500,tap,s
+baseline_4,4,toni,True,11,8.2520772600,stimulus,
+baseline_4,4,toni, True,11,8.9892761210,tap,l
+baseline_4,4,toni,True,12,9.0022248150,stimulus,
+baseline_4,4,toni, True,12,9.7412363620,tap,s
+baseline_4,4,toni,True,13,9.7523057250,stimulus,
+baseline_4,4,toni, True,13,10.4772326030,tap,l
+baseline_4,4,toni,True,14,10.5024147860,stimulus,
+baseline_4,4,toni, True,14,11.2215198060,tap,s
+baseline_4,4,toni,True,15,11.2524649210,stimulus,
+baseline_4,4,toni, True,15,11.9411460810,tap,s
+baseline_4,4,toni,True,16,12.0026759350,stimulus,
+baseline_4,4,toni, True,16,12.7091328640,tap,l
+baseline_4,4,toni,True,17,12.7527615140,stimulus,
+baseline_4,4,toni, True,17,13.4611483210,tap,s
+baseline_4,4,toni,True,18,13.5029137910,stimulus,
+baseline_4,4,toni, True,18,14.2131549260,tap,l
+baseline_4,4,toni,True,19,14.2529817750,stimulus,
+baseline_4,4,toni, True,19,14.9655593550,tap,l
+baseline_4,4,toni,True,20,15.0030843340,stimulus,
+baseline_4,4,toni, True,20,15.7092875650,tap,s
+baseline_4,4,toni,True,21,15.7531420750,stimulus,
+baseline_4,4,toni, True,21,16.4690649690,tap,l
+baseline_4,4,toni,True,22,16.5032341210,stimulus,
+baseline_4,4,toni, True,22,17.2372445680,tap,s
+baseline_4,4,toni,True,23,17.2533261090,stimulus,
+baseline_4,4,toni, True,23,17.9332559140,tap,s
+baseline_4,4,toni,True,24,18.0034222230,stimulus,
+baseline_4,4,toni, True,24,18.7491484900,tap,l
+baseline_4,4,toni,True,25,18.7534746810,stimulus,
+baseline_4,4,toni,True,26,19.5035750130,stimulus,
+baseline_4,4,toni, True,26,19.5252952480,tap,s
+baseline_4,4,toni,True,27,20.2536885840,stimulus,
+baseline_4,4,toni, True,27,20.2853445270,tap,l
+baseline_4,4,toni, True,27,20.9570958410,tap,s
+baseline_4,4,toni,True,28,21.0037875220,stimulus,
+baseline_4,4,toni, True,28,21.7252328240,tap,s
+baseline_4,4,toni,True,29,21.7538630110,stimulus,
+baseline_4,4,toni, True,29,22.4930938890,tap,l
+baseline_4,4,toni,True,30,22.5040630290,stimulus,
+baseline_4,4,toni, True,30,23.2131275780,tap,s
+baseline_4,4,toni,True,31,23.2540738770,stimulus,
+baseline_4,4,toni, True,31,23.9410920080,tap,s
+baseline_4,4,toni,True,32,24.0042249630,stimulus,
+baseline_4,4,toni, True,32,24.7091735940,tap,l
+baseline_4,4,toni,True,33,24.7543464460,stimulus,
+baseline_4,4,toni, True,33,25.4531363440,tap,s
+baseline_4,4,toni,True,34,25.5044899530,stimulus,
+baseline_4,4,toni, True,34,26.1974147180,tap,l
+baseline_4,4,toni,True,35,26.2546029740,stimulus,
+baseline_4,4,toni, True,35,26.9890966310,tap,l
+baseline_4,4,toni,True,36,27.0047540630,stimulus,
+baseline_4,4,toni, True,36,27.6373873490,tap,s
+baseline_4,4,toni,True,37,27.7548267230,stimulus,
+baseline_4,4,toni,True,38,28.5049521890,stimulus,
+baseline_4,4,toni, True,38,28.5251646330,tap,l
+baseline_4,4,toni, True,38,29.2292746710,tap,l
+baseline_4,4,toni,True,39,29.2550121450,stimulus,
+baseline_4,4,toni, True,39,30.0053274840,tap,s
+baseline_4,4,toni,True,40,30.0055982310,stimulus,
+baseline_4,4,toni, True,40,30.7171505670,tap,l
+baseline_4,4,toni,True,41,30.7557204360,stimulus,
+baseline_4,4,toni, True,41,31.3972076200,tap,s
+baseline_4,4,toni,True,42,31.5058045570,stimulus,
+baseline_4,4,toni, True,42,32.1572050870,tap,l
+baseline_4,4,toni,True,43,32.2558645380,stimulus,
+baseline_4,4,toni, True,43,32.9572277630,tap,s
+baseline_4,4,toni,True,44,33.0060111150,stimulus,
+baseline_4,4,toni, True,44,33.6851122330,tap,l
+baseline_4,4,toni,True,45,33.7561342780,stimulus,
+baseline_4,4,toni, True,45,34.4610634830,tap,s
+baseline_4,4,toni,True,46,34.5062215750,stimulus,
+baseline_4,4,toni, True,46,35.1652145140,tap,l
+baseline_4,4,toni,True,47,35.2563338350,stimulus,
+baseline_4,4,toni, True,47,35.8691266980,tap,l
+baseline_4,4,toni,True,48,36.0064612900,stimulus,
+baseline_4,4,toni, True,48,36.7172005110,tap,s
+baseline_4,4,toni,True,49,36.7565850140,stimulus,
+baseline_4,4,toni, True,49,37.4934501180,tap,l
+baseline_4,4,toni,True,50,37.5066798560,stimulus,
+baseline_4,4,toni,True,51,38.2567365040,stimulus,
+baseline_4,4,toni, True,51,38.2852611170,tap,s
+baseline_4,4,toni,True,52,39.0068532650,stimulus,
+baseline_4,4,toni, True,52,39.0290423540,tap,l
+baseline_4,4,toni, True,52,39.7571375550,tap,s
+baseline_4,4,toni,True,53,39.7574076200,stimulus,
+baseline_4,4,toni, True,53,40.4531922420,tap,s
+baseline_4,4,toni,True,54,40.5075470540,stimulus,
+baseline_4,4,toni, True,54,41.2452293840,tap,l
+baseline_4,4,toni,True,55,41.2576520800,stimulus,
+baseline_4,4,toni, True,55,41.9891170970,tap,s
+baseline_4,4,toni,True,56,42.0077433080,stimulus,
+baseline_4,4,toni, True,56,42.6692257880,tap,l
+baseline_4,4,toni,True,57,42.7578656700,stimulus,
+baseline_4,4,toni, True,57,43.4535621250,tap,s
+baseline_4,4,toni,True,58,43.5080078230,stimulus,
+baseline_4,4,toni, True,58,44.2454436720,tap,s
+baseline_4,4,toni,True,59,44.2581049280,stimulus,
+baseline_4,4,toni, True,59,45.0051026290,tap,s
+baseline_4,4,toni,True,60,45.0081963690,stimulus,
+baseline_4,4,toni, True,60,45.7493754570,tap,l
+baseline_4,4,toni,True,61,45.7583133220,stimulus,
+baseline_4,4,toni, True,61,46.4690916780,tap,s
+baseline_4,4,toni,True,62,46.5084848130,stimulus,
+baseline_4,4,toni, True,62,47.2453177470,tap,l
+baseline_4,4,toni,True,63,47.2585710370,stimulus,
+baseline_4,4,toni, True,63,47.9409823060,tap,l
+baseline_4,4,toni,True,64,48.0086836040,stimulus,
+baseline_4,4,toni, True,64,48.7334651650,tap,s
+baseline_4,4,toni,True,65,48.7587706690,stimulus,
+baseline_4,4,toni, True,65,49.5092322130,tap,l
+baseline_4,4,toni,True,66,49.5095027640,stimulus,
+baseline_4,4,toni, True,66,49.5890515870,tap,s
+baseline_4,4,toni,True,67,50.2596767220,stimulus,
+baseline_4,4,toni, True,67,50.2613088740,tap,l
+baseline_4,4,toni, True,67,50.9812032720,tap,s
+baseline_4,4,toni,True,68,51.0098008850,stimulus,
+baseline_4,4,toni, True,68,51.7332693910,tap,l
+baseline_4,4,toni,True,69,51.7599183280,stimulus,
+baseline_4,4,toni, True,69,52.4610872860,tap,l
+baseline_4,4,toni,True,70,52.5100028120,stimulus,
+baseline_4,4,toni,True,71,53.2600759500,stimulus,
+baseline_4,4,toni, True,71,53.2692925660,tap,s
+baseline_4,4,toni, True,71,53.9652165960,tap,s
+baseline_4,4,toni,True,72,54.0102254980,stimulus,
+baseline_4,4,toni, True,72,54.7012813710,tap,l
+baseline_4,4,toni,True,73,54.7602699980,stimulus,
+baseline_4,4,toni, True,73,55.4772242510,tap,l
+baseline_4,4,toni,True,74,55.5103864160,stimulus,
+baseline_4,4,toni,True,75,56.2605048060,stimulus,
+baseline_4,4,toni, True,75,56.2692424150,tap,s
+baseline_4,4,toni,True,76,57.0106659160,stimulus,
+baseline_4,4,toni, True,76,57.0131839090,tap,s
+baseline_4,4,toni, True,76,57.7251346630,tap,s
+baseline_4,4,toni,True,77,57.7607706660,stimulus,
+baseline_4,4,toni, True,77,58.4531079130,tap,l
+baseline_4,4,toni,True,78,58.5108717290,stimulus,
+baseline_4,4,toni, True,78,59.2452724190,tap,s
+baseline_4,4,toni,True,79,59.2609519650,stimulus,
+baseline_4,4,toni, True,79,59.9892982090,tap,s
+baseline_4,4,toni,True,80,60.0110783250,stimulus,
+baseline_4,4,toni,True,81,60.7611646210,stimulus,
+baseline_4,4,toni, True,81,60.7730497320,tap,l
+baseline_4,4,toni, True,81,61.5015118230,tap,s
+baseline_4,4,toni,True,82,61.5112374740,stimulus,
+baseline_4,4,toni,True,83,62.2613801250,stimulus,
+baseline_4,4,toni, True,83,62.2692530930,tap,s
+baseline_4,4,toni,True,84,63.0114511490,stimulus,
+baseline_4,4,toni, True,84,63.0133121010,tap,l
+baseline_4,4,toni, True,84,63.7571357760,tap,l
+baseline_4,4,toni,True,85,63.7615639730,stimulus,
+baseline_4,4,toni, True,85,64.4770700930,tap,l
+baseline_4,4,toni,True,86,64.5116944910,stimulus,
+baseline_4,4,toni, True,86,65.2131576850,tap,l
+baseline_4,4,toni,True,87,65.2618338070,stimulus,
+baseline_4,4,toni, True,87,65.9891613070,tap,s
+baseline_4,4,toni,True,88,66.0119730480,stimulus,
+baseline_4,4,toni, True,88,66.7252261010,tap,s
+baseline_4,4,toni,True,89,66.7620739550,stimulus,
+baseline_4,4,toni,True,90,70.6540498020,probe_task,0
+baseline_4,4,toni, True,90,71.0556015950,probe_intention,1
+baseline_4,4,toni,True,91,74.8375243600,stimulus,
+baseline_4,4,toni, True,91,74.8854809870,tap,l
+baseline_4,4,toni,True,92,75.5875962000,stimulus,
+baseline_4,4,toni, True,92,75.5891064220,tap,l
+baseline_4,4,toni, True,92,76.3172201240,tap,s
+baseline_4,4,toni,True,93,76.3376953990,stimulus,
+baseline_4,4,toni, True,93,77.0771189110,tap,l
+baseline_4,4,toni,True,94,77.0877726610,stimulus,
+baseline_4,4,toni, True,94,77.8212233750,tap,l
+baseline_4,4,toni,True,95,77.8378511830,stimulus,
+baseline_4,4,toni, True,95,78.5732255660,tap,s
+baseline_4,4,toni,True,96,78.5879602880,stimulus,
+baseline_4,4,toni, True,96,79.2695476570,tap,l
+baseline_4,4,toni,True,97,79.3380459500,stimulus,
+baseline_4,4,toni, True,97,80.0212621410,tap,s
+baseline_4,4,toni,True,98,80.0881751120,stimulus,
+baseline_4,4,toni, True,98,80.7411316290,tap,l
+baseline_4,4,toni,True,99,80.8382402960,stimulus,
+baseline_4,4,toni, True,99,81.5090713390,tap,l
+baseline_4,4,toni,True,100,81.5883313190,stimulus,
+baseline_4,4,toni, True,100,82.2611195170,tap,l
+baseline_4,4,toni,True,101,82.3384540400,stimulus,
+baseline_4,4,toni, True,101,83.0131112970,tap,s
+baseline_4,4,toni,True,102,83.0885427730,stimulus,
+baseline_4,4,toni, True,102,83.7572296690,tap,s
+baseline_4,4,toni,True,103,83.8386438600,stimulus,
+baseline_4,4,toni, True,103,84.5890698360,tap,s
+baseline_4,4,toni,True,104,84.5893400970,stimulus,
+baseline_4,4,toni, True,104,85.2775577540,tap,s
+baseline_4,4,toni,True,105,85.3394782880,stimulus,
+baseline_4,4,toni, True,105,86.0852214240,tap,s
+baseline_4,4,toni,True,106,86.0895264160,stimulus,
+baseline_4,4,toni, True,106,86.8051100690,tap,l
+baseline_4,4,toni,True,107,86.8396138120,stimulus,
+baseline_4,4,toni, True,107,87.5812765580,tap,s
+baseline_4,4,toni,True,108,87.5897015560,stimulus,
+baseline_4,4,toni, True,108,88.2933395880,tap,l
+baseline_4,4,toni,True,109,88.3398446600,stimulus,
+baseline_4,4,toni, True,109,89.0531949600,tap,s
+baseline_4,4,toni,True,110,89.0899900730,stimulus,
+baseline_4,4,toni, True,110,89.8053150590,tap,s
+baseline_4,4,toni,True,111,89.8401008650,stimulus,
+baseline_4,4,toni, True,111,90.5572184150,tap,l
+baseline_4,4,toni,True,112,90.5902126950,stimulus,
+baseline_4,4,toni, True,112,91.2931225030,tap,l
+baseline_4,4,toni,True,113,91.3404088360,stimulus,
+baseline_4,4,toni, True,113,92.0851384480,tap,l
+baseline_4,4,toni,True,114,92.0905410700,stimulus,
+baseline_4,4,toni, True,114,92.7813290910,tap,l
+baseline_4,4,toni,True,115,92.8406852740,stimulus,
+baseline_4,4,toni, True,115,93.5732056010,tap,s
+baseline_4,4,toni,True,116,93.5907930670,stimulus,
+baseline_4,4,toni, True,116,94.3254099530,tap,s
+baseline_4,4,toni,True,117,94.3408582410,stimulus,
+baseline_4,4,toni, True,117,95.0693138120,tap,s
+baseline_4,4,toni,True,118,95.0909985740,stimulus,
+baseline_4,4,toni, True,118,95.7972524010,tap,s
+baseline_4,4,toni,True,119,95.8411120120,stimulus,
+baseline_4,4,toni,True,120,96.5912360710,stimulus,
+baseline_4,4,toni, True,120,96.6211390250,tap,s
+baseline_4,4,toni,True,121,97.3413613130,stimulus,
+baseline_4,4,toni, True,121,97.3491275040,tap,s
+baseline_4,4,toni, True,121,98.0772985890,tap,l
+baseline_4,4,toni,True,122,98.0915003050,stimulus,
+baseline_4,4,toni, True,122,98.8291977340,tap,s
+baseline_4,4,toni,True,123,98.8416037410,stimulus,
+baseline_4,4,toni, True,123,99.5491437580,tap,l
+baseline_4,4,toni,True,124,99.5917169470,stimulus,
+baseline_4,4,toni, True,124,100.3413678230,tap,s
+baseline_4,4,toni,True,125,100.3418044910,stimulus,
+baseline_4,4,toni,True,126,101.0919186880,stimulus,
+baseline_4,4,toni, True,126,101.0932381040,tap,s
+baseline_4,4,toni, True,126,101.7972098560,tap,s
+baseline_4,4,toni,True,127,101.8420353210,stimulus,
+baseline_4,4,toni, True,127,102.5489953200,tap,l
+baseline_4,4,toni,True,128,102.5921776360,stimulus,
+baseline_4,4,toni, True,128,103.2693770840,tap,s
+baseline_4,4,toni,True,129,103.3422982540,stimulus,
+baseline_4,4,toni, True,129,104.0294620390,tap,s
+baseline_4,4,toni,True,130,104.0924003810,stimulus,
+baseline_4,4,toni,True,131,104.8424862430,stimulus,
+baseline_4,4,toni, True,131,104.8531413750,tap,l
+baseline_4,4,toni, True,131,105.5495264260,tap,s
+baseline_4,4,toni,True,132,105.5926387990,stimulus,
+baseline_4,4,toni, True,132,106.3332574900,tap,s
+baseline_4,4,toni,True,133,106.3427505250,stimulus,
+baseline_4,4,toni, True,133,107.0771213460,tap,s
+baseline_4,4,toni,True,134,107.0928955490,stimulus,
+baseline_4,4,toni, True,134,107.8133016650,tap,l
+baseline_4,4,toni,True,135,107.8429490720,stimulus,
+baseline_4,4,toni, True,135,108.5332292280,tap,s
+baseline_4,4,toni,True,136,108.5931068590,stimulus,
+baseline_4,4,toni, True,136,109.2693601190,tap,s
+baseline_4,4,toni,True,137,109.3431970960,stimulus,
+baseline_4,4,toni, True,137,110.0370785380,tap,s
+baseline_4,4,toni,True,138,110.0932906580,stimulus,
+baseline_4,4,toni, True,138,110.8051460530,tap,s
+baseline_4,4,toni,True,139,110.8433576780,stimulus,
+baseline_4,4,toni, True,139,111.5732936560,tap,l
+baseline_4,4,toni,True,140,111.5934771460,stimulus,
+baseline_4,4,toni, True,140,112.3330861690,tap,s
+baseline_4,4,toni,True,141,112.3436020370,stimulus,
+baseline_4,4,toni, True,141,113.0853963210,tap,s
+baseline_4,4,toni,True,142,113.0936831990,stimulus,
+baseline_4,4,toni, True,142,113.7411132790,tap,s
+baseline_4,4,toni,True,143,113.8438238500,stimulus,
+baseline_4,4,toni, True,143,114.5171547400,tap,s
+baseline_4,4,toni,True,144,114.5939071740,stimulus,
+baseline_4,4,toni,True,145,115.3439957010,stimulus,
+baseline_4,4,toni, True,145,115.3971869940,tap,l
+baseline_4,4,toni,True,146,116.0941256850,stimulus,
+baseline_4,4,toni, True,146,116.1011275580,tap,l
+baseline_4,4,toni,True,147,116.8442076910,stimulus,
+baseline_4,4,toni, True,147,116.8532622960,tap,s
+baseline_4,4,toni, True,147,117.5410051880,tap,l
+baseline_4,4,toni,True,148,117.5943175330,stimulus,
+baseline_4,4,toni,True,149,118.3443901850,stimulus,
+baseline_4,4,toni, True,149,118.3813603720,tap,l
+baseline_4,4,toni,True,150,119.0945344320,stimulus,
+baseline_4,4,toni, True,150,119.1252422280,tap,s
+baseline_4,4,toni,True,151,119.8446580340,stimulus,
+baseline_4,4,toni, True,151,119.8691674610,tap,l
+baseline_4,4,toni, True,151,120.5655294520,tap,l
+baseline_4,4,toni,True,152,120.5948232950,stimulus,
+baseline_4,4,toni, True,152,121.2932174660,tap,s
+baseline_4,4,toni,True,153,121.3449004220,stimulus,
+baseline_4,4,toni, True,153,122.0610573630,tap,l
+baseline_4,4,toni,True,154,122.0950032740,stimulus,
+baseline_4,4,toni,True,155,122.8451025440,stimulus,
+baseline_4,4,toni, True,155,122.9411422630,tap,l
+baseline_4,4,toni, True,155,123.5651582230,tap,s
+baseline_4,4,toni,True,156,123.5952377100,stimulus,
+baseline_4,4,toni, True,156,124.3174235200,tap,l
+baseline_4,4,toni,True,157,124.3453117720,stimulus,
+baseline_4,4,toni, True,157,125.0371588260,tap,l
+baseline_4,4,toni,True,158,125.0954486140,stimulus,
+baseline_4,4,toni, True,158,125.7972359940,tap,l
+baseline_4,4,toni,True,159,125.8455477340,stimulus,
+baseline_4,4,toni,True,160,126.5956595760,stimulus,
+baseline_4,4,toni, True,160,126.6132067700,tap,l
+baseline_4,4,toni,True,161,127.3457711780,stimulus,
+baseline_4,4,toni, True,161,127.3811351630,tap,s
+baseline_4,4,toni, True,161,128.0852271760,tap,s
+baseline_4,4,toni,True,162,128.0958594310,stimulus,
+baseline_4,4,toni, True,162,128.8450755600,tap,l
+baseline_4,4,toni,True,163,128.8459666760,stimulus,
+baseline_4,4,toni, True,163,129.5653075510,tap,s
+baseline_4,4,toni,True,164,129.5961094520,stimulus,
+baseline_4,4,toni, True,164,130.3012127290,tap,l
+baseline_4,4,toni,True,165,130.3461912760,stimulus,
+baseline_4,4,toni, True,165,131.0611016710,tap,l
+baseline_4,4,toni,True,166,131.0963237330,stimulus,
+baseline_4,4,toni, True,166,131.8452624950,tap,s
+baseline_4,4,toni,True,167,131.8464067690,stimulus,
+baseline_4,4,toni, True,167,132.5171653350,tap,s
+baseline_4,4,toni,True,168,132.5965378380,stimulus,
+baseline_4,4,toni, True,168,133.3252039050,tap,l
+baseline_4,4,toni,True,169,133.3467042060,stimulus,
+baseline_4,4,toni,True,170,134.0968611250,stimulus,
+baseline_4,4,toni, True,170,134.1173099800,tap,s
+baseline_4,4,toni,True,171,134.8469597700,stimulus,
+baseline_4,4,toni, True,171,134.8533894470,tap,s
+baseline_4,4,toni, True,171,135.5810582510,tap,s
+baseline_4,4,toni,True,172,135.5970511150,stimulus,
+baseline_4,4,toni, True,172,136.3411855790,tap,s
+baseline_4,4,toni,True,173,136.3471343570,stimulus,
+baseline_4,4,toni, True,173,137.0612202480,tap,l
+baseline_4,4,toni,True,174,137.0972212170,stimulus,
+baseline_4,4,toni,True,175,137.8473371330,stimulus,
+baseline_4,4,toni, True,175,137.8771131590,tap,l
+baseline_4,4,toni, True,175,138.5891738730,tap,s
+baseline_4,4,toni,True,176,138.5974601630,stimulus,
+baseline_4,4,toni,True,177,139.3475452990,stimulus,
+baseline_4,4,toni, True,177,139.3737349960,tap,l
+baseline_4,4,toni, True,177,140.0611669560,tap,l
+baseline_4,4,toni,True,178,140.0976840910,stimulus,
+baseline_4,4,toni, True,178,140.8452608270,tap,l
+baseline_4,4,toni,True,179,140.8477720120,stimulus,
+baseline_4,4,toni, True,179,141.5331989170,tap,s
+baseline_4,4,toni,True,180,141.5978927990,stimulus,
+baseline_4,4,toni, True,180,142.2852375400,tap,l
+baseline_4,4,toni,True,181,142.3479676710,stimulus,
+baseline_4,4,toni, True,181,143.0932302620,tap,s
+baseline_4,4,toni,True,182,143.0980662620,stimulus,
+baseline_4,4,toni, True,182,143.8372781610,tap,l
+baseline_4,4,toni,True,183,143.8481756310,stimulus,
+baseline_4,4,toni,True,184,144.5982514710,stimulus,
+baseline_4,4,toni, True,184,144.6211855890,tap,s
+baseline_4,4,toni, True,184,145.3412722070,tap,l
+baseline_4,4,toni,True,185,145.3483218130,stimulus,
+baseline_4,4,toni, True,185,146.0852106600,tap,s
+baseline_4,4,toni,True,186,146.0984931560,stimulus,
+baseline_4,4,toni,True,187,146.8485507740,stimulus,
+baseline_4,4,toni, True,187,146.8612683340,tap,l
+baseline_4,4,toni, True,187,147.5893709460,tap,l
+baseline_4,4,toni,True,188,147.5987462610,stimulus,
+baseline_4,4,toni,True,189,148.3488219200,stimulus,
+baseline_4,4,toni, True,189,148.3572931800,tap,s
+baseline_4,4,toni,True,190,149.0989243380,stimulus,
+baseline_4,4,toni, True,190,149.1410186860,tap,l
+baseline_4,4,toni, True,190,149.8452703040,tap,l
+baseline_4,4,toni,True,191,149.8490557930,stimulus,
+baseline_4,4,toni,True,192,150.5991521680,stimulus,
+baseline_4,4,toni, True,192,150.6292186140,tap,s
+baseline_4,4,toni, True,192,151.3410617690,tap,l
+baseline_4,4,toni,True,193,151.3492800320,stimulus,
+baseline_4,4,toni,True,194,152.0994213330,stimulus,
+baseline_4,4,toni, True,194,152.1732691160,tap,l
+baseline_4,4,toni,True,195,152.8495089270,stimulus,
+baseline_4,4,toni, True,195,152.8772281060,tap,s
+baseline_4,4,toni,True,196,153.5995874810,stimulus,
+baseline_4,4,toni, True,196,153.6052709950,tap,l
+baseline_4,4,toni, True,196,154.3492785010,tap,s
+baseline_4,4,toni,True,197,154.3497585740,stimulus,
+baseline_4,4,toni,True,198,155.0998959940,stimulus,
+baseline_4,4,toni, True,198,155.1250710690,tap,l
+baseline_4,4,toni,True,199,155.8499983600,stimulus,
+baseline_4,4,toni, True,199,155.8695140830,tap,s
+baseline_4,4,toni,True,200,156.6001231080,stimulus,
+baseline_4,4,toni, True,200,156.6454693640,tap,s
+baseline_4,4,toni, True,200,157.3411830720,tap,s
+baseline_4,4,toni,True,201,162.1695823880,probe_task,1
+baseline_4,4,toni, True,201,164.1708871320,probe_intention,1
+baseline_4,4,toni,True,202,167.9529455990,stimulus,
+baseline_4,4,toni, True,202,167.9548503750,tap,l
+baseline_4,4,toni, True,202,167.9654052290,tap,l
+baseline_4,4,toni, True,202,168.6935517490,tap,l
+baseline_4,4,toni,True,203,168.7030531800,stimulus,
+baseline_4,4,toni, True,203,169.4450575920,tap,s
+baseline_4,4,toni,True,204,169.4531541370,stimulus,
+baseline_4,4,toni,True,205,170.2032684430,stimulus,
+baseline_4,4,toni, True,205,170.2053499640,tap,s
+baseline_4,4,toni, True,205,170.9090907410,tap,l
+baseline_4,4,toni,True,206,170.9533609800,stimulus,
+baseline_4,4,toni,True,207,171.7034349930,stimulus,
+baseline_4,4,toni, True,207,171.7572647040,tap,s
+baseline_4,4,toni, True,207,172.4371954910,tap,l
+baseline_4,4,toni,True,208,172.4535782670,stimulus,
+baseline_4,4,toni, True,208,173.1890963690,tap,l
+baseline_4,4,toni,True,209,173.2036677470,stimulus,
+baseline_4,4,toni, True,209,173.9171732580,tap,s
+baseline_4,4,toni,True,210,173.9537623700,stimulus,
+baseline_4,4,toni, True,210,174.6615922560,tap,s
+baseline_4,4,toni,True,211,174.7038570960,stimulus,
+baseline_4,4,toni, True,211,175.4290319720,tap,s
+baseline_4,4,toni,True,212,175.4539757460,stimulus,
+baseline_4,4,toni, True,212,176.2051788840,tap,l
+baseline_4,4,toni,True,213,176.2053195510,stimulus,
+baseline_4,4,toni, True,213,176.9093081960,tap,s
+baseline_4,4,toni,True,214,176.9554655130,stimulus,
+baseline_4,4,toni,True,215,177.7056098340,stimulus,
+baseline_4,4,toni, True,215,177.7090934260,tap,l
+baseline_4,4,toni, True,215,178.3731206880,tap,l
+baseline_4,4,toni,True,216,178.4557396240,stimulus,
+baseline_4,4,toni, True,216,179.1811307570,tap,s
+baseline_4,4,toni,True,217,179.2058309470,stimulus,
+baseline_4,4,toni,True,218,179.9559354710,stimulus,
+baseline_4,4,toni, True,218,179.9650522010,tap,l
+baseline_4,4,toni, True,218,180.7012677600,tap,s
+baseline_4,4,toni,True,219,180.7060517430,stimulus,
+baseline_4,4,toni, True,219,181.4132212190,tap,s
+baseline_4,4,toni,True,220,181.4561664210,stimulus,
+baseline_4,4,toni, True,220,182.1412444810,tap,s
+baseline_4,4,toni,True,221,182.2062900800,stimulus,
+baseline_4,4,toni, True,221,182.9413864760,tap,l
+baseline_4,4,toni,True,222,182.9563603540,stimulus,
+baseline_4,4,toni,True,223,183.7064920540,stimulus,
+baseline_4,4,toni, True,223,183.7252174220,tap,s
+baseline_4,4,toni,True,224,184.4565733610,stimulus,
+baseline_4,4,toni, True,224,184.4850254500,tap,l
+baseline_4,4,toni,True,225,185.2066825720,stimulus,
+baseline_4,4,toni, True,225,185.2693932530,tap,s
+baseline_4,4,toni, True,225,185.9411919170,tap,l
+baseline_4,4,toni,True,226,185.9567678160,stimulus,
+baseline_4,4,toni, True,226,186.6291656350,tap,l
+baseline_4,4,toni,True,227,186.7069167430,stimulus,
+baseline_4,4,toni, True,227,187.3815533450,tap,s
+baseline_4,4,toni,True,228,187.4569973060,stimulus,
+baseline_4,4,toni, True,228,188.0852443690,tap,l
+baseline_4,4,toni,True,229,188.2070819860,stimulus,
+baseline_4,4,toni, True,229,188.9171803910,tap,s
+baseline_4,4,toni,True,230,188.9572112460,stimulus,
+baseline_4,4,toni,True,231,189.7073130720,stimulus,
+baseline_4,4,toni, True,231,189.7252485870,tap,l
+baseline_4,4,toni,True,232,190.4573958230,stimulus,
+baseline_4,4,toni,True,233,191.2075286300,stimulus,
+baseline_4,4,toni, True,233,191.2132915100,tap,l
+baseline_4,4,toni, True,233,191.9011248030,tap,s
+baseline_4,4,toni,True,234,191.9576220440,stimulus,
+baseline_4,4,toni, True,234,192.6531159190,tap,s
+baseline_4,4,toni,True,235,192.7077177940,stimulus,
+baseline_4,4,toni,True,236,193.4578536460,stimulus,
+baseline_4,4,toni, True,236,193.4852207410,tap,l
+baseline_4,4,toni,True,237,194.2079857920,stimulus,
+baseline_4,4,toni, True,237,194.2373315970,tap,s
+baseline_4,4,toni,True,238,194.9580997860,stimulus,
+baseline_4,4,toni, True,238,194.9894581250,tap,l
+baseline_4,4,toni, True,238,195.6935593440,tap,s
+baseline_4,4,toni,True,239,195.7082418450,stimulus,
+baseline_4,4,toni, True,239,196.4130404470,tap,l
+baseline_4,4,toni,True,240,196.4583352530,stimulus,
+baseline_4,4,toni,True,241,197.2084111130,stimulus,
+baseline_4,4,toni, True,241,197.2292418260,tap,l
+baseline_4,4,toni,True,242,197.9585349540,stimulus,
+baseline_4,4,toni, True,242,197.9738347960,tap,s
+baseline_4,4,toni, True,242,198.6613503880,tap,s
+baseline_4,4,toni,True,243,198.7086088010,stimulus,
+baseline_4,4,toni, True,243,199.4131248010,tap,l
+baseline_4,4,toni,True,244,199.4587310600,stimulus,
+baseline_4,4,toni,True,245,200.2088267950,stimulus,
+baseline_4,4,toni, True,245,200.2131126220,tap,s
+baseline_4,4,toni,True,246,200.9589480320,stimulus,
+baseline_4,4,toni, True,246,201.0050217180,tap,l
+baseline_4,4,toni, True,246,201.7011843840,tap,l
+baseline_4,4,toni,True,247,201.7090572510,stimulus,
+baseline_4,4,toni, True,247,202.4130637480,tap,s
+baseline_4,4,toni,True,248,202.4591826170,stimulus,
+baseline_4,4,toni, True,248,203.1731766810,tap,s
+baseline_4,4,toni,True,249,203.2092499500,stimulus,
+baseline_4,4,toni, True,249,203.9091112470,tap,s
+baseline_4,4,toni,True,250,203.9593458670,stimulus,
+baseline_4,4,toni, True,250,204.6692901710,tap,l
+baseline_4,4,toni,True,251,204.7094739470,stimulus,
+baseline_4,4,toni, True,251,205.3816258120,tap,s
+baseline_4,4,toni,True,252,205.4596019270,stimulus,
+baseline_4,4,toni, True,252,206.1332763550,tap,s
+baseline_4,4,toni,True,253,206.2097332360,stimulus,
+baseline_4,4,toni, True,253,206.9173169910,tap,l
+baseline_4,4,toni,True,254,206.9598350590,stimulus,
+baseline_4,4,toni, True,254,207.6294764620,tap,s
+baseline_4,4,toni,True,255,207.7099095630,stimulus,
+baseline_4,4,toni, True,255,208.4050896750,tap,s
+baseline_4,4,toni,True,256,208.4599943960,stimulus,
+baseline_4,4,toni, True,256,209.1812826140,tap,l
+baseline_4,4,toni,True,257,209.2101035700,stimulus,
+baseline_4,4,toni, True,257,209.9171672810,tap,s
+baseline_4,4,toni,True,258,209.9602020040,stimulus,
+baseline_4,4,toni, True,258,210.6692494630,tap,s
+baseline_4,4,toni,True,259,210.7102728570,stimulus,
+baseline_4,4,toni, True,259,211.3971798140,tap,l
+baseline_4,4,toni,True,260,211.4608000700,stimulus,
+baseline_4,4,toni, True,260,212.1253102920,tap,s
+baseline_4,4,toni,True,261,212.2109374770,stimulus,
+baseline_4,4,toni, True,261,212.9014112520,tap,s
+baseline_4,4,toni,True,262,212.9610830720,stimulus,
+baseline_4,4,toni, True,262,213.5892319000,tap,s
+baseline_4,4,toni,True,263,213.7111723690,stimulus,
+baseline_4,4,toni,True,264,214.4612812400,stimulus,
+baseline_4,4,toni, True,264,214.5094310090,tap,l
+baseline_4,4,toni, True,264,215.1731485950,tap,s
+baseline_4,4,toni,True,265,215.2113955320,stimulus,
+baseline_4,4,toni, True,265,215.8452230700,tap,s
+baseline_4,4,toni,True,266,215.9615028600,stimulus,
+baseline_4,4,toni, True,266,216.6371120570,tap,l
+baseline_4,4,toni,True,267,216.7116216660,stimulus,
+baseline_4,4,toni, True,267,217.3972867940,tap,s
+baseline_4,4,toni,True,268,217.4619641730,stimulus,
+baseline_4,4,toni, True,268,218.1811838700,tap,s
+baseline_4,4,toni,True,269,218.2120369940,stimulus,
+baseline_4,4,toni, True,269,218.9251810540,tap,l
+baseline_4,4,toni,True,270,218.9621702740,stimulus,
+baseline_4,4,toni, True,270,219.6771348990,tap,l
+baseline_4,4,toni,True,271,219.7122529070,stimulus,
+baseline_4,4,toni,True,272,220.4623646010,stimulus,
+baseline_4,4,toni, True,272,220.4930962220,tap,l
+baseline_4,4,toni, True,272,221.1811320980,tap,s
+baseline_4,4,toni,True,273,221.2124474370,stimulus,
+baseline_4,4,toni,True,274,221.9625722520,stimulus,
+baseline_4,4,toni, True,274,221.9890626570,tap,l
+baseline_4,4,toni,True,275,222.7126880460,stimulus,
+baseline_4,4,toni, True,275,222.7333364470,tap,s
+baseline_4,4,toni, True,275,223.3570219200,tap,l
+baseline_4,4,toni,True,276,223.4628005260,stimulus,
+baseline_4,4,toni,True,277,224.2129242900,stimulus,
+baseline_4,4,toni, True,277,224.2216111490,tap,l
+baseline_4,4,toni,True,278,224.9630745100,stimulus,
+baseline_4,4,toni, True,278,224.9813347600,tap,l
+baseline_4,4,toni, True,278,225.6291956300,tap,s
+baseline_4,4,toni,True,279,225.7131920410,stimulus,
+baseline_4,4,toni, True,279,226.4451973650,tap,l
+baseline_4,4,toni,True,280,226.4632978670,stimulus,
+baseline_4,4,toni, True,280,227.2131064100,tap,l
+baseline_4,4,toni,True,281,227.2134676190,stimulus,
+baseline_4,4,toni,True,282,227.9636138070,stimulus,
+baseline_4,4,toni, True,282,227.9735843400,tap,s
+baseline_4,4,toni, True,282,228.6771195180,tap,l
+baseline_4,4,toni,True,283,228.7137521870,stimulus,
+baseline_4,4,toni, True,283,229.4452548860,tap,s
+baseline_4,4,toni,True,284,229.4638899450,stimulus,
+baseline_4,4,toni, True,284,230.1412198940,tap,l
+baseline_4,4,toni,True,285,230.2139486100,stimulus,
+baseline_4,4,toni, True,285,230.9331003010,tap,s
+baseline_4,4,toni,True,286,230.9640873410,stimulus,
+baseline_4,4,toni,True,287,231.7141671970,stimulus,
+baseline_4,4,toni, True,287,231.7175866670,tap,s
+baseline_4,4,toni,True,288,232.4642502000,stimulus,
+baseline_4,4,toni, True,288,232.5412210360,tap,l
+baseline_4,4,toni, True,288,233.1575009530,tap,s
+baseline_4,4,toni,True,289,233.2143791410,stimulus,
+baseline_4,4,toni,True,290,233.9644773860,stimulus,
+baseline_4,4,toni, True,290,233.9815247530,tap,s
+baseline_4,4,toni, True,290,234.6931193620,tap,l
+baseline_4,4,toni,True,291,234.7145437700,stimulus,
+baseline_4,4,toni,True,292,235.4646427710,stimulus,
+baseline_4,4,toni, True,292,235.4770362810,tap,s
+baseline_4,4,toni, True,292,236.1891135170,tap,s
+baseline_4,4,toni,True,293,236.2147217010,stimulus,
+baseline_4,4,toni, True,293,236.9653133440,tap,l
+baseline_4,4,toni,True,294,236.9655953210,stimulus,
+baseline_4,4,toni,True,295,237.7157495020,stimulus,
+baseline_4,4,toni, True,295,237.7332703510,tap,l
+baseline_4,4,toni, True,295,238.4530597480,tap,l
+baseline_4,4,toni,True,296,238.4659529100,stimulus,
+baseline_4,4,toni, True,296,239.1170947710,tap,l
+baseline_4,4,toni,True,297,239.2159432350,stimulus,
+baseline_4,4,toni,True,298,239.9660495320,stimulus,
+baseline_4,4,toni, True,298,239.9730314280,tap,s
+baseline_4,4,toni,True,299,240.7161727390,stimulus,
+baseline_4,4,toni, True,299,240.7492325650,tap,l
+baseline_4,4,toni, True,299,241.4212296090,tap,l
+baseline_4,4,toni,True,300,241.4662630810,stimulus,
+baseline_4,4,toni, True,300,242.2133557460,tap,s
+baseline_4,4,toni,True,301,242.2163576850,stimulus,
+baseline_4,4,toni, True,301,242.9251949020,tap,s
+baseline_4,4,toni,True,302,242.9664701520,stimulus,
+baseline_4,4,toni, True,302,243.6775454670,tap,s
+baseline_4,4,toni,True,303,243.7166247570,stimulus,
+baseline_4,4,toni, True,303,244.4212377500,tap,l
+baseline_4,4,toni,True,304,244.4668051890,stimulus,
+baseline_4,4,toni, True,304,245.1975368400,tap,s
+baseline_4,4,toni,True,305,245.2169084910,stimulus,
+baseline_4,4,toni,True,306,245.9670114390,stimulus,
+baseline_4,4,toni, True,306,245.9732788480,tap,l
+baseline_4,4,toni, True,306,246.7012735980,tap,l
+baseline_4,4,toni,True,307,249.8680649280,probe_task,1
+baseline_4,4,toni, True,307,251.7194925260,probe_intention,2
+baseline_4,4,toni,True,308,255.5017779320,stimulus,
+baseline_4,4,toni, True,308,255.5037256310,tap,l
+baseline_4,4,toni, True,308,255.5570105250,tap,l
+baseline_4,4,toni, True,308,256.2214221010,tap,s
+baseline_4,4,toni,True,309,256.2518482720,stimulus,
+baseline_4,4,toni, True,309,256.9652299390,tap,l
+baseline_4,4,toni,True,310,257.0019576440,stimulus,
+baseline_4,4,toni, True,310,257.6532824270,tap,l
+baseline_4,4,toni,True,311,257.7520958540,stimulus,
+baseline_4,4,toni, True,311,258.3971729970,tap,l
+baseline_4,4,toni,True,312,258.5021651880,stimulus,
+baseline_4,4,toni, True,312,259.2373846850,tap,s
+baseline_4,4,toni,True,313,259.2522659250,stimulus,
+baseline_4,4,toni, True,313,259.9571379110,tap,l
+baseline_4,4,toni,True,314,260.0023814380,stimulus,
+baseline_4,4,toni, True,314,260.7333278950,tap,s
+baseline_4,4,toni,True,315,260.7524787920,stimulus,
+baseline_4,4,toni, True,315,261.4611591690,tap,s
+baseline_4,4,toni,True,316,261.5025455720,stimulus,
+baseline_4,4,toni, True,316,262.2291782810,tap,l
+baseline_4,4,toni,True,317,262.2526990930,stimulus,
+baseline_4,4,toni, True,317,262.9653588750,tap,s
+baseline_4,4,toni,True,318,263.0027816930,stimulus,
+baseline_4,4,toni, True,318,263.7015457880,tap,s
+baseline_4,4,toni,True,319,263.7528640830,stimulus,
+baseline_4,4,toni,True,320,264.5029963110,stimulus,
+baseline_4,4,toni, True,320,264.5093113660,tap,l
+baseline_4,4,toni, True,320,265.2535641230,tap,s
+baseline_4,4,toni,True,321,265.2538617420,stimulus,
+baseline_4,4,toni, True,321,265.9573381330,tap,l
+baseline_4,4,toni,True,322,266.0039746130,stimulus,
+baseline_4,4,toni, True,322,266.7015026840,tap,s
+baseline_4,4,toni,True,323,266.7541172620,stimulus,
+baseline_4,4,toni, True,323,267.5012888050,tap,l
+baseline_4,4,toni,True,324,267.5042321640,stimulus,
+baseline_4,4,toni,True,325,268.2543446080,stimulus,
+baseline_4,4,toni, True,325,268.3095587920,tap,l
+baseline_4,4,toni,True,326,269.0044456020,stimulus,
+baseline_4,4,toni, True,326,269.0214829770,tap,s
+baseline_4,4,toni,True,327,269.7545533500,stimulus,
+baseline_4,4,toni, True,327,269.7657602510,tap,l
+baseline_4,4,toni, True,327,270.4852010590,tap,s
+baseline_4,4,toni,True,328,270.5047194220,stimulus,
+baseline_4,4,toni, True,328,271.1738051730,tap,l
+baseline_4,4,toni,True,329,271.2547854680,stimulus,
+baseline_4,4,toni, True,329,271.8210858800,tap,l
+baseline_4,4,toni,True,330,272.0048773010,stimulus,
+baseline_4,4,toni, True,330,272.7012128820,tap,s
+baseline_4,4,toni,True,331,272.7550197650,stimulus,
+baseline_4,4,toni,True,332,273.5051224850,stimulus,
+baseline_4,4,toni, True,332,273.5331573350,tap,l
+baseline_4,4,toni, True,332,274.2534536560,tap,l
+baseline_4,4,toni,True,333,274.2551939490,stimulus,
+baseline_4,4,toni,True,334,275.0053265620,stimulus,
+baseline_4,4,toni, True,334,275.0450677880,tap,s
+baseline_4,4,toni, True,334,275.7253488050,tap,l
+baseline_4,4,toni,True,335,275.7554327070,stimulus,
+baseline_4,4,toni, True,335,276.4532346600,tap,l
+baseline_4,4,toni,True,336,276.5055182850,stimulus,
+baseline_4,4,toni, True,336,277.2051064120,tap,l
+baseline_4,4,toni,True,337,277.2556589990,stimulus,
+baseline_4,4,toni, True,337,277.9649956680,tap,s
+baseline_4,4,toni,True,338,278.0057183710,stimulus,
+baseline_4,4,toni, True,338,278.7410747800,tap,l
+baseline_4,4,toni,True,339,278.7558411210,stimulus,
+baseline_4,4,toni,True,340,279.5059723690,stimulus,
+baseline_4,4,toni, True,340,279.6050347630,tap,s
+baseline_4,4,toni, True,340,280.2213345470,tap,s
+baseline_4,4,toni,True,341,280.2560990140,stimulus,
+baseline_4,4,toni,True,342,281.0061906720,stimulus,
+baseline_4,4,toni, True,342,281.0930567310,tap,s
+baseline_4,4,toni, True,342,281.7014237190,tap,l
+baseline_4,4,toni,True,343,281.7563022120,stimulus,
+baseline_4,4,toni,True,344,282.5064125710,stimulus,
+baseline_4,4,toni, True,344,282.5330197660,tap,s
+baseline_4,4,toni,True,345,283.2565042230,stimulus,
+baseline_4,4,toni, True,345,283.3013816590,tap,s
+baseline_4,4,toni, True,345,283.9731072450,tap,s
+baseline_4,4,toni,True,346,284.0066057830,stimulus,
+baseline_4,4,toni, True,346,284.7412622630,tap,l
+baseline_4,4,toni,True,347,284.7566872660,stimulus,
+baseline_4,4,toni,True,348,285.5067507470,stimulus,
+baseline_4,4,toni, True,348,285.5171265170,tap,l
+baseline_4,4,toni, True,348,286.2452745810,tap,s
+baseline_4,4,toni,True,349,286.2568492890,stimulus,
+baseline_4,4,toni, True,349,286.9972743980,tap,s
+baseline_4,4,toni,True,350,287.0069475790,stimulus,
+baseline_4,4,toni, True,350,287.6773026670,tap,l
+baseline_4,4,toni,True,351,287.7570483850,stimulus,
+baseline_4,4,toni, True,351,288.4611426510,tap,s
+baseline_4,4,toni,True,352,288.5071239110,stimulus,
+baseline_4,4,toni, True,352,289.2292741890,tap,s
+baseline_4,4,toni,True,353,289.2573170730,stimulus,
+baseline_4,4,toni, True,353,289.3250991380,tap,l
+baseline_4,4,toni,True,354,290.0073667240,stimulus,
+baseline_4,4,toni, True,354,290.0850635450,tap,s
+baseline_4,4,toni, True,354,290.7492751950,tap,l
+baseline_4,4,toni,True,355,290.7574771890,stimulus,
+baseline_4,4,toni,True,356,291.5076040640,stimulus,
+baseline_4,4,toni, True,356,292.2456979530,tap,s
+baseline_4,4,toni,True,357,292.2576615410,stimulus,
+baseline_4,4,toni,True,358,293.0077811180,stimulus,
+baseline_4,4,toni, True,358,293.0371889240,tap,l
+baseline_4,4,toni,True,359,293.7578387460,stimulus,
+baseline_4,4,toni, True,359,293.7971218390,tap,s
+baseline_4,4,toni,True,360,294.5079639230,stimulus,
+baseline_4,4,toni, True,360,294.5492274770,tap,l
+baseline_4,4,toni, True,360,295.2452040320,tap,l
+baseline_4,4,toni,True,361,295.2580756410,stimulus,
+baseline_4,4,toni, True,361,295.9570139470,tap,s
+baseline_4,4,toni,True,362,296.0082046580,stimulus,
+baseline_4,4,toni,True,363,296.7583432240,stimulus,
+baseline_4,4,toni, True,363,296.7973040760,tap,l
+baseline_4,4,toni,True,364,297.5084491870,stimulus,
+baseline_4,4,toni, True,364,297.5410360400,tap,s
+baseline_4,4,toni,True,365,298.2585756780,stimulus,
+baseline_4,4,toni, True,365,298.6773044610,tap,s
+baseline_4,4,toni,True,366,299.0086796530,stimulus,
+baseline_4,4,toni, True,366,299.0370827940,tap,l
+baseline_4,4,toni,True,367,299.7587774890,stimulus,
+baseline_4,4,toni, True,367,299.8292765170,tap,s
+baseline_4,4,toni, True,367,300.5094832560,tap,s
+baseline_4,4,toni,True,368,300.5097619600,stimulus,
+baseline_4,4,toni,True,369,301.2598868250,stimulus,
+baseline_4,4,toni, True,369,301.2772359370,tap,l
+baseline_4,4,toni,True,370,302.0099691920,stimulus,
+baseline_4,4,toni, True,370,302.0613349850,tap,l
+baseline_4,4,toni,True,371,302.7600693450,stimulus,
+baseline_4,4,toni, True,371,302.8454325690,tap,s
+baseline_4,4,toni,True,372,303.5101988850,stimulus,
+baseline_4,4,toni, True,372,303.5812934140,tap,l
+baseline_4,4,toni,True,373,304.2603216980,stimulus,
+baseline_4,4,toni, True,373,304.2690426320,tap,s
+baseline_4,4,toni,True,374,305.0104345800,stimulus,
+baseline_4,4,toni, True,374,305.0213677240,tap,l
+baseline_4,4,toni, True,374,305.7170979830,tap,s
+baseline_4,4,toni,True,375,305.7605778070,stimulus,
+baseline_4,4,toni,True,376,306.5106503170,stimulus,
+baseline_4,4,toni, True,376,306.5490256360,tap,l
+baseline_4,4,toni,True,377,307.2607606840,stimulus,
+baseline_4,4,toni, True,377,307.3173899510,tap,l
+baseline_4,4,toni,True,378,308.0109025270,stimulus,
+baseline_4,4,toni, True,378,308.0452315150,tap,s
+baseline_4,4,toni,True,379,308.7609808370,stimulus,
+baseline_4,4,toni, True,379,308.7731739280,tap,l
+baseline_4,4,toni,True,380,309.5110914130,stimulus,
+baseline_4,4,toni, True,380,309.5650848600,tap,s
+baseline_4,4,toni,True,381,310.2611597510,stimulus,
+baseline_4,4,toni, True,381,310.2932967380,tap,l
+baseline_4,4,toni, True,381,310.9492183250,tap,l
+baseline_4,4,toni,True,382,311.0112346370,stimulus,
+baseline_4,4,toni, True,382,311.7334264560,tap,s
+baseline_4,4,toni,True,383,311.7613778490,stimulus,
+baseline_4,4,toni, True,383,312.4853238260,tap,s
+baseline_4,4,toni,True,384,312.5114548480,stimulus,
+baseline_4,4,toni,True,385,313.2615651380,stimulus,
+baseline_4,4,toni, True,385,313.3092681680,tap,s
+baseline_4,4,toni,True,386,314.0116804170,stimulus,
+baseline_4,4,toni, True,386,314.0132918090,tap,s
+baseline_4,4,toni, True,386,314.7571647610,tap,l
+baseline_4,4,toni,True,387,314.7618612480,stimulus,
+baseline_4,4,toni,True,388,315.5119973560,stimulus,
+baseline_4,4,toni, True,388,315.5331768430,tap,s
+baseline_4,4,toni, True,388,316.2613794250,tap,s
+baseline_4,4,toni,True,389,316.2620721890,stimulus,
+baseline_4,4,toni, True,389,316.9970560340,tap,l
+baseline_4,4,toni,True,390,317.0121689550,stimulus,
+baseline_4,4,toni,True,391,317.7623170540,stimulus,
+baseline_4,4,toni, True,391,317.7652780400,tap,s
+baseline_4,4,toni,True,392,318.5123778010,stimulus,
+baseline_4,4,toni, True,392,318.5730683450,tap,l
+baseline_4,4,toni,True,393,319.2625102490,stimulus,
+baseline_4,4,toni, True,393,319.2851671270,tap,s
+baseline_4,4,toni,True,394,320.0126215390,stimulus,
+baseline_4,4,toni, True,394,320.0370256690,tap,s
+baseline_4,4,toni,True,395,320.7627263080,stimulus,
+baseline_4,4,toni, True,395,320.7817319080,tap,l
+baseline_4,4,toni, True,395,321.5092264730,tap,l
+baseline_4,4,toni,True,396,321.5128037600,stimulus,
+baseline_4,4,toni,True,397,322.2629034700,stimulus,
+baseline_4,4,toni, True,397,322.3173917290,tap,l
+baseline_4,4,toni,True,398,323.0130399960,stimulus,
+baseline_4,4,toni, True,398,323.0770182630,tap,l
+baseline_4,4,toni, True,398,323.7010665080,tap,s
+baseline_4,4,toni,True,399,327.4840679300,probe_task,0
+baseline_4,4,toni, True,399,329.5018929770,probe_intention,1
+baseline_4,4,toni,True,400,333.2840678680,stimulus,
+baseline_4,4,toni, True,400,333.5013920930,tap,l
+baseline_4,4,toni,True,401,334.0341384440,stimulus,
+baseline_4,4,toni, True,401,334.0931144880,tap,l
+baseline_4,4,toni, True,401,334.7492306290,tap,l
+baseline_4,4,toni,True,402,334.7842776930,stimulus,
+baseline_4,4,toni, True,402,335.4770487210,tap,l
+baseline_4,4,toni,True,403,335.5343956240,stimulus,
+baseline_4,4,toni, True,403,336.2771545340,tap,s
+baseline_4,4,toni,True,404,336.2844554720,stimulus,
+baseline_4,4,toni,True,405,337.0346335870,stimulus,
+baseline_4,4,toni, True,405,337.0370691510,tap,l
+baseline_4,4,toni, True,405,337.7812961660,tap,l
+baseline_4,4,toni,True,406,337.7846886070,stimulus,
+baseline_4,4,toni, True,406,338.4694202550,tap,s
+baseline_4,4,toni,True,407,338.5347952290,stimulus,
+baseline_4,4,toni, True,407,339.2532459560,tap,l
+baseline_4,4,toni,True,408,339.2848784540,stimulus,
+baseline_4,4,toni,True,409,340.0350337160,stimulus,
+baseline_4,4,toni, True,409,340.0533061650,tap,s
+baseline_4,4,toni,True,410,340.7851372870,stimulus,
+baseline_4,4,toni, True,410,340.7892409760,tap,l
+baseline_4,4,toni, True,410,341.5171971840,tap,l
+baseline_4,4,toni,True,411,341.5352676840,stimulus,
+baseline_4,4,toni, True,411,342.2531215600,tap,s
+baseline_4,4,toni,True,412,342.2853566620,stimulus,
+baseline_4,4,toni, True,412,342.9970049640,tap,l
+baseline_4,4,toni,True,413,343.0355106270,stimulus,
+baseline_4,4,toni, True,413,343.7652549090,tap,s
+baseline_4,4,toni,True,414,343.7855661390,stimulus,
+baseline_4,4,toni, True,414,344.4691425940,tap,s
+baseline_4,4,toni,True,415,344.5356820320,stimulus,
+baseline_4,4,toni, True,415,345.2131258150,tap,l
+baseline_4,4,toni,True,416,345.2858163100,stimulus,
+baseline_4,4,toni, True,416,345.9413083080,tap,s
+baseline_4,4,toni,True,417,346.0359315290,stimulus,
+baseline_4,4,toni, True,417,346.7731327070,tap,l
+baseline_4,4,toni,True,418,346.7859929470,stimulus,
+baseline_4,4,toni, True,418,347.5171163240,tap,s
+baseline_4,4,toni,True,419,347.5361079590,stimulus,
+baseline_4,4,toni,True,420,348.2861727900,stimulus,
+baseline_4,4,toni, True,420,348.3171435560,tap,l
+baseline_4,4,toni, True,420,348.9730324670,tap,l
+baseline_4,4,toni,True,421,349.0365008430,stimulus,
+baseline_4,4,toni,True,422,349.7865853890,stimulus,
+baseline_4,4,toni, True,422,349.7972076800,tap,s
+baseline_4,4,toni, True,422,350.5330409370,tap,l
+baseline_4,4,toni,True,423,350.5366573400,stimulus,
+baseline_4,4,toni,True,424,351.2867852080,stimulus,
+baseline_4,4,toni, True,424,351.2932397220,tap,s
+baseline_4,4,toni, True,424,351.9970418830,tap,l
+baseline_4,4,toni,True,425,352.0369213160,stimulus,
+baseline_4,4,toni,True,426,352.7870089230,stimulus,
+baseline_4,4,toni, True,426,352.7891942810,tap,s
+baseline_4,4,toni, True,426,353.4932275310,tap,l
+baseline_4,4,toni,True,427,353.5370907520,stimulus,
+baseline_4,4,toni, True,427,354.2211981860,tap,s
+baseline_4,4,toni,True,428,354.2871938100,stimulus,
+baseline_4,4,toni, True,428,354.9972804920,tap,l
+baseline_4,4,toni,True,429,355.0372923250,stimulus,
+baseline_4,4,toni, True,429,355.7650963180,tap,s
+baseline_4,4,toni,True,430,355.7873633060,stimulus,
+baseline_4,4,toni,True,431,356.5374581660,stimulus,
+baseline_4,4,toni, True,431,356.5650535610,tap,l
+baseline_4,4,toni,True,432,357.2875459470,stimulus,
+baseline_4,4,toni, True,432,357.3175409460,tap,l
+baseline_4,4,toni, True,432,357.9732854310,tap,s
+baseline_4,4,toni,True,433,358.0376911410,stimulus,
+baseline_4,4,toni, True,433,358.7572023740,tap,s
+baseline_4,4,toni,True,434,358.7877751120,stimulus,
+baseline_4,4,toni, True,434,359.5011845830,tap,s
+baseline_4,4,toni,True,435,359.5379110230,stimulus,
+baseline_4,4,toni, True,435,360.2771465400,tap,l
+baseline_4,4,toni,True,436,360.2879859880,stimulus,
+baseline_4,4,toni,True,437,361.0380905570,stimulus,
+baseline_4,4,toni, True,437,361.0610908630,tap,s
+baseline_4,4,toni, True,437,361.7651036130,tap,l
+baseline_4,4,toni,True,438,361.7881928110,stimulus,
+baseline_4,4,toni, True,438,362.5252343030,tap,s
+baseline_4,4,toni,True,439,362.5383044990,stimulus,
+baseline_4,4,toni,True,440,363.2884223250,stimulus,
+baseline_4,4,toni, True,440,363.2933211100,tap,l
+baseline_4,4,toni,True,441,364.0385529090,stimulus,
+baseline_4,4,toni, True,441,364.0612717430,tap,l
+baseline_4,4,toni,True,442,364.7886339030,stimulus,
+baseline_4,4,toni, True,442,364.8131157320,tap,l
+baseline_4,4,toni,True,443,365.5387130870,stimulus,
+baseline_4,4,toni, True,443,365.5490564270,tap,s
+baseline_4,4,toni,True,444,366.2888030720,stimulus,
+baseline_4,4,toni, True,444,366.3252685680,tap,l
+baseline_4,4,toni, True,444,366.9972917800,tap,s
+baseline_4,4,toni,True,445,367.0388864370,stimulus,
+baseline_4,4,toni, True,445,367.7493323740,tap,l
+baseline_4,4,toni,True,446,367.7889619280,stimulus,
+baseline_4,4,toni, True,446,368.5090475420,tap,s
+baseline_4,4,toni,True,447,368.5390928250,stimulus,
+baseline_4,4,toni, True,447,369.2612393530,tap,s
+baseline_4,4,toni,True,448,369.2891969110,stimulus,
+baseline_4,4,toni, True,448,369.9731537810,tap,l
+baseline_4,4,toni,True,449,370.0393252080,stimulus,
+baseline_4,4,toni, True,449,370.7733623430,tap,l
+baseline_4,4,toni,True,450,370.7893953270,stimulus,
+baseline_4,4,toni, True,450,371.4210123890,tap,s
+baseline_4,4,toni,True,451,371.5394898330,stimulus,
+baseline_4,4,toni, True,451,372.2371868810,tap,s
+baseline_4,4,toni,True,452,372.2896129100,stimulus,
+baseline_4,4,toni, True,452,373.0130556790,tap,s
+baseline_4,4,toni,True,453,373.0397503900,stimulus,
+baseline_4,4,toni, True,453,373.7890815120,tap,s
+baseline_4,4,toni,True,454,373.7898228270,stimulus,
+baseline_4,4,toni, True,454,374.5253978350,tap,s
+baseline_4,4,toni,True,455,374.5399663650,stimulus,
+baseline_4,4,toni,True,456,375.2900570550,stimulus,
+baseline_4,4,toni, True,456,375.3170973110,tap,l
+baseline_4,4,toni, True,456,376.0293910810,tap,s
+baseline_4,4,toni,True,457,376.0401767310,stimulus,
+baseline_4,4,toni,True,458,376.7902703780,stimulus,
+baseline_4,4,toni, True,458,376.8452189070,tap,s
+baseline_4,4,toni,True,459,377.5403990750,stimulus,
+baseline_4,4,toni, True,459,377.5651646850,tap,s
+baseline_4,4,toni, True,459,378.2292203030,tap,l
+baseline_4,4,toni,True,460,378.2906503620,stimulus,
+baseline_4,4,toni, True,460,378.9411461990,tap,s
+baseline_4,4,toni,True,461,379.0407525900,stimulus,
+baseline_4,4,toni, True,461,379.6693219280,tap,s
+baseline_4,4,toni,True,462,379.7908176230,stimulus,
+baseline_4,4,toni, True,462,380.4610805050,tap,s
+baseline_4,4,toni,True,463,380.5409068530,stimulus,
+baseline_4,4,toni, True,463,381.2530631730,tap,s
+baseline_4,4,toni,True,464,381.2909712250,stimulus,
+baseline_4,4,toni, True,464,381.9969649190,tap,l
+baseline_4,4,toni,True,465,382.0410803540,stimulus,
+baseline_4,4,toni,True,466,382.7911561500,stimulus,
+baseline_4,4,toni, True,466,383.5091113420,tap,l
+baseline_4,4,toni,True,467,383.5412418580,stimulus,
+baseline_4,4,toni,True,468,384.2913372000,stimulus,
+baseline_4,4,toni, True,468,385.0292396670,tap,l
+baseline_4,4,toni,True,469,385.0414567720,stimulus,
+baseline_4,4,toni,True,470,385.7915403840,stimulus,
+baseline_4,4,toni, True,470,385.8131942140,tap,l
+baseline_4,4,toni, True,470,386.5012086390,tap,l
+baseline_4,4,toni,True,471,386.5416430460,stimulus,
+baseline_4,4,toni, True,471,387.2850717660,tap,s
+baseline_4,4,toni,True,472,387.2917531880,stimulus,
+baseline_4,4,toni,True,473,388.0418849950,stimulus,
+baseline_4,4,toni, True,473,388.0770887370,tap,l
+baseline_4,4,toni,True,474,388.7919818270,stimulus,
+baseline_4,4,toni, True,474,388.7971821240,tap,l
+baseline_4,4,toni,True,475,389.5421150320,stimulus,
+baseline_4,4,toni, True,475,389.6052557350,tap,s
+baseline_4,4,toni, True,475,390.2691533480,tap,l
+baseline_4,4,toni,True,476,390.2921908960,stimulus,
+baseline_4,4,toni,True,477,391.0423013350,stimulus,
+baseline_4,4,toni, True,477,391.0931258180,tap,s
+baseline_4,4,toni,True,478,391.7924085840,stimulus,
+baseline_4,4,toni, True,478,391.8371061560,tap,l
+baseline_4,4,toni,True,479,392.5425114000,stimulus,
+baseline_4,4,toni, True,479,392.6052778880,tap,s
+baseline_4,4,toni, True,479,393.2851711710,tap,s
+baseline_4,4,toni,True,480,400.9162961110,probe_task,2
+baseline_4,4,toni, True,480,405.7343990300,probe_intention,2
+baseline_4,4,toni,True,481,409.5163183770,stimulus,
+baseline_4,4,toni, True,481,409.7817125150,tap,l
+baseline_4,4,toni,True,482,410.2663542350,stimulus,
+baseline_4,4,toni, True,482,410.2773001470,tap,l
+baseline_4,4,toni, True,482,410.9971213420,tap,s
+baseline_4,4,toni,True,483,411.0164902650,stimulus,
+baseline_4,4,toni, True,483,411.7491687600,tap,l
+baseline_4,4,toni,True,484,411.7665974910,stimulus,
+baseline_4,4,toni, True,484,412.4772313740,tap,l
+baseline_4,4,toni,True,485,412.5167057300,stimulus,
+baseline_4,4,toni,True,486,413.2668603190,stimulus,
+baseline_4,4,toni, True,486,413.2691007470,tap,s
+baseline_4,4,toni,True,487,414.0169456590,stimulus,
+baseline_4,4,toni, True,487,414.7332810480,tap,s
+baseline_4,4,toni,True,488,414.7670724540,stimulus,
+baseline_4,4,toni,True,489,415.5171942080,stimulus,
+baseline_4,4,toni, True,489,415.5495348620,tap,l
+baseline_4,4,toni, True,489,416.2291438670,tap,s
+baseline_4,4,toni,True,490,416.2672651140,stimulus,
+baseline_4,4,toni, True,490,416.9731621960,tap,s
+baseline_4,4,toni,True,491,417.0173719690,stimulus,
+baseline_4,4,toni, True,491,417.7571633210,tap,l
+baseline_4,4,toni,True,492,417.7674758430,stimulus,
+baseline_4,4,toni,True,493,418.5175612720,stimulus,
+baseline_4,4,toni, True,493,418.5250487660,tap,s
+baseline_4,4,toni, True,493,419.2531019560,tap,s
+baseline_4,4,toni,True,494,419.2676658250,stimulus,
+baseline_4,4,toni,True,495,420.0177711970,stimulus,
+baseline_4,4,toni, True,495,420.0530635250,tap,l
+baseline_4,4,toni, True,495,420.7573616570,tap,l
+baseline_4,4,toni,True,496,420.7678927040,stimulus,
+baseline_4,4,toni,True,497,421.5179856360,stimulus,
+baseline_4,4,toni, True,497,421.5411153190,tap,s
+baseline_4,4,toni, True,497,422.2451020130,tap,l
+baseline_4,4,toni,True,498,422.2680399400,stimulus,
+baseline_4,4,toni,True,499,423.0181225070,stimulus,
+baseline_4,4,toni, True,499,423.0451324820,tap,l
+baseline_4,4,toni,True,500,423.7682424320,stimulus,
+baseline_4,4,toni, True,500,423.7970691070,tap,s
+baseline_4,4,toni, True,500,424.4770288740,tap,l
+baseline_4,4,toni,True,501,424.5183379120,stimulus,
+baseline_4,4,toni, True,501,425.2615973180,tap,s
+baseline_4,4,toni,True,502,425.2684075050,stimulus,
+baseline_4,4,toni,True,503,426.0185084500,stimulus,
+baseline_4,4,toni, True,503,426.0451205580,tap,s
+baseline_4,4,toni,True,504,426.7685996560,stimulus,
+baseline_4,4,toni, True,504,426.7971810480,tap,l
+baseline_4,4,toni, True,504,427.4855098780,tap,s
+baseline_4,4,toni,True,505,427.5187176810,stimulus,
+baseline_4,4,toni,True,506,428.2688356080,stimulus,
+baseline_4,4,toni, True,506,428.2852041860,tap,l
+baseline_4,4,toni,True,507,429.0189582980,stimulus,
+baseline_4,4,toni, True,507,429.0371334110,tap,s
+baseline_4,4,toni,True,508,429.7690460950,stimulus,
+baseline_4,4,toni, True,508,429.7891780160,tap,s
+baseline_4,4,toni,True,509,430.5191254550,stimulus,
+baseline_4,4,toni, True,509,430.5575657760,tap,l
+baseline_4,4,toni,True,510,431.2692299980,stimulus,
+baseline_4,4,toni, True,510,431.3332671490,tap,l
+baseline_4,4,toni,True,511,432.0193612890,stimulus,
+baseline_4,4,toni, True,511,432.0612340140,tap,l
+baseline_4,4,toni,True,512,432.7694816230,stimulus,
+baseline_4,4,toni, True,512,432.7731851170,tap,s
+baseline_4,4,toni,True,513,433.5195735540,stimulus,
+baseline_4,4,toni, True,513,433.5410827020,tap,l
+baseline_4,4,toni, True,513,434.2611970300,tap,s
+baseline_4,4,toni,True,514,434.2696767460,stimulus,
+baseline_4,4,toni,True,515,435.0197969330,stimulus,
+baseline_4,4,toni, True,515,435.0292303010,tap,l
+baseline_4,4,toni, True,515,435.7252608900,tap,l
+baseline_4,4,toni,True,516,435.7698933310,stimulus,
+baseline_4,4,toni, True,516,436.5093504980,tap,s
+baseline_4,4,toni,True,517,436.5199604060,stimulus,
+baseline_4,4,toni, True,517,437.2053054950,tap,l
+baseline_4,4,toni,True,518,437.2700757580,stimulus,
+baseline_4,4,toni,True,519,438.0202099360,stimulus,
+baseline_4,4,toni, True,519,438.0370735730,tap,s
+baseline_4,4,toni, True,519,438.7651971410,tap,l
+baseline_4,4,toni,True,520,438.7702865170,stimulus,
+baseline_4,4,toni,True,521,439.5204190990,stimulus,
+baseline_4,4,toni, True,521,439.5331787130,tap,s
+baseline_4,4,toni, True,521,440.2290502800,tap,l
+baseline_4,4,toni,True,522,440.2705004270,stimulus,
+baseline_4,4,toni,True,523,441.0205908880,stimulus,
+baseline_4,4,toni, True,523,441.1010717840,tap,s
+baseline_4,4,toni, True,523,441.7493084640,tap,l
+baseline_4,4,toni,True,524,441.7707010010,stimulus,
+baseline_4,4,toni,True,525,442.5208142680,stimulus,
+baseline_4,4,toni,True,526,443.2709487120,stimulus,
+baseline_4,4,toni, True,526,443.3174355630,tap,l
+baseline_4,4,toni, True,526,444.0053033240,tap,s
+baseline_4,4,toni,True,527,444.0210375830,stimulus,
+baseline_4,4,toni, True,527,444.6692350610,tap,l
+baseline_4,4,toni,True,528,444.7711781460,stimulus,
+baseline_4,4,toni, True,528,445.4851274070,tap,l
+baseline_4,4,toni,True,529,445.5212320720,stimulus,
+baseline_4,4,toni, True,529,446.2133376210,tap,s
+baseline_4,4,toni,True,530,446.2713515590,stimulus,
+baseline_4,4,toni, True,530,446.9011030620,tap,s
+baseline_4,4,toni,True,531,447.0214544840,stimulus,
+baseline_4,4,toni, True,531,447.7493693810,tap,s
+baseline_4,4,toni,True,532,447.7716021150,stimulus,
+baseline_4,4,toni,True,533,448.5217118680,stimulus,
+baseline_4,4,toni, True,533,448.5251122660,tap,s
+baseline_4,4,toni, True,533,449.2372182350,tap,l
+baseline_4,4,toni,True,534,449.2718526740,stimulus,
+baseline_4,4,toni, True,534,450.0054169590,tap,s
+baseline_4,4,toni,True,535,450.0219211990,stimulus,
+baseline_4,4,toni, True,535,450.7331797120,tap,l
+baseline_4,4,toni,True,536,450.7720481840,stimulus,
+baseline_4,4,toni, True,536,451.4690793240,tap,s
+baseline_4,4,toni,True,537,451.5221271950,stimulus,
+baseline_4,4,toni,True,538,452.2722705070,stimulus,
+baseline_4,4,toni, True,538,452.2931258690,tap,s
+baseline_4,4,toni,True,539,453.0223817100,stimulus,
+baseline_4,4,toni, True,539,453.0771657260,tap,l
+baseline_4,4,toni,True,540,453.7724592990,stimulus,
+baseline_4,4,toni,True,541,454.5225846440,stimulus,
+baseline_4,4,toni, True,541,454.5331528750,tap,s
+baseline_4,4,toni, True,541,455.2371862070,tap,s
+baseline_4,4,toni,True,542,455.2726591140,stimulus,
+baseline_4,4,toni,True,543,456.0227834460,stimulus,
+baseline_4,4,toni, True,543,456.0292375960,tap,s
+baseline_4,4,toni, True,543,456.7571229930,tap,s
+baseline_4,4,toni,True,544,456.7728436270,stimulus,
+baseline_4,4,toni, True,544,457.5017163550,tap,l
+baseline_4,4,toni,True,545,457.5229649670,stimulus,
+baseline_4,4,toni,True,546,458.2730557040,stimulus,
+baseline_4,4,toni, True,546,458.3011538130,tap,l
+baseline_4,4,toni, True,546,458.9971399180,tap,l
+baseline_4,4,toni,True,547,459.0231524720,stimulus,
+baseline_4,4,toni, True,547,459.7650981220,tap,s
+baseline_4,4,toni,True,548,459.7732422060,stimulus,
+baseline_4,4,toni,True,549,464.0654072350,probe_task,0
+baseline_4,4,toni, True,549,465.5833855400,probe_intention,1
+baseline_4,4,toni,True,550,469.3656204390,stimulus,
+baseline_4,4,toni, True,550,469.5333099260,tap,l
+baseline_4,4,toni,True,551,470.1156675650,stimulus,
+baseline_4,4,toni, True,551,470.1734429630,tap,l
+baseline_4,4,toni, True,551,470.8374321980,tap,s
+baseline_4,4,toni,True,552,470.8657666210,stimulus,
+baseline_4,4,toni, True,552,471.5731228940,tap,l
+baseline_4,4,toni,True,553,471.6158905010,stimulus,
+baseline_4,4,toni, True,553,472.3331441460,tap,s
+baseline_4,4,toni,True,554,472.3659314330,stimulus,
+baseline_4,4,toni,True,555,473.1160330380,stimulus,
+baseline_4,4,toni, True,555,473.8214595550,tap,l
+baseline_4,4,toni,True,556,473.8661470170,stimulus,
+baseline_4,4,toni, True,556,474.5891469140,tap,s
+baseline_4,4,toni,True,557,474.6162659510,stimulus,
+baseline_4,4,toni, True,557,475.2373060650,tap,l
+baseline_4,4,toni,True,558,475.3663627690,stimulus,
+baseline_4,4,toni, True,558,476.0532649410,tap,s
+baseline_4,4,toni,True,559,476.1165380660,stimulus,
+baseline_4,4,toni, True,559,476.8371386660,tap,s
+baseline_4,4,toni,True,560,476.8666737120,stimulus,
+baseline_4,4,toni, True,560,477.5730461520,tap,l
+baseline_4,4,toni,True,561,477.6167278300,stimulus,
+baseline_4,4,toni, True,561,478.3012132120,tap,s
+baseline_4,4,toni,True,562,478.3668638360,stimulus,
+baseline_4,4,toni, True,562,478.9890221690,tap,l
+baseline_4,4,toni,True,563,479.1169807320,stimulus,
+baseline_4,4,toni, True,563,479.7971529030,tap,l
+baseline_4,4,toni,True,564,479.8670941850,stimulus,
+baseline_4,4,toni,True,565,480.6172189860,stimulus,
+baseline_4,4,toni, True,565,480.6771271830,tap,s
+baseline_4,4,toni, True,565,481.3252025710,tap,l
+baseline_4,4,toni,True,566,481.3673561310,stimulus,
+baseline_4,4,toni,True,567,482.1174684200,stimulus,
+baseline_4,4,toni, True,567,482.1490326700,tap,l
+baseline_4,4,toni, True,567,482.8291409140,tap,s
+baseline_4,4,toni,True,568,482.8675630490,stimulus,
+baseline_4,4,toni, True,568,483.5651804870,tap,l
+baseline_4,4,toni,True,569,483.6176293390,stimulus,
+baseline_4,4,toni,True,570,484.3677270290,stimulus,
+baseline_4,4,toni, True,570,484.3731417010,tap,s
+baseline_4,4,toni,True,571,485.1178036350,stimulus,
+baseline_4,4,toni, True,571,485.5412121510,tap,l
+baseline_4,4,toni,True,572,485.8679383990,stimulus,
+baseline_4,4,toni, True,572,486.4852059870,tap,l
+baseline_4,4,toni,True,573,486.6180421380,stimulus,
+baseline_4,4,toni, True,573,487.3333147550,tap,l
+baseline_4,4,toni,True,574,487.3681477710,stimulus,
+baseline_4,4,toni, True,574,488.0131428210,tap,s
+baseline_4,4,toni,True,575,488.1183045300,stimulus,
+baseline_4,4,toni, True,575,488.8371175270,tap,s
+baseline_4,4,toni,True,576,488.8683720440,stimulus,
+baseline_4,4,toni, True,576,489.5975196540,tap,l
+baseline_4,4,toni,True,577,489.6184652580,stimulus,
+baseline_4,4,toni, True,577,490.3652616900,tap,l
+baseline_4,4,toni,True,578,490.3685777290,stimulus,
+baseline_4,4,toni,True,579,491.1186444330,stimulus,
+baseline_4,4,toni, True,579,491.1491591640,tap,s
+baseline_4,4,toni, True,579,491.8530288670,tap,l
+baseline_4,4,toni,True,580,491.8687491800,stimulus,
+baseline_4,4,toni, True,580,492.5972705550,tap,l
+baseline_4,4,toni,True,581,492.6188695680,stimulus,
+baseline_4,4,toni,True,582,493.3689798520,stimulus,
+baseline_4,4,toni,True,583,494.1191046540,stimulus,
+baseline_4,4,toni, True,583,494.1411673760,tap,s
+baseline_4,4,toni,True,584,494.8692061890,stimulus,
+baseline_4,4,toni, True,584,494.9092204940,tap,l
+baseline_4,4,toni,True,585,495.6193458980,stimulus,
+baseline_4,4,toni, True,585,495.6854948260,tap,s
+baseline_4,4,toni, True,585,496.3573597150,tap,s
+baseline_4,4,toni,True,586,496.3694587160,stimulus,
+baseline_4,4,toni, True,586,497.0611503080,tap,l
+baseline_4,4,toni,True,587,497.1195610800,stimulus,
+baseline_4,4,toni, True,587,497.8530073000,tap,s
+baseline_4,4,toni,True,588,497.8696688680,stimulus,
+baseline_4,4,toni, True,588,498.5894608990,tap,s
+baseline_4,4,toni,True,589,498.6197703480,stimulus,
+baseline_4,4,toni,True,590,499.3699294750,stimulus,
+baseline_4,4,toni, True,590,499.3734818830,tap,l
+baseline_4,4,toni, True,590,500.0773599870,tap,s
+baseline_4,4,toni,True,591,500.1200435130,stimulus,
+baseline_4,4,toni, True,591,500.8451120030,tap,s
+baseline_4,4,toni,True,592,500.8701939480,stimulus,
+baseline_4,4,toni, True,592,501.5332176480,tap,l
+baseline_4,4,toni,True,593,501.6202930750,stimulus,
+baseline_4,4,toni, True,593,502.2775134320,tap,s
+baseline_4,4,toni,True,594,502.3703966470,stimulus,
+baseline_4,4,toni, True,594,502.9973958620,tap,s
+baseline_4,4,toni,True,595,503.1204872230,stimulus,
+baseline_4,4,toni, True,595,503.7896157200,tap,s
+baseline_4,4,toni,True,596,503.8705831390,stimulus,
+baseline_4,4,toni, True,596,504.5091522940,tap,l
+baseline_4,4,toni,True,597,504.6207122970,stimulus,
+baseline_4,4,toni, True,597,505.2690760730,tap,s
+baseline_4,4,toni,True,598,505.3708250220,stimulus,
+baseline_4,4,toni, True,598,505.9411270580,tap,l
+baseline_4,4,toni,True,599,506.1208986230,stimulus,
+baseline_4,4,toni, True,599,506.7891879420,tap,l
+baseline_4,4,toni,True,600,506.8710140020,stimulus,
+baseline_4,4,toni, True,600,507.4851925720,tap,s
+baseline_4,4,toni,True,601,507.6210944690,stimulus,
+baseline_4,4,toni, True,601,508.1412531000,tap,l
+baseline_4,4,toni,True,602,508.3712372070,stimulus,
+baseline_4,4,toni, True,602,508.4292598150,tap,l
+baseline_4,4,toni,True,603,509.1213290850,stimulus,
+baseline_4,4,toni, True,603,509.1331005530,tap,s
+baseline_4,4,toni, True,603,509.8209796310,tap,l
+baseline_4,4,toni,True,604,509.8714256630,stimulus,
+baseline_4,4,toni, True,604,510.5574462960,tap,s
+baseline_4,4,toni,True,605,510.6215392040,stimulus,
+baseline_4,4,toni, True,605,511.2370449710,tap,l
+baseline_4,4,toni,True,606,511.3716447510,stimulus,
+baseline_4,4,toni, True,606,512.1171840060,tap,s
+baseline_4,4,toni,True,607,515.7315365600,probe_task,1
+baseline_4,4,toni, True,607,518.2827796350,probe_intention,1
+baseline_4,4,toni,True,608,522.0648639580,stimulus,
+baseline_4,4,toni, True,608,522.3173744710,tap,l
+baseline_4,4,toni, True,608,522.7971372640,tap,s
+baseline_4,4,toni,True,609,522.8150040150,stimulus,
+baseline_4,4,toni,True,610,523.5650404490,stimulus,
+baseline_4,4,toni, True,610,524.3091022580,tap,l
+baseline_4,4,toni,True,611,524.3151555500,stimulus,
+baseline_4,4,toni, True,611,525.0211685710,tap,s
+baseline_4,4,toni,True,612,525.0652751440,stimulus,
+baseline_4,4,toni, True,612,525.7895764820,tap,s
+baseline_4,4,toni,True,613,525.8153674690,stimulus,
+baseline_4,4,toni, True,613,526.5091943940,tap,s
+baseline_4,4,toni,True,614,526.5655073880,stimulus,
+baseline_4,4,toni, True,614,527.2451842430,tap,l
+baseline_4,4,toni,True,615,527.3155494860,stimulus,
+baseline_4,4,toni, True,615,528.0132287770,tap,s
+baseline_4,4,toni,True,616,528.0656945020,stimulus,
+baseline_4,4,toni, True,616,528.7251082230,tap,s
+baseline_4,4,toni,True,617,528.8157584680,stimulus,
+baseline_4,4,toni,True,618,529.5658555980,stimulus,
+baseline_4,4,toni, True,618,529.5731869800,tap,s
+baseline_4,4,toni, True,618,530.3011504290,tap,l
+baseline_4,4,toni,True,619,530.3159708000,stimulus,
+baseline_4,4,toni, True,619,531.0454283400,tap,l
+baseline_4,4,toni,True,620,531.0660833820,stimulus,
+baseline_4,4,toni,True,621,531.8162057740,stimulus,
+baseline_4,4,toni, True,621,532.4852001170,tap,l
+baseline_4,4,toni,True,622,532.5663372700,stimulus,
+baseline_4,4,toni, True,622,533.2211624260,tap,l
+baseline_4,4,toni,True,623,533.3164654000,stimulus,
+baseline_4,4,toni, True,623,534.0371010640,tap,s
+baseline_4,4,toni,True,624,534.0665560650,stimulus,
+baseline_4,4,toni, True,624,534.7254389920,tap,l
+baseline_4,4,toni,True,625,534.8166457690,stimulus,
+baseline_4,4,toni, True,625,535.4931536610,tap,l
+baseline_4,4,toni,True,626,535.5667487490,stimulus,
+baseline_4,4,toni,True,627,536.3168358590,stimulus,
+baseline_4,4,toni, True,627,536.3251773350,tap,l
+baseline_4,4,toni,True,628,537.0669735230,stimulus,
+baseline_4,4,toni, True,628,537.0692275940,tap,s
+baseline_4,4,toni, True,628,537.7170524670,tap,s
+baseline_4,4,toni,True,629,537.8170827870,stimulus,
+baseline_4,4,toni, True,629,538.5172639980,tap,l
+baseline_4,4,toni,True,630,538.5671380420,stimulus,
+baseline_4,4,toni, True,630,539.3091339840,tap,l
+baseline_4,4,toni,True,631,539.3172623810,stimulus,
+baseline_4,4,toni, True,631,539.9732705500,tap,l
+baseline_4,4,toni,True,632,540.0674233420,stimulus,
+baseline_4,4,toni, True,632,540.7091148130,tap,l
+baseline_4,4,toni,True,633,540.8175382930,stimulus,
+baseline_4,4,toni, True,633,541.5331742900,tap,s
+baseline_4,4,toni,True,634,541.5676578900,stimulus,
+baseline_4,4,toni, True,634,542.2611231820,tap,l
+baseline_4,4,toni,True,635,542.3178624680,stimulus,
+baseline_4,4,toni, True,635,543.0452877220,tap,l
+baseline_4,4,toni,True,636,543.0679350480,stimulus,
+baseline_4,4,toni, True,636,543.7890839670,tap,s
+baseline_4,4,toni,True,637,543.8180397500,stimulus,
+baseline_4,4,toni, True,637,544.4051980380,tap,l
+baseline_4,4,toni,True,638,544.5681299500,stimulus,
+baseline_4,4,toni,True,639,545.3182428640,stimulus,
+baseline_4,4,toni, True,639,545.3253840580,tap,l
+baseline_4,4,toni,True,640,546.0683774040,stimulus,
+baseline_4,4,toni, True,640,546.0851633000,tap,s
+baseline_4,4,toni, True,640,546.7733607500,tap,l
+baseline_4,4,toni,True,641,546.8184818120,stimulus,
+baseline_4,4,toni, True,641,547.4373228550,tap,s
+baseline_4,4,toni,True,642,547.5685630340,stimulus,
+baseline_4,4,toni, True,642,548.2131474090,tap,l
+baseline_4,4,toni,True,643,548.3187067050,stimulus,
+baseline_4,4,toni,True,644,549.0687944260,stimulus,
+baseline_4,4,toni, True,644,549.1091478990,tap,s
+baseline_4,4,toni, True,644,549.7811938290,tap,s
+baseline_4,4,toni,True,645,549.8189243530,stimulus,
+baseline_4,4,toni, True,645,550.5410617820,tap,l
+baseline_4,4,toni,True,646,550.5690361090,stimulus,
+baseline_4,4,toni, True,646,551.3011637050,tap,s
+baseline_4,4,toni,True,647,551.3192008480,stimulus,
+baseline_4,4,toni, True,647,552.0292254040,tap,s
+baseline_4,4,toni,True,648,552.0692774930,stimulus,
+baseline_4,4,toni, True,648,552.6769910610,tap,l
+baseline_4,4,toni,True,649,552.8193790850,stimulus,
+baseline_4,4,toni, True,649,553.5572989960,tap,s
+baseline_4,4,toni,True,650,553.5694626580,stimulus,
+baseline_4,4,toni, True,650,554.1971078880,tap,l
+baseline_4,4,toni,True,651,554.3195976610,stimulus,
+baseline_4,4,toni, True,651,555.0690892600,tap,s
+baseline_4,4,toni,True,652,555.0696326510,stimulus,
+baseline_4,4,toni, True,652,555.7972144070,tap,s
+baseline_4,4,toni,True,653,555.8197581570,stimulus,
+baseline_4,4,toni,True,654,556.5698449120,stimulus,
+baseline_4,4,toni, True,654,556.5815938680,tap,l
+baseline_4,4,toni, True,654,557.3012094260,tap,s
+baseline_4,4,toni,True,655,557.3199420570,stimulus,
+baseline_4,4,toni, True,655,557.9810950410,tap,s
+baseline_4,4,toni,True,656,558.0700141580,stimulus,
+baseline_4,4,toni, True,656,558.7971983010,tap,l
+baseline_4,4,toni,True,657,558.8200987340,stimulus,
+baseline_4,4,toni,True,658,559.5701981040,stimulus,
+baseline_4,4,toni, True,658,559.5971193170,tap,s
+baseline_4,4,toni,True,659,560.3202811790,stimulus,
+baseline_4,4,toni, True,659,560.3333142000,tap,s
+baseline_4,4,toni,True,660,561.0703804450,stimulus,
+baseline_4,4,toni, True,660,561.0930442380,tap,l
+baseline_4,4,toni, True,660,561.7973214730,tap,s
+baseline_4,4,toni,True,661,561.8204999270,stimulus,
+baseline_4,4,toni,True,662,562.5706091050,stimulus,
+baseline_4,4,toni, True,662,562.6130815490,tap,l
+baseline_4,4,toni,True,663,563.3207313750,stimulus,
+baseline_4,4,toni, True,663,563.3413579510,tap,l
+baseline_4,4,toni, True,663,564.0693838940,tap,s
+baseline_4,4,toni,True,664,564.0708347260,stimulus,
+baseline_4,4,toni, True,664,564.7813558920,tap,l
+baseline_4,4,toni,True,665,564.8209708740,stimulus,
+baseline_4,4,toni,True,666,565.5710454980,stimulus,
+baseline_4,4,toni, True,666,565.5732247770,tap,s
+baseline_4,4,toni, True,666,566.3175432270,tap,l
+baseline_4,4,toni,True,667,566.3211216050,stimulus,
+baseline_4,4,toni, True,667,567.0293407550,tap,l
+baseline_4,4,toni,True,668,567.0712455480,stimulus,
+baseline_4,4,toni, True,668,567.8050524740,tap,s
+baseline_4,4,toni,True,669,567.8213901040,stimulus,
+baseline_4,4,toni, True,669,568.5011600710,tap,l
+baseline_4,4,toni,True,670,568.5715113300,stimulus,
+baseline_4,4,toni, True,670,569.2371232980,tap,s
+baseline_4,4,toni,True,671,569.3216143110,stimulus,
+baseline_4,4,toni, True,671,570.0297273610,tap,s
+baseline_4,4,toni,True,672,570.0716830970,stimulus,
+baseline_4,4,toni, True,672,570.7970362120,tap,l
+baseline_4,4,toni,True,673,570.8218435720,stimulus,
+baseline_4,4,toni, True,673,571.5492284540,tap,l
+baseline_4,4,toni,True,674,571.5719463350,stimulus,
+baseline_4,4,toni,True,675,572.3220945380,stimulus,
+baseline_4,4,toni, True,675,572.3331514050,tap,l
+baseline_4,4,toni, True,675,573.0692797100,tap,s
+baseline_4,4,toni,True,676,573.0722147540,stimulus,
+baseline_4,4,toni, True,676,573.7731974370,tap,l
+baseline_4,4,toni,True,677,573.8223282170,stimulus,
+baseline_4,4,toni,True,678,574.5724259740,stimulus,
+baseline_4,4,toni, True,678,574.6213585340,tap,s
+baseline_4,4,toni, True,678,575.3014051920,tap,s
+baseline_4,4,toni,True,679,575.3225668030,stimulus,
+baseline_4,4,toni, True,679,576.0213064420,tap,l
+baseline_4,4,toni,True,680,576.0726557180,stimulus,
+baseline_4,4,toni,True,681,576.8227551520,stimulus,
+baseline_4,4,toni,True,682,577.5728903670,stimulus,
+baseline_4,4,toni, True,682,577.5970687320,tap,s
+baseline_4,4,toni, True,682,578.2370811620,tap,s
+baseline_4,4,toni,True,683,578.3230025620,stimulus,
+baseline_4,4,toni, True,683,579.0051368200,tap,s
+baseline_4,4,toni,True,684,579.0730915940,stimulus,
+baseline_4,4,toni, True,684,579.7892063400,tap,s
+baseline_4,4,toni,True,685,579.8232046150,stimulus,
+baseline_4,4,toni, True,685,580.3733260050,tap,l
+baseline_4,4,toni,True,686,580.5733366080,stimulus,
+baseline_4,4,toni, True,686,581.3010086600,tap,s
+baseline_4,4,toni,True,687,581.3234544940,stimulus,
+baseline_4,4,toni, True,687,581.9812459990,tap,l
+baseline_4,4,toni,True,688,582.0735672240,stimulus,
+baseline_4,4,toni,True,689,582.8236386030,stimulus,
+baseline_4,4,toni, True,689,582.8453403580,tap,l
+baseline_4,4,toni,True,690,583.5737812670,stimulus,
+baseline_4,4,toni, True,690,583.5892229060,tap,l
+baseline_4,4,toni, True,690,584.3091035330,tap,l
+baseline_4,4,toni,True,691,584.3238432110,stimulus,
+baseline_4,4,toni, True,691,585.0212541390,tap,l
+baseline_4,4,toni,True,692,585.0739440400,stimulus,
+baseline_4,4,toni,True,693,585.8240338290,stimulus,
+baseline_4,4,toni, True,693,585.8291493000,tap,s
+baseline_4,4,toni, True,693,586.5332957380,tap,l
+baseline_4,4,toni,True,694,586.5741416290,stimulus,
+baseline_4,4,toni,True,695,587.3242206900,stimulus,
+baseline_4,4,toni, True,695,587.3651024250,tap,s
+baseline_4,4,toni, True,695,588.0292317840,tap,s
+baseline_4,4,toni,True,696,588.0743486640,stimulus,
+baseline_4,4,toni, True,696,588.7810016300,tap,l
+baseline_4,4,toni,True,697,588.8244298830,stimulus,
+baseline_4,4,toni, True,697,589.5251838160,tap,l
+baseline_4,4,toni,True,698,589.5745172030,stimulus,
+baseline_4,4,toni, True,698,590.3171805520,tap,s
+baseline_4,4,toni,True,699,590.3246158240,stimulus,
+baseline_4,4,toni, True,699,590.9011875630,tap,l
+baseline_4,4,toni,True,700,591.0747728950,stimulus,
+baseline_4,4,toni, True,700,591.8212301030,tap,s
+baseline_4,4,toni,True,701,591.8248384810,stimulus,
+baseline_4,4,toni,True,702,596.0294741310,probe_task,0
+baseline_4,4,toni, True,702,596.4315969790,probe_intention,1
+baseline_4,4,toni,True,703,600.2132304050,stimulus,
+baseline_4,4,toni, True,703,600.3253560270,tap,l
+baseline_4,4,toni,True,704,600.9632259600,stimulus,
+baseline_4,4,toni, True,704,601.0053275390,tap,l
+baseline_4,4,toni,True,705,601.7133522300,stimulus,
+baseline_4,4,toni, True,705,601.7175174520,tap,s
+baseline_4,4,toni, True,705,602.4370436230,tap,l
+baseline_4,4,toni,True,706,602.4635055300,stimulus,
+baseline_4,4,toni, True,706,603.1811368430,tap,l
+baseline_4,4,toni,True,707,603.2135327640,stimulus,
+baseline_4,4,toni, True,707,603.9412153730,tap,s
+baseline_4,4,toni,True,708,603.9636715220,stimulus,
+baseline_4,4,toni, True,708,604.7015467160,tap,l
+baseline_4,4,toni,True,709,604.7137672870,stimulus,
+baseline_4,4,toni, True,709,605.4291469370,tap,s
+baseline_4,4,toni,True,710,605.4638861440,stimulus,
+baseline_4,4,toni, True,710,606.2052734030,tap,l
+baseline_4,4,toni,True,711,606.2139833510,stimulus,
+baseline_4,4,toni, True,711,606.9172314730,tap,s
+baseline_4,4,toni,True,712,606.9640747290,stimulus,
+baseline_4,4,toni, True,712,607.6614406250,tap,s
+baseline_4,4,toni,True,713,607.7141561830,stimulus,
+baseline_4,4,toni, True,713,608.4210861930,tap,s
+baseline_4,4,toni,True,714,608.4642539670,stimulus,
+baseline_4,4,toni,True,715,609.2143201410,stimulus,
+baseline_4,4,toni, True,715,609.2210560690,tap,l
+baseline_4,4,toni, True,715,609.9250905230,tap,l
+baseline_4,4,toni,True,716,609.9645510780,stimulus,
+baseline_4,4,toni,True,717,610.7146368200,stimulus,
+baseline_4,4,toni, True,717,610.7333950210,tap,l
+baseline_4,4,toni,True,718,611.4647499320,stimulus,
+baseline_4,4,toni, True,718,611.5331803340,tap,l
+baseline_4,4,toni,True,719,612.2148290020,stimulus,
+baseline_4,4,toni, True,719,612.2452618700,tap,s
+baseline_4,4,toni,True,720,612.9649174560,stimulus,
+baseline_4,4,toni, True,720,612.9813322110,tap,l
+baseline_4,4,toni,True,721,613.7150044780,stimulus,
+baseline_4,4,toni, True,721,613.7492076720,tap,l
+baseline_4,4,toni, True,721,614.4210929720,tap,s
+baseline_4,4,toni,True,722,614.4651078020,stimulus,
+baseline_4,4,toni, True,722,615.2051971140,tap,l
+baseline_4,4,toni,True,723,615.2152314720,stimulus,
+baseline_4,4,toni, True,723,615.9251636960,tap,s
+baseline_4,4,toni,True,724,615.9653903750,stimulus,
+baseline_4,4,toni,True,725,616.7154972320,stimulus,
+baseline_4,4,toni, True,725,616.7491929790,tap,s
+baseline_4,4,toni,True,726,617.4655775420,stimulus,
+baseline_4,4,toni, True,726,617.7012016730,tap,l
+baseline_4,4,toni,True,727,618.2156628160,stimulus,
+baseline_4,4,toni, True,727,618.2691516670,tap,l
+baseline_4,4,toni, True,727,618.9412672960,tap,l
+baseline_4,4,toni,True,728,618.9657492300,stimulus,
+baseline_4,4,toni, True,728,619.6611998850,tap,s
+baseline_4,4,toni,True,729,619.7158213980,stimulus,
+baseline_4,4,toni, True,729,620.4452790900,tap,l
+baseline_4,4,toni,True,730,620.4659449260,stimulus,
+baseline_4,4,toni,True,731,621.2160588230,stimulus,
+baseline_4,4,toni, True,731,621.2293462610,tap,l
+baseline_4,4,toni, True,731,621.9572519260,tap,s
+baseline_4,4,toni,True,732,621.9661480430,stimulus,
+baseline_4,4,toni,True,733,622.7162679090,stimulus,
+baseline_4,4,toni, True,733,622.7334500700,tap,l
+baseline_4,4,toni,True,734,623.4663574460,stimulus,
+baseline_4,4,toni, True,734,623.4770508150,tap,s
+baseline_4,4,toni, True,734,624.1813300260,tap,l
+baseline_4,4,toni,True,735,624.2164212090,stimulus,
+baseline_4,4,toni, True,735,624.9651230460,tap,s
+baseline_4,4,toni,True,736,624.9664853380,stimulus,
+baseline_4,4,toni,True,737,625.7165978150,stimulus,
+baseline_4,4,toni, True,737,625.7411323250,tap,l
+baseline_4,4,toni,True,738,626.4667046840,stimulus,
+baseline_4,4,toni, True,738,626.4691503310,tap,l
+baseline_4,4,toni, True,738,627.2132277620,tap,l
+baseline_4,4,toni,True,739,627.2168039540,stimulus,
+baseline_4,4,toni, True,739,627.9410292200,tap,s
+baseline_4,4,toni,True,740,627.9669570030,stimulus,
+baseline_4,4,toni,True,741,628.7170850750,stimulus,
+baseline_4,4,toni, True,741,628.7251430540,tap,l
+baseline_4,4,toni,True,742,629.4671940210,stimulus,
+baseline_4,4,toni, True,742,629.4691090160,tap,s
+baseline_4,4,toni,True,743,630.2173142210,stimulus,
+baseline_4,4,toni, True,743,630.2210499840,tap,l
+baseline_4,4,toni, True,743,630.9250355940,tap,s
+baseline_4,4,toni,True,744,630.9674184220,stimulus,
+baseline_4,4,toni,True,745,631.7174998640,stimulus,
+baseline_4,4,toni, True,745,631.7331848760,tap,s
+baseline_4,4,toni, True,745,632.4531999930,tap,l
+baseline_4,4,toni,True,746,632.4675882220,stimulus,
+baseline_4,4,toni, True,746,633.2131600190,tap,l
+baseline_4,4,toni,True,747,633.2176429990,stimulus,
+baseline_4,4,toni, True,747,633.9571450190,tap,s
+baseline_4,4,toni,True,748,633.9677492220,stimulus,
+baseline_4,4,toni, True,748,634.6212655820,tap,l
+baseline_4,4,toni,True,749,634.7178802760,stimulus,
+baseline_4,4,toni,True,750,635.4680261910,stimulus,
+baseline_4,4,toni, True,750,635.4693904900,tap,l
+baseline_4,4,toni,True,751,636.2181447900,stimulus,
+baseline_4,4,toni, True,751,636.2693303410,tap,s
+baseline_4,4,toni,True,752,636.9682664350,stimulus,
+baseline_4,4,toni, True,752,636.9891262940,tap,l
+baseline_4,4,toni, True,752,637.7171365430,tap,l
+baseline_4,4,toni,True,753,637.7183500230,stimulus,
+baseline_4,4,toni,True,754,638.4684958100,stimulus,
+baseline_4,4,toni,True,755,639.2186096450,stimulus,
+baseline_4,4,toni, True,755,639.3252710040,tap,s
+baseline_4,4,toni, True,755,639.9251847510,tap,s
+baseline_4,4,toni,True,756,639.9687375380,stimulus,
+baseline_4,4,toni,True,757,640.7188634350,stimulus,
+baseline_4,4,toni, True,757,640.7331830700,tap,s
+baseline_4,4,toni,True,758,641.4689964520,stimulus,
+baseline_4,4,toni, True,758,641.4770233270,tap,l
+baseline_4,4,toni,True,759,642.2191078740,stimulus,
+baseline_4,4,toni, True,759,642.2851829890,tap,s
+baseline_4,4,toni,True,760,642.9691865850,stimulus,
+baseline_4,4,toni, True,760,642.9892688410,tap,l
+baseline_4,4,toni,True,761,643.7193260450,stimulus,
+baseline_4,4,toni,True,762,644.4694205720,stimulus,
+baseline_4,4,toni, True,762,644.5251412730,tap,l
+baseline_4,4,toni,True,763,645.2195402760,stimulus,
+baseline_4,4,toni, True,763,645.2291278650,tap,l
+baseline_4,4,toni, True,763,645.9332898520,tap,s
+baseline_4,4,toni,True,764,645.9697134010,stimulus,
+baseline_4,4,toni,True,765,646.7197544750,stimulus,
+baseline_4,4,toni, True,765,646.7331390560,tap,s
+baseline_4,4,toni,True,766,647.4698772580,stimulus,
+baseline_4,4,toni, True,766,647.4932039020,tap,s
+baseline_4,4,toni, True,766,648.2050414820,tap,l
+baseline_4,4,toni,True,767,648.2200006060,stimulus,
+baseline_4,4,toni,True,768,648.9701455930,stimulus,
+baseline_4,4,toni, True,768,648.9895643920,tap,l
+baseline_4,4,toni,True,769,649.7202211290,stimulus,
+baseline_4,4,toni, True,769,649.7410960420,tap,s
+baseline_4,4,toni, True,769,650.4211338840,tap,l
+baseline_4,4,toni,True,770,650.4703547190,stimulus,
+baseline_4,4,toni, True,770,651.1734044010,tap,s
+baseline_4,4,toni,True,771,651.2204562450,stimulus,
+baseline_4,4,toni,True,772,651.9705874370,stimulus,
+baseline_4,4,toni, True,772,651.9731816240,tap,l
+baseline_4,4,toni,True,773,652.7207118670,stimulus,
+baseline_4,4,toni, True,773,652.7330420950,tap,l
+baseline_4,4,toni,True,774,653.4708030450,stimulus,
+baseline_4,4,toni, True,774,653.5252796320,tap,l
+baseline_4,4,toni,True,775,654.2208971980,stimulus,
+baseline_4,4,toni, True,775,654.2610116870,tap,s
+baseline_4,4,toni,True,776,654.9709786980,stimulus,
+baseline_4,4,toni, True,776,654.9891859650,tap,l
+baseline_4,4,toni, True,776,655.7010495900,tap,s
+baseline_4,4,toni,True,777,655.7210502700,stimulus,
+baseline_4,4,toni,True,778,656.4711872280,stimulus,
+baseline_4,4,toni, True,778,656.5011793330,tap,s
+baseline_4,4,toni, True,778,657.1574796100,tap,l
+baseline_4,4,toni,True,779,657.2213011480,stimulus,
+baseline_4,4,toni, True,779,657.9494683070,tap,s
+baseline_4,4,toni,True,780,657.9713869980,stimulus,
+baseline_4,4,toni, True,780,658.6930709170,tap,l
+baseline_4,4,toni,True,781,664.4127946920,probe_task,2
+baseline_4,4,toni, True,781,669.4306572760,probe_intention,2
+baseline_4,4,toni,True,782,673.2121247540,stimulus,
+baseline_4,4,toni, True,782,673.2140983220,tap,l
+baseline_4,4,toni, True,782,673.2291251310,tap,l
+baseline_4,4,toni, True,782,673.9172613920,tap,s
+baseline_4,4,toni,True,783,673.9621990540,stimulus,
+baseline_4,4,toni, True,783,674.6612673460,tap,l
+baseline_4,4,toni,True,784,674.7122782840,stimulus,
+baseline_4,4,toni, True,784,675.3972534360,tap,s
+baseline_4,4,toni,True,785,675.4623952980,stimulus,
+baseline_4,4,toni, True,785,676.1331404710,tap,s
+baseline_4,4,toni,True,786,676.2125331100,stimulus,
+baseline_4,4,toni, True,786,676.8930918280,tap,l
+baseline_4,4,toni,True,787,676.9626453700,stimulus,
+baseline_4,4,toni, True,787,677.6370739490,tap,s
+baseline_4,4,toni,True,788,677.7128001370,stimulus,
+baseline_4,4,toni, True,788,678.3411972070,tap,l
+baseline_4,4,toni,True,789,678.4628682030,stimulus,
+baseline_4,4,toni, True,789,679.1570561830,tap,l
+baseline_4,4,toni,True,790,679.2129462090,stimulus,
+baseline_4,4,toni, True,790,679.9013718340,tap,s
+baseline_4,4,toni,True,791,679.9630918250,stimulus,
+baseline_4,4,toni, True,791,680.6453846650,tap,l
+baseline_4,4,toni,True,792,680.7131699580,stimulus,
+baseline_4,4,toni,True,793,681.4632963460,stimulus,
+baseline_4,4,toni, True,793,681.4692010300,tap,s
+baseline_4,4,toni, True,793,682.1814168990,tap,l
+baseline_4,4,toni,True,794,682.2133759780,stimulus,
+baseline_4,4,toni, True,794,682.9412727250,tap,s
+baseline_4,4,toni,True,795,682.9635422010,stimulus,
+baseline_4,4,toni, True,795,683.6774124880,tap,s
+baseline_4,4,toni,True,796,683.7136589820,stimulus,
+baseline_4,4,toni, True,796,684.4371947780,tap,l
+baseline_4,4,toni,True,797,684.4637589850,stimulus,
+baseline_4,4,toni,True,798,685.2138684650,stimulus,
+baseline_4,4,toni, True,798,685.2215736990,tap,s
+baseline_4,4,toni,True,799,685.9639631470,stimulus,
+baseline_4,4,toni, True,799,686.0054805140,tap,s

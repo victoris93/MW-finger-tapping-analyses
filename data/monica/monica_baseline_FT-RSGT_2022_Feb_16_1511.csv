@@ -1,0 +1,1619 @@
+# {'participant': 'monica', 'session': 'N', 'EEG': 'No', 'date': '2022_Feb_16_1511', 'expName': 'FT-RSGT', 'frameRate': 60.01777187268586}
+subj, EEG,trial,time, stimulus, response
+monica,False,0,0.0001186150,stimulus,
+monica, False,0,0.6370158080,tap,s
+monica,False,1,0.7502155190,stimulus,
+monica, False,1,1.3976638580,tap,s
+monica,False,2,1.5002982830,stimulus,
+monica, False,2,2.0656398160,tap,s
+monica,False,3,2.2504373760,stimulus,
+monica, False,3,2.8094621100,tap,s
+monica,False,4,3.0005646250,stimulus,
+monica, False,4,3.4840585310,tap,l
+monica,False,5,3.7506944390,stimulus,
+monica, False,5,4.2244696930,tap,l
+monica,False,6,4.5008284180,stimulus,
+monica, False,6,5.0275932440,tap,s
+monica,False,7,5.2509558830,stimulus,
+monica, False,7,5.6896129820,tap,s
+monica,False,8,6.0010835720,stimulus,
+monica, False,8,6.4106217390,tap,l
+monica,False,9,6.7512242200,stimulus,
+monica, False,9,7.1964101370,tap,l
+monica,False,10,7.5013353980,stimulus,
+monica, False,10,7.8783826010,tap,l
+monica,False,11,8.2514248260,stimulus,
+monica, False,11,8.7102145530,tap,l
+monica,False,12,9.0015240070,stimulus,
+monica, False,12,9.5948372900,tap,l
+monica,False,13,9.7516141900,stimulus,
+monica, False,13,10.2420904280,tap,l
+monica,False,14,10.5017080830,stimulus,
+monica, False,14,10.9276363530,tap,l
+monica,False,15,11.2518290800,stimulus,
+monica, False,15,11.5192904280,tap,s
+monica,False,16,12.0019507380,stimulus,
+monica, False,16,12.3812805070,tap,l
+monica,False,17,12.7520587640,stimulus,
+monica, False,17,13.1670355740,tap,l
+monica,False,18,13.5021786030,stimulus,
+monica, False,18,13.9533043170,tap,l
+monica,False,19,14.2523138210,stimulus,
+monica, False,19,14.5580073430,tap,s
+monica,False,20,15.0024484490,stimulus,
+monica, False,20,15.4261685060,tap,l
+monica,False,21,15.7525451490,stimulus,
+monica, False,21,16.1360811760,tap,l
+monica,False,22,16.5026406180,stimulus,
+monica, False,22,16.7922611180,tap,s
+monica,False,23,17.2527175130,stimulus,
+monica, False,23,17.4689660950,tap,s
+monica,False,24,18.0028135350,stimulus,
+monica, False,24,18.1032096120,tap,s
+monica, False,24,18.7027105700,tap,s
+monica,False,25,18.7529146710,stimulus,
+monica, False,25,19.2871720780,tap,s
+monica,False,26,19.5030401920,stimulus,
+monica, False,26,20.0367512010,tap,s
+monica,False,27,20.2531687560,stimulus,
+monica, False,27,20.7106185010,tap,l
+monica,False,28,21.0032633730,stimulus,
+monica, False,28,21.4085912290,tap,l
+monica,False,29,21.7533369750,stimulus,
+monica, False,29,22.1667230070,tap,s
+monica,False,30,22.5034639870,stimulus,
+monica, False,30,22.7645470610,tap,s
+monica,False,31,23.2535649380,stimulus,
+monica, False,31,23.5969020610,tap,s
+monica,False,32,24.0037091330,stimulus,
+monica, False,32,24.3463324420,tap,l
+monica,False,33,24.7538058450,stimulus,
+monica, False,33,25.1408288010,tap,s
+monica,False,34,25.5039003610,stimulus,
+monica, False,34,25.8513349410,tap,l
+monica,False,35,26.2539739470,stimulus,
+monica, False,35,26.5408335750,tap,s
+monica,False,36,27.0041158100,stimulus,
+monica, False,36,27.3385266440,tap,s
+monica,False,37,27.7542022280,stimulus,
+monica, False,37,28.0115054380,tap,s
+monica,False,38,28.5043081210,stimulus,
+monica, False,38,28.7952018710,tap,s
+monica,False,39,29.2544466080,stimulus,
+monica, False,39,29.5643097110,tap,s
+monica,False,40,30.0045509210,stimulus,
+monica, False,40,30.1731787610,tap,s
+monica, False,40,30.7551807740,tap,s
+monica,False,41,30.7554401490,stimulus,
+monica, False,41,31.4205255150,tap,s
+monica,False,42,31.5055940660,stimulus,
+monica, False,42,32.0371178330,tap,s
+monica,False,43,32.2557311430,stimulus,
+monica, False,43,32.7470984890,tap,s
+monica,False,44,33.0058551860,stimulus,
+monica, False,44,33.4114533760,tap,l
+monica,False,45,33.7559422430,stimulus,
+monica, False,45,34.2002533480,tap,l
+monica,False,46,34.5060182420,stimulus,
+monica, False,46,34.9154161140,tap,s
+monica,False,47,35.2560899470,stimulus,
+monica, False,47,35.6788211580,tap,s
+monica,False,48,36.0061988670,stimulus,
+monica, False,48,36.3523268770,tap,l
+monica,False,49,36.7562874240,stimulus,
+monica, False,49,37.1028183850,tap,l
+monica,False,50,37.5063659290,stimulus,
+monica, False,50,37.8031946740,tap,l
+monica,False,51,38.2564988650,stimulus,
+monica, False,51,38.6868790860,tap,l
+monica,False,52,39.0066001780,stimulus,
+monica, False,52,39.3932110730,tap,l
+monica,False,53,39.7567142570,stimulus,
+monica, False,53,40.0616154970,tap,l
+monica,False,54,40.5068047480,stimulus,
+monica, False,54,40.8597902550,tap,l
+monica, False,54,41.1879462740,tap,s
+monica,False,55,41.2569330610,stimulus,
+monica, False,55,41.8163411560,tap,s
+monica,False,56,42.0070150090,stimulus,
+monica, False,56,42.3266426380,tap,l
+monica,False,57,42.7570948840,stimulus,
+monica, False,57,43.0585833540,tap,l
+monica,False,58,43.5072017690,stimulus,
+monica, False,58,43.7813567000,tap,l
+monica,False,59,44.2572699920,stimulus,
+monica, False,59,44.6787149540,tap,l
+monica,False,60,45.0073723970,stimulus,
+monica,False,61,45.7574776880,stimulus,
+monica, False,61,46.1812698290,tap,s
+monica,False,62,46.5076211420,stimulus,
+monica, False,62,46.5990673820,tap,s
+monica,False,63,47.2577575310,stimulus,
+monica, False,63,47.2800604290,tap,s
+monica, False,63,47.5565547860,tap,l
+monica, False,63,47.9210538900,tap,s
+monica,False,64,48.0078903290,stimulus,
+monica, False,64,48.1590594250,tap,l
+monica,False,65,48.7580315140,stimulus,
+monica, False,65,48.8256590790,tap,l
+monica, False,65,49.4659818160,tap,l
+monica,False,66,49.5081562900,stimulus,
+monica, False,66,50.1841830010,tap,l
+monica,False,67,50.2582145210,stimulus,
+monica, False,67,50.7478597810,tap,s
+monica,False,68,51.0083269200,stimulus,
+monica, False,68,51.4503699220,tap,s
+monica,False,69,51.7584342550,stimulus,
+monica, False,69,52.2969468610,tap,s
+monica,False,70,52.5085656790,stimulus,
+monica, False,70,53.0412003750,tap,s
+monica,False,71,53.2587059360,stimulus,
+monica, False,71,53.8020184660,tap,s
+monica,False,72,54.0087824110,stimulus,
+monica, False,72,54.5782214100,tap,s
+monica,False,73,54.7588815820,stimulus,
+monica, False,73,55.3356209400,tap,l
+monica,False,74,55.5089575850,stimulus,
+monica, False,74,56.0569892900,tap,s
+monica,False,75,56.2590846250,stimulus,
+monica, False,75,56.9028274420,tap,s
+monica,False,76,57.0091771120,stimulus,
+monica, False,76,57.5604374870,tap,s
+monica,False,77,57.7592635680,stimulus,
+monica, False,77,58.2866939070,tap,l
+monica,False,78,58.5093957640,stimulus,
+monica, False,78,59.0298601790,tap,l
+monica,False,79,59.2595063740,stimulus,
+monica, False,79,59.7294820940,tap,l
+monica,False,80,60.0095943550,stimulus,
+monica, False,80,60.4990503600,tap,l
+monica,False,81,60.7597273540,stimulus,
+monica, False,81,61.2264945580,tap,s
+monica,False,82,61.5098654660,stimulus,
+monica, False,82,61.9532251080,tap,l
+monica,False,83,62.2599502140,stimulus,
+monica, False,83,62.7152417650,tap,l
+monica,False,84,63.0100489770,stimulus,
+monica, False,84,63.4189064800,tap,s
+monica,False,85,63.7601518490,stimulus,
+monica, False,85,64.1513606110,tap,s
+monica,False,86,64.5102416450,stimulus,
+monica, False,86,64.8284515770,tap,s
+monica,False,87,65.2603758460,stimulus,
+monica, False,87,65.6384746560,tap,s
+monica,False,88,66.0105081190,stimulus,
+monica, False,88,66.4358326380,tap,s
+monica,False,89,66.7605911910,stimulus,
+monica, False,89,67.1081577850,tap,s
+monica,False,90,67.5106762440,stimulus,
+monica, False,90,67.8907181010,tap,s
+monica,False,91,68.2607645840,stimulus,
+monica, False,91,68.6442557100,tap,s
+monica,False,92,69.0108693890,stimulus,
+monica, False,92,69.3254595180,tap,s
+monica,False,93,69.7610022880,stimulus,
+monica, False,93,70.0590400360,tap,l
+monica,False,94,70.5111116560,stimulus,
+monica, False,94,70.8053174470,tap,l
+monica,False,95,71.2611938090,stimulus,
+monica, False,95,71.7671466730,tap,l
+monica,False,96,72.0113144230,stimulus,
+monica, False,96,72.5490702110,tap,l
+monica,False,97,80.3295646780,probe_task,0
+monica, False,97,99.0965893550,probe_intention,1
+monica,False,98,102.8794674000,stimulus,
+monica,False,99,103.6295266090,stimulus,
+monica, False,99,103.6527729820,tap,s
+monica, False,99,104.1494700520,tap,s
+monica,False,100,104.3796418270,stimulus,
+monica, False,100,104.6658230710,tap,l
+monica,False,101,105.1297707160,stimulus,
+monica, False,101,105.3175380950,tap,s
+monica,False,102,105.8798682690,stimulus,
+monica, False,102,105.9195965120,tap,s
+monica, False,102,106.5694466070,tap,s
+monica,False,103,106.6299988250,stimulus,
+monica, False,103,107.2119993780,tap,s
+monica,False,104,107.3801326710,stimulus,
+monica, False,104,107.7145536120,tap,l
+monica,False,105,108.1302728200,stimulus,
+monica, False,105,108.4419602050,tap,l
+monica,False,106,108.8803508690,stimulus,
+monica, False,106,109.1760630430,tap,l
+monica,False,107,109.6304289940,stimulus,
+monica, False,107,109.8983383220,tap,l
+monica,False,108,110.3805175440,stimulus,
+monica, False,108,110.6563001360,tap,l
+monica,False,109,111.1306311620,stimulus,
+monica, False,109,111.2468341120,tap,l
+monica,False,110,111.8807129060,stimulus,
+monica, False,110,111.8981948730,tap,s
+monica, False,110,112.5153107640,tap,s
+monica,False,111,112.6308298360,stimulus,
+monica, False,111,113.1039152810,tap,s
+monica,False,112,113.3809699030,stimulus,
+monica, False,112,113.9209638780,tap,s
+monica,False,113,114.1310811240,stimulus,
+monica, False,113,114.5930292190,tap,s
+monica,False,114,114.8811963250,stimulus,
+monica, False,114,115.2651549560,tap,l
+monica,False,115,115.6313124280,stimulus,
+monica, False,115,116.1368431240,tap,l
+monica,False,116,116.3814070860,stimulus,
+monica, False,116,116.8579048330,tap,l
+monica,False,117,117.1314901010,stimulus,
+monica, False,117,117.7008228880,tap,l
+monica,False,118,117.8815987470,stimulus,
+monica, False,118,118.4469389840,tap,l
+monica,False,119,118.6317273390,stimulus,
+monica, False,119,119.0970507960,tap,s
+monica,False,120,119.3818179290,stimulus,
+monica, False,120,119.8257163760,tap,l
+monica,False,121,120.1319266020,stimulus,
+monica, False,121,120.5828821760,tap,l
+monica,False,122,120.8820434740,stimulus,
+monica, False,122,121.2920114720,tap,s
+monica,False,123,121.6321419860,stimulus,
+monica, False,123,121.9763752810,tap,s
+monica,False,124,122.3822764580,stimulus,
+monica, False,124,122.7498322760,tap,l
+monica,False,125,123.1323521870,stimulus,
+monica, False,125,123.4620198770,tap,l
+monica,False,126,123.8824795910,stimulus,
+monica, False,126,124.2558721830,tap,s
+monica,False,127,124.6325833840,stimulus,
+monica, False,127,125.1066033850,tap,s
+monica,False,128,125.3826626680,stimulus,
+monica, False,128,125.8146050400,tap,s
+monica,False,129,126.1327707630,stimulus,
+monica, False,129,126.5504315340,tap,s
+monica,False,130,126.8829674880,stimulus,
+monica, False,130,127.2597694080,tap,l
+monica,False,131,127.6330657200,stimulus,
+monica, False,131,128.0774944770,tap,l
+monica,False,132,128.3831949310,stimulus,
+monica, False,132,128.8846483270,tap,l
+monica,False,133,129.1333041890,stimulus,
+monica, False,133,129.6423775270,tap,l
+monica,False,134,129.8833926830,stimulus,
+monica, False,134,130.2895731900,tap,s
+monica,False,135,130.6335307340,stimulus,
+monica, False,135,131.1222077320,tap,s
+monica,False,136,131.3836410190,stimulus,
+monica, False,136,131.8558207120,tap,s
+monica,False,137,132.1337239630,stimulus,
+monica, False,137,132.6535784230,tap,s
+monica,False,138,132.8838033910,stimulus,
+monica, False,138,133.3550067630,tap,s
+monica,False,139,133.6338783140,stimulus,
+monica, False,139,134.1455695720,tap,s
+monica,False,140,134.3839895980,stimulus,
+monica, False,140,134.8633959470,tap,s
+monica,False,141,135.1340844730,stimulus,
+monica, False,141,135.5371385040,tap,s
+monica,False,142,135.8841709380,stimulus,
+monica, False,142,136.5304801790,tap,s
+monica,False,143,136.6342621890,stimulus,
+monica, False,143,137.1813457220,tap,l
+monica,False,144,137.3843604520,stimulus,
+monica, False,144,137.9161941460,tap,l
+monica,False,145,138.1344342010,stimulus,
+monica, False,145,138.5884511880,tap,l
+monica,False,146,138.8845245830,stimulus,
+monica, False,146,139.3081245510,tap,l
+monica,False,147,139.6346287920,stimulus,
+monica, False,147,140.0777916980,tap,l
+monica,False,148,140.3847073970,stimulus,
+monica, False,148,140.8171981870,tap,l
+monica,False,149,141.1348492760,stimulus,
+monica, False,149,141.5869627760,tap,l
+monica,False,150,141.8849606710,stimulus,
+monica, False,150,142.0912089210,tap,s
+monica,False,151,142.6350674800,stimulus,
+monica, False,151,142.8378212930,tap,s
+monica,False,152,143.3851748910,stimulus,
+monica, False,152,143.5820750460,tap,s
+monica,False,153,144.1352759170,stimulus,
+monica, False,153,144.1608112670,tap,l
+monica, False,153,144.8599083150,tap,l
+monica,False,154,144.8854030780,stimulus,
+monica, False,154,145.4955920600,tap,s
+monica,False,155,145.6354899960,stimulus,
+monica, False,155,146.3006332600,tap,s
+monica,False,156,146.3855670330,stimulus,
+monica, False,156,146.8716506200,tap,l
+monica,False,157,147.1356581060,stimulus,
+monica, False,157,147.7208942570,tap,l
+monica,False,158,147.8857558260,stimulus,
+monica, False,158,148.3784849860,tap,s
+monica,False,159,148.6358755900,stimulus,
+monica, False,159,149.1777291590,tap,s
+monica,False,160,149.3859576820,stimulus,
+monica, False,160,149.8504464370,tap,l
+monica,False,161,150.1360477050,stimulus,
+monica, False,161,150.6356958870,tap,l
+monica,False,162,150.8861490210,stimulus,
+monica, False,162,151.3227120720,tap,s
+monica,False,163,151.6362413320,stimulus,
+monica, False,163,152.1927252030,tap,s
+monica,False,164,152.3863221910,stimulus,
+monica, False,164,152.8531058130,tap,l
+monica,False,165,153.1364124350,stimulus,
+monica, False,165,153.6428439250,tap,s
+monica,False,166,153.8864929710,stimulus,
+monica, False,166,154.2973222080,tap,l
+monica,False,167,154.6366288290,stimulus,
+monica, False,167,155.0574334880,tap,s
+monica,False,168,155.3867317570,stimulus,
+monica, False,168,155.7740983490,tap,l
+monica,False,169,156.1368154980,stimulus,
+monica, False,169,156.5654811880,tap,l
+monica,False,170,160.2944693900,probe_task,0
+monica, False,170,162.4622948760,probe_intention,1
+monica,False,171,166.2442771390,stimulus,
+monica, False,171,166.5558628210,tap,s
+monica,False,172,166.9943583410,stimulus,
+monica, False,172,167.2123489660,tap,s
+monica,False,173,167.7444771730,stimulus,
+monica, False,173,167.8104179830,tap,l
+monica, False,173,168.4644216660,tap,s
+monica,False,174,168.4945640590,stimulus,
+monica, False,174,169.1243089700,tap,l
+monica,False,175,169.2447662170,stimulus,
+monica, False,175,169.8653327760,tap,l
+monica,False,176,169.9948563900,stimulus,
+monica, False,176,170.5286570120,tap,s
+monica,False,177,170.7449961700,stimulus,
+monica, False,177,171.3130680800,tap,s
+monica,False,178,171.4951318510,stimulus,
+monica, False,178,171.9269108200,tap,l
+monica,False,179,172.2452523380,stimulus,
+monica, False,179,172.9508984090,tap,s
+monica,False,180,172.9953767900,stimulus,
+monica,False,181,173.7454630050,stimulus,
+monica, False,181,173.7528525700,tap,l
+monica,False,182,174.4955918000,stimulus,
+monica, False,182,174.5282560340,tap,s
+monica, False,182,175.1671133140,tap,s
+monica,False,183,175.2456916070,stimulus,
+monica, False,183,175.7238168380,tap,l
+monica,False,184,175.9957760780,stimulus,
+monica, False,184,176.6509597510,tap,s
+monica,False,185,176.7458700340,stimulus,
+monica, False,185,177.4061106070,tap,s
+monica,False,186,177.4960078220,stimulus,
+monica, False,186,178.0028847910,tap,l
+monica,False,187,178.2461255620,stimulus,
+monica, False,187,178.7320202490,tap,l
+monica,False,188,178.9963039000,stimulus,
+monica, False,188,179.4738646870,tap,l
+monica,False,189,179.7463901240,stimulus,
+monica, False,189,180.2628128790,tap,s
+monica,False,190,180.4965271060,stimulus,
+monica, False,190,181.1035965370,tap,s
+monica,False,191,181.2466627560,stimulus,
+monica, False,191,181.8646009420,tap,s
+monica,False,192,181.9967631650,stimulus,
+monica, False,192,182.4675903630,tap,l
+monica,False,193,182.7469014180,stimulus,
+monica, False,193,183.2019446250,tap,l
+monica,False,194,183.4970200830,stimulus,
+monica, False,194,184.0354111340,tap,l
+monica,False,195,184.2471533080,stimulus,
+monica, False,195,184.7276766190,tap,s
+monica,False,196,184.9972485830,stimulus,
+monica, False,196,185.4386533830,tap,s
+monica,False,197,185.7473775320,stimulus,
+monica, False,197,186.2118070680,tap,s
+monica,False,198,186.4974651700,stimulus,
+monica, False,198,186.8804409240,tap,s
+monica,False,199,187.2476056370,stimulus,
+monica, False,199,187.6532280490,tap,s
+monica,False,200,187.9977180360,stimulus,
+monica, False,200,188.2933088160,tap,l
+monica,False,201,188.7478493810,stimulus,
+monica, False,201,189.1265472490,tap,l
+monica,False,202,189.4979194010,stimulus,
+monica, False,202,189.8924748130,tap,l
+monica,False,203,190.2480098330,stimulus,
+monica, False,203,190.6187137310,tap,l
+monica,False,204,190.9981527180,stimulus,
+monica, False,204,191.3432674970,tap,s
+monica,False,205,191.7482929250,stimulus,
+monica, False,205,192.2330914820,tap,s
+monica,False,206,192.4983699100,stimulus,
+monica, False,206,193.0092483380,tap,s
+monica,False,207,193.2484708890,stimulus,
+monica, False,207,193.7274654350,tap,s
+monica,False,208,193.9985588250,stimulus,
+monica, False,208,194.3948891010,tap,l
+monica,False,209,194.7486340670,stimulus,
+monica, False,209,195.2193152130,tap,l
+monica,False,210,195.4987189370,stimulus,
+monica, False,210,195.9699254690,tap,l
+monica,False,211,196.2488002460,stimulus,
+monica, False,211,196.6741753670,tap,l
+monica,False,212,196.9988719800,stimulus,
+monica, False,212,197.4589315100,tap,l
+monica,False,213,197.7489746830,stimulus,
+monica, False,213,198.2719846030,tap,l
+monica,False,214,198.4991070300,stimulus,
+monica, False,214,198.9306626440,tap,s
+monica,False,215,199.2492000690,stimulus,
+monica, False,215,199.7912481200,tap,s
+monica,False,216,199.9992720070,stimulus,
+monica, False,216,200.4116746780,tap,l
+monica,False,217,200.7494096990,stimulus,
+monica, False,217,201.2149050510,tap,l
+monica,False,218,201.4994932770,stimulus,
+monica, False,218,201.9435717480,tap,l
+monica,False,219,202.2495813790,stimulus,
+monica, False,219,202.6568420420,tap,s
+monica,False,220,202.9996989820,stimulus,
+monica, False,220,203.4486865550,tap,s
+monica,False,221,203.7498438610,stimulus,
+monica, False,221,204.1508485950,tap,s
+monica,False,222,204.4999839920,stimulus,
+monica, False,222,204.8696697000,tap,s
+monica,False,223,205.2500822030,stimulus,
+monica, False,223,205.6289003950,tap,s
+monica,False,224,206.0002109840,stimulus,
+monica, False,224,206.3773089920,tap,s
+monica,False,225,206.7503431810,stimulus,
+monica, False,225,207.1655883880,tap,s
+monica,False,226,207.5004184070,stimulus,
+monica, False,226,207.9144220820,tap,s
+monica,False,227,208.2505255390,stimulus,
+monica, False,227,208.6304026780,tap,l
+monica,False,228,209.0005926920,stimulus,
+monica, False,228,209.4355676330,tap,l
+monica,False,229,209.7507044360,stimulus,
+monica, False,229,210.0604094620,tap,s
+monica,False,230,210.5008230350,stimulus,
+monica, False,230,210.7200304970,tap,l
+monica,False,231,211.2509478460,stimulus,
+monica, False,231,211.3336688400,tap,l
+monica, False,231,211.9440220840,tap,l
+monica,False,232,212.0010281440,stimulus,
+monica, False,232,212.5487061430,tap,s
+monica,False,233,212.7511580980,stimulus,
+monica, False,233,213.3405996070,tap,s
+monica,False,234,213.5012630970,stimulus,
+monica, False,234,214.0840272320,tap,s
+monica,False,235,214.2514355410,stimulus,
+monica, False,235,214.7832273720,tap,s
+monica,False,236,215.0015198980,stimulus,
+monica, False,236,215.4120818590,tap,l
+monica,False,237,215.7516521830,stimulus,
+monica, False,237,216.3248830530,tap,l
+monica,False,238,216.5017264680,stimulus,
+monica, False,238,217.0769004810,tap,l
+monica,False,239,217.2518305820,stimulus,
+monica, False,239,217.7580335310,tap,s
+monica,False,240,218.0019190870,stimulus,
+monica, False,240,218.4907315400,tap,l
+monica,False,241,218.7520241480,stimulus,
+monica, False,241,219.3311525080,tap,l
+monica,False,242,219.5021274840,stimulus,
+monica, False,242,219.9349196260,tap,s
+monica,False,243,220.2522348560,stimulus,
+monica, False,243,220.6542090310,tap,s
+monica,False,244,221.0024305020,stimulus,
+monica, False,244,221.5205731950,tap,s
+monica,False,245,221.7525637580,stimulus,
+monica, False,245,222.2771813210,tap,l
+monica,False,246,222.5026763450,stimulus,
+monica, False,246,223.1738599140,tap,l
+monica,False,247,223.2528043420,stimulus,
+monica, False,247,223.9916271750,tap,l
+monica,False,248,224.0029373030,stimulus,
+monica, False,248,224.7209831910,tap,l
+monica,False,249,233.1109642210,probe_task,0
+monica, False,249,238.7447394480,probe_intention,1
+monica,False,250,242.5276729200,stimulus,
+monica, False,250,242.9815570980,tap,s
+monica,False,251,243.2776151510,stimulus,
+monica, False,251,243.6881631650,tap,s
+monica,False,252,244.0276977210,stimulus,
+monica, False,252,244.2544273230,tap,l
+monica, False,252,244.7410322250,tap,l
+monica,False,253,244.7777704060,stimulus,
+monica, False,253,245.3127617210,tap,l
+monica,False,254,245.5278715560,stimulus,
+monica, False,254,245.8099492880,tap,s
+monica,False,255,246.2779592240,stimulus,
+monica, False,255,246.4851154480,tap,s
+monica,False,256,247.0280560550,stimulus,
+monica, False,256,247.1839713900,tap,l
+monica,False,257,247.7781804730,stimulus,
+monica, False,257,247.8139783580,tap,l
+monica,False,258,248.5283818770,stimulus,
+monica, False,258,248.6148397720,tap,l
+monica, False,258,249.0568241590,tap,s
+monica,False,259,249.2784504720,stimulus,
+monica, False,259,249.6717096730,tap,s
+monica,False,260,250.0285595030,stimulus,
+monica, False,260,250.6772215790,tap,s
+monica,False,261,250.7786571710,stimulus,
+monica, False,261,251.3128136050,tap,l
+monica,False,262,251.5287763910,stimulus,
+monica, False,262,252.0168491450,tap,l
+monica,False,263,252.2788974680,stimulus,
+monica, False,263,252.7046581090,tap,l
+monica,False,264,253.0290026710,stimulus,
+monica, False,264,253.2137037970,tap,s
+monica,False,265,253.7790973240,stimulus,
+monica, False,265,253.8536829210,tap,s
+monica, False,265,254.4305863760,tap,s
+monica,False,266,254.5292262600,stimulus,
+monica, False,266,255.0645724510,tap,l
+monica,False,267,255.2793687470,stimulus,
+monica, False,267,255.6960128630,tap,l
+monica,False,268,256.0294613800,stimulus,
+monica, False,268,256.3944589910,tap,l
+monica,False,269,256.7795981190,stimulus,
+monica, False,269,257.2950872650,tap,s
+monica,False,270,257.5297063430,stimulus,
+monica, False,270,257.9433855590,tap,s
+monica,False,271,258.2797951540,stimulus,
+monica, False,271,258.9687961740,tap,l
+monica,False,272,259.0299289010,stimulus,
+monica, False,272,259.6244664970,tap,l
+monica,False,273,259.7800315730,stimulus,
+monica,False,274,260.5301361160,stimulus,
+monica, False,274,260.5698351080,tap,l
+monica,False,275,261.2802753220,stimulus,
+monica, False,275,261.3251508520,tap,s
+monica, False,275,261.9585424040,tap,s
+monica,False,276,262.0304038290,stimulus,
+monica,False,277,262.7804854880,stimulus,
+monica, False,277,262.9072579780,tap,l
+monica,False,278,263.5306164870,stimulus,
+monica, False,278,263.8529072280,tap,l
+monica,False,279,264.2806872570,stimulus,
+monica, False,279,264.5221334580,tap,l
+monica,False,280,265.0308034030,stimulus,
+monica, False,280,265.1070191660,tap,s
+monica, False,280,265.7201068900,tap,s
+monica,False,281,265.7808857750,stimulus,
+monica, False,281,266.4779502760,tap,s
+monica,False,282,266.5309631610,stimulus,
+monica, False,282,267.2172585900,tap,l
+monica,False,283,267.2810801330,stimulus,
+monica, False,283,268.0089548410,tap,l
+monica,False,284,268.0311526560,stimulus,
+monica, False,284,268.5962154930,tap,l
+monica,False,285,268.7812996910,stimulus,
+monica,False,286,269.5313988490,stimulus,
+monica, False,286,269.6727417640,tap,l
+monica,False,287,270.2815179870,stimulus,
+monica, False,287,270.3168979550,tap,l
+monica, False,287,271.0301082830,tap,s
+monica,False,288,271.0316348520,stimulus,
+monica, False,288,271.6716407440,tap,s
+monica,False,289,271.7817508730,stimulus,
+monica, False,289,272.5228499920,tap,s
+monica,False,290,272.5318252580,stimulus,
+monica, False,290,273.1347164890,tap,s
+monica,False,291,273.2819299090,stimulus,
+monica,False,292,274.0320079940,stimulus,
+monica, False,292,274.0718317610,tap,l
+monica,False,293,274.7821349810,stimulus,
+monica, False,293,274.8614662230,tap,l
+monica,False,294,275.5322763310,stimulus,
+monica,False,295,276.2823512830,stimulus,
+monica,False,296,277.0324515090,stimulus,
+monica, False,296,277.1001085330,tap,s
+monica, False,296,277.2874658470,tap,l
+monica,False,297,277.7825634630,stimulus,
+monica, False,297,277.8752927030,tap,s
+monica, False,297,277.9032362100,tap,l
+monica,False,298,278.5326519250,stimulus,
+monica, False,298,278.6481176290,tap,s
+monica, False,298,278.6507300630,tap,l
+monica,False,299,279.2827573150,stimulus,
+monica, False,299,279.2923534780,tap,l
+monica, False,299,279.3882403530,tap,s
+monica,False,300,280.0328853250,stimulus,
+monica, False,300,280.0841896080,tap,l
+monica, False,300,280.1241681090,tap,s
+monica,False,301,280.7829910990,stimulus,
+monica, False,301,281.0814247830,tap,s
+monica,False,302,281.5330757340,stimulus,
+monica, False,302,281.8491204620,tap,s
+monica,False,303,282.2831852700,stimulus,
+monica, False,303,282.3504035240,tap,l
+monica,False,304,283.0333103080,stimulus,
+monica, False,304,283.0563000140,tap,l
+monica, False,304,283.7302026210,tap,s
+monica,False,305,283.7834387910,stimulus,
+monica,False,306,284.5335468910,stimulus,
+monica, False,306,284.5861039800,tap,s
+monica,False,307,285.2836471630,stimulus,
+monica, False,307,285.7894314500,tap,l
+monica,False,308,286.0338343240,stimulus,
+monica, False,308,286.4778322980,tap,l
+monica,False,309,286.7838874570,stimulus,
+monica, False,309,287.1640512440,tap,s
+monica,False,310,287.5340011410,stimulus,
+monica, False,310,288.1060203350,tap,s
+monica,False,311,288.2841221620,stimulus,
+monica, False,311,288.8521446710,tap,l
+monica,False,312,289.0342549090,stimulus,
+monica,False,313,289.7843806790,stimulus,
+monica, False,313,289.8426550140,tap,l
+monica,False,314,290.5344989540,stimulus,
+monica,False,315,291.2846342420,stimulus,
+monica, False,315,291.5250219380,tap,l
+monica, False,315,291.9458024480,tap,l
+monica,False,316,292.0347442260,stimulus,
+monica, False,316,292.6367069350,tap,s
+monica,False,317,292.7848198570,stimulus,
+monica, False,317,293.1766892030,tap,s
+monica,False,318,293.5349511610,stimulus,
+monica, False,318,293.8841363930,tap,s
+monica,False,319,294.2850658320,stimulus,
+monica, False,319,294.5886650850,tap,l
+monica,False,320,295.0352051740,stimulus,
+monica, False,320,295.5419800710,tap,l
+monica,False,321,295.7853395200,stimulus,
+monica,False,322,296.5354134470,stimulus,
+monica, False,322,296.7225769760,tap,l
+monica,False,323,297.2855324800,stimulus,
+monica, False,323,297.7384622660,tap,s
+monica,False,324,298.0356380070,stimulus,
+monica, False,324,298.2784154470,tap,s
+monica,False,325,298.7857640400,stimulus,
+monica, False,325,298.9045564010,tap,s
+monica, False,325,299.5223596730,tap,s
+monica,False,326,299.5358475360,stimulus,
+monica, False,326,300.0284425120,tap,l
+monica,False,327,300.2859926130,stimulus,
+monica, False,327,300.7782943070,tap,l
+monica,False,328,301.0360792360,stimulus,
+monica, False,328,301.3938346310,tap,l
+monica,False,329,301.7861883730,stimulus,
+monica, False,329,302.2251098540,tap,l
+monica,False,330,302.5363158150,stimulus,
+monica, False,330,302.9528972420,tap,l
+monica,False,331,303.2863883340,stimulus,
+monica, False,331,303.6561798450,tap,s
+monica,False,332,304.0365303440,stimulus,
+monica, False,332,304.3735127430,tap,s
+monica,False,333,304.7866041910,stimulus,
+monica, False,333,305.0661989460,tap,l
+monica,False,334,305.5367407990,stimulus,
+monica, False,334,305.6282353160,tap,l
+monica,False,335,306.2868175100,stimulus,
+monica, False,335,306.3400744270,tap,l
+monica,False,336,307.0369116220,stimulus,
+monica, False,336,307.0483841290,tap,s
+monica,False,337,307.7870419880,stimulus,
+monica, False,337,307.7951967800,tap,s
+monica, False,337,308.4710446680,tap,s
+monica,False,338,308.5371290710,stimulus,
+monica, False,338,309.0768677930,tap,l
+monica,False,339,309.2872428010,stimulus,
+monica, False,339,309.7852350140,tap,l
+monica,False,340,318.8932290810,probe_task,0
+monica, False,340,321.2788647390,probe_intention,1
+monica,False,341,325.0598141940,stimulus,
+monica, False,341,325.4776240470,tap,s
+monica,False,342,325.8098088790,stimulus,
+monica, False,342,326.1139088360,tap,s
+monica,False,343,326.5599035840,stimulus,
+monica, False,343,326.8198352390,tap,l
+monica,False,344,327.3100433920,stimulus,
+monica, False,344,327.6458184780,tap,l
+monica,False,345,328.0601561960,stimulus,
+monica, False,345,328.2609035450,tap,l
+monica,False,346,328.8102748270,stimulus,
+monica, False,346,329.0936669760,tap,l
+monica,False,347,329.5603888680,stimulus,
+monica, False,347,329.7970269950,tap,l
+monica,False,348,330.3105107300,stimulus,
+monica, False,348,330.4736544700,tap,l
+monica,False,349,331.0606286080,stimulus,
+monica, False,349,331.1765950410,tap,s
+monica, False,349,331.7965451980,tap,s
+monica,False,350,331.8107252690,stimulus,
+monica, False,350,332.3811477690,tap,s
+monica,False,351,332.5608258310,stimulus,
+monica,False,352,333.3109511670,stimulus,
+monica, False,352,333.5658376210,tap,l
+monica,False,353,334.0610598950,stimulus,
+monica, False,353,334.4644381660,tap,l
+monica,False,354,334.8111931790,stimulus,
+monica, False,354,335.2347196300,tap,l
+monica,False,355,335.5612912020,stimulus,
+monica,False,356,336.3113675400,stimulus,
+monica, False,356,336.7437837490,tap,l
+monica,False,357,337.0615149360,stimulus,
+monica, False,357,337.5603800970,tap,l
+monica,False,358,337.8116179590,stimulus,
+monica, False,358,338.2296703780,tap,l
+monica,False,359,338.5617031180,stimulus,
+monica, False,359,339.1402413380,tap,s
+monica,False,360,339.3118305610,stimulus,
+monica, False,360,339.7473317780,tap,s
+monica,False,361,340.0619160810,stimulus,
+monica, False,361,340.5712530300,tap,s
+monica,False,362,340.8120119270,stimulus,
+monica, False,362,341.4395939150,tap,l
+monica,False,363,341.5620897500,stimulus,
+monica, False,363,342.1530744440,tap,l
+monica,False,364,342.3122278300,stimulus,
+monica, False,364,342.9079192760,tap,l
+monica,False,365,343.0623590590,stimulus,
+monica, False,365,343.6360145130,tap,l
+monica,False,366,343.8124464580,stimulus,
+monica, False,366,344.3619802550,tap,l
+monica,False,367,344.5625487110,stimulus,
+monica, False,367,345.0683073560,tap,l
+monica,False,368,345.3126765270,stimulus,
+monica, False,368,345.9820942320,tap,s
+monica,False,369,346.0627600140,stimulus,
+monica, False,369,346.7539195190,tap,s
+monica,False,370,346.8128711800,stimulus,
+monica, False,370,347.4547125060,tap,s
+monica,False,371,347.5629418840,stimulus,
+monica, False,371,348.1309033010,tap,s
+monica,False,372,348.3130512270,stimulus,
+monica, False,372,348.8058094800,tap,s
+monica,False,373,349.0631563380,stimulus,
+monica, False,373,349.5017086530,tap,s
+monica,False,374,349.8132882300,stimulus,
+monica, False,374,350.3380103720,tap,s
+monica,False,375,350.5633858780,stimulus,
+monica, False,375,351.0206383950,tap,l
+monica,False,376,351.3134928260,stimulus,
+monica, False,376,351.8668648170,tap,s
+monica,False,377,352.0635651610,stimulus,
+monica, False,377,352.6530542860,tap,l
+monica,False,378,352.8136772930,stimulus,
+monica, False,378,353.4235826220,tap,l
+monica,False,379,353.5638114090,stimulus,
+monica, False,379,354.0265785830,tap,l
+monica,False,380,354.3139061820,stimulus,
+monica, False,380,354.7185216420,tap,s
+monica,False,381,355.0639803900,stimulus,
+monica, False,381,355.3165582460,tap,s
+monica,False,382,355.8140920830,stimulus,
+monica, False,382,356.0584953530,tap,s
+monica,False,383,356.5641847430,stimulus,
+monica, False,383,356.5915617380,tap,l
+monica,False,384,357.3142684290,stimulus,
+monica, False,384,357.3705002430,tap,s
+monica, False,384,357.9835162660,tap,l
+monica,False,385,358.0644085380,stimulus,
+monica, False,385,358.6824772160,tap,l
+monica,False,386,358.8145262920,stimulus,
+monica, False,386,359.3751301040,tap,s
+monica,False,387,359.5646451620,stimulus,
+monica, False,387,360.0467179240,tap,s
+monica,False,388,360.3147776000,stimulus,
+monica, False,388,360.7789169010,tap,l
+monica,False,389,361.0648720920,stimulus,
+monica, False,389,361.5054000990,tap,l
+monica,False,390,361.8149881530,stimulus,
+monica, False,390,362.2570879250,tap,s
+monica,False,391,362.5651013170,stimulus,
+monica, False,391,362.9982406820,tap,s
+monica,False,392,363.3151995810,stimulus,
+monica, False,392,363.6680708590,tap,s
+monica,False,393,364.0653256360,stimulus,
+monica, False,393,364.4721330060,tap,s
+monica,False,394,364.8153998340,stimulus,
+monica, False,394,365.1779773970,tap,s
+monica,False,395,365.5655016040,stimulus,
+monica, False,395,365.9850138210,tap,l
+monica,False,396,366.3156201150,stimulus,
+monica, False,396,366.6759596480,tap,s
+monica,False,397,367.0657520450,stimulus,
+monica, False,397,367.4095593480,tap,s
+monica,False,398,367.8158879000,stimulus,
+monica, False,398,368.2606784370,tap,s
+monica,False,399,368.5659611090,stimulus,
+monica, False,399,369.1590172040,tap,s
+monica, False,399,369.1701257700,tap,l
+monica,False,400,369.3160979180,stimulus,
+monica, False,400,369.9115916720,tap,s
+monica, False,400,369.9358641310,tap,l
+monica,False,401,370.0662041540,stimulus,
+monica, False,401,370.6551918340,tap,l
+monica, False,401,370.6946346300,tap,s
+monica,False,402,370.8163245930,stimulus,
+monica, False,402,371.4728013500,tap,s
+monica, False,402,371.5045093950,tap,l
+monica,False,403,371.5664155960,stimulus,
+monica, False,403,372.2399914510,tap,s
+monica, False,403,372.2755146230,tap,l
+monica,False,404,372.3164987700,stimulus,
+monica, False,404,372.9376040040,tap,l
+monica,False,405,373.0666450680,stimulus,
+monica, False,405,373.6959385490,tap,l
+monica,False,406,373.8167185370,stimulus,
+monica, False,406,374.3823891360,tap,s
+monica,False,407,374.5668292120,stimulus,
+monica, False,407,375.1889328410,tap,s
+monica,False,408,375.3169567710,stimulus,
+monica, False,408,375.9086135970,tap,l
+monica,False,409,376.0670423060,stimulus,
+monica, False,409,376.7135263450,tap,l
+monica,False,410,376.8171585130,stimulus,
+monica, False,410,377.4863605580,tap,s
+monica,False,411,377.5672804250,stimulus,
+monica, False,411,378.1905790720,tap,s
+monica,False,412,378.3173585340,stimulus,
+monica, False,412,378.9983286150,tap,s
+monica,False,413,381.9082673590,probe_task,0
+monica, False,413,383.1448265650,probe_intention,1
+monica,False,414,386.9247939880,stimulus,
+monica, False,414,386.9266349860,tap,l
+monica,False,415,387.6748838480,stimulus,
+monica, False,415,387.6839245460,tap,l
+monica,False,416,388.4250056030,stimulus,
+monica, False,416,388.5610030560,tap,s
+monica,False,417,389.1751238530,stimulus,
+monica, False,417,389.3245339210,tap,s
+monica,False,418,389.9252411960,stimulus,
+monica,False,419,390.6753141750,stimulus,
+monica,False,420,391.4254513110,stimulus,
+monica, False,420,391.4571238710,tap,l
+monica, False,420,392.1146619190,tap,l
+monica,False,421,392.1755841100,stimulus,
+monica,False,422,392.9256813380,stimulus,
+monica, False,422,393.1316779600,tap,s
+monica,False,423,393.6757590880,stimulus,
+monica,False,424,394.4258524890,stimulus,
+monica, False,424,394.5978166830,tap,s
+monica,False,425,395.1759737870,stimulus,
+monica,False,426,395.9260545370,stimulus,
+monica, False,426,396.5735692970,tap,s
+monica, False,426,396.6253984780,tap,l
+monica,False,427,396.6761741060,stimulus,
+monica, False,427,397.1476899610,tap,l
+monica,False,428,397.4262554280,stimulus,
+monica,False,429,398.1763850860,stimulus,
+monica, False,429,398.2206680740,tap,l
+monica, False,429,398.8412494050,tap,s
+monica,False,430,398.9264610640,stimulus,
+monica, False,430,399.4832399710,tap,s
+monica,False,431,399.6765466360,stimulus,
+monica, False,431,400.3231325160,tap,s
+monica,False,432,400.4266768600,stimulus,
+monica,False,433,401.1768012850,stimulus,
+monica,False,434,401.9269022290,stimulus,
+monica,False,435,402.6770103380,stimulus,
+monica,False,436,403.4271181570,stimulus,
+monica,False,437,404.1772487820,stimulus,
+monica,False,438,404.9273786480,stimulus,
+monica,False,439,405.6774806280,stimulus,
+monica,False,440,406.4275635400,stimulus,
+monica, False,440,406.7279931920,tap,l
+monica, False,440,406.7797860840,tap,s
+monica,False,441,407.1776773690,stimulus,
+monica, False,441,407.2276898000,tap,l
+monica, False,441,407.2638780730,tap,s
+monica, False,441,407.7998308640,tap,l
+monica, False,441,407.8277238740,tap,s
+monica,False,442,407.9277809820,stimulus,
+monica, False,442,408.4878272490,tap,s
+monica,False,443,408.6779117650,stimulus,
+monica, False,443,408.7756375860,tap,l
+monica, False,443,409.2042144220,tap,l
+monica, False,443,409.2114997280,tap,s
+monica,False,444,409.4280309000,stimulus,
+monica, False,444,409.8500606870,tap,s
+monica, False,444,409.8895297300,tap,l
+monica,False,445,410.1781335090,stimulus,
+monica, False,445,410.5598952420,tap,l
+monica,False,446,410.9282251560,stimulus,
+monica, False,446,411.5897598780,tap,l
+monica,False,447,411.6783092800,stimulus,
+monica, False,447,412.3986525260,tap,l
+monica,False,448,412.4284470910,stimulus,
+monica,False,449,413.1785414990,stimulus,
+monica, False,449,413.2017498080,tap,s
+monica,False,450,413.9286789860,stimulus,
+monica, False,450,414.1275231880,tap,s
+monica,False,451,414.6788153550,stimulus,
+monica, False,451,414.7713728320,tap,l
+monica,False,452,415.4289388660,stimulus,
+monica, False,452,415.6403552400,tap,l
+monica,False,453,416.1790410510,stimulus,
+monica, False,453,416.4777834080,tap,l
+monica,False,454,416.9291547870,stimulus,
+monica, False,454,416.9833446070,tap,l
+monica,False,455,417.6792560480,stimulus,
+monica, False,455,417.7697418970,tap,s
+monica,False,456,418.4293807840,stimulus,
+monica, False,456,419.1304504800,tap,s
+monica,False,457,419.1794992450,stimulus,
+monica, False,457,419.8792034790,tap,l
+monica,False,458,419.9295991080,stimulus,
+monica, False,458,420.4563204950,tap,l
+monica,False,459,420.6797172170,stimulus,
+monica,False,460,421.4298062490,stimulus,
+monica,False,461,422.1799091520,stimulus,
+monica, False,461,422.5027939570,tap,l
+monica,False,462,422.9300133390,stimulus,
+monica, False,462,422.9431694410,tap,s
+monica,False,463,423.6800880440,stimulus,
+monica,False,464,424.4302289320,stimulus,
+monica,False,465,425.1803680010,stimulus,
+monica, False,465,425.9060119310,tap,s
+monica,False,466,425.9304382050,stimulus,
+monica, False,466,426.0406110840,tap,l
+monica, False,466,426.5197185140,tap,l
+monica,False,467,426.6805295940,stimulus,
+monica, False,467,427.1932830780,tap,l
+monica,False,468,427.4306082260,stimulus,
+monica, False,468,427.9237097050,tap,s
+monica,False,469,428.1807207070,stimulus,
+monica,False,470,428.9308292290,stimulus,
+monica, False,470,429.0568784490,tap,s
+monica,False,471,429.6809218540,stimulus,
+monica,False,472,430.4310108900,stimulus,
+monica, False,472,430.9020323650,tap,l
+monica,False,473,431.1811484560,stimulus,
+monica, False,473,431.5068304740,tap,l
+monica,False,474,435.0405187190,probe_task,0
+monica, False,474,451.9750864490,probe_intention,1
+monica,False,475,455.7580357350,stimulus,
+monica,False,476,456.5080319850,stimulus,
+monica,False,477,457.2581282860,stimulus,
+monica,False,478,458.0082391620,stimulus,
+monica,False,479,458.7583359970,stimulus,
+monica,False,480,459.5084648370,stimulus,
+monica, False,480,459.8081410850,tap,s
+monica, False,480,459.9593436520,tap,l
+monica,False,481,460.2585600890,stimulus,
+monica, False,481,460.2695945540,tap,l
+monica, False,481,460.8126316430,tap,l
+monica,False,482,461.0086699720,stimulus,
+monica, False,482,461.4205475930,tap,s
+monica,False,483,461.7587662810,stimulus,
+monica, False,483,462.1564429810,tap,s
+monica,False,484,462.5088842970,stimulus,
+monica, False,484,462.8526358330,tap,s
+monica,False,485,463.2589842120,stimulus,
+monica, False,485,463.5745784780,tap,l
+monica,False,486,464.0090636380,stimulus,
+monica, False,486,464.2154765380,tap,l
+monica,False,487,464.7591746560,stimulus,
+monica, False,487,464.8596363610,tap,l
+monica,False,488,465.5092557790,stimulus,
+monica, False,488,465.5444651740,tap,l
+monica, False,488,466.2274167720,tap,s
+monica,False,489,466.2593467590,stimulus,
+monica, False,489,466.7590676050,tap,l
+monica,False,490,467.0094766310,stimulus,
+monica, False,490,467.4285652970,tap,s
+monica,False,491,467.7596076870,stimulus,
+monica, False,491,468.0791279740,tap,s
+monica,False,492,468.5097001190,stimulus,
+monica, False,492,468.7579756310,tap,s
+monica,False,493,469.2597733000,stimulus,
+monica, False,493,469.4459036030,tap,s
+monica,False,494,470.0098693330,stimulus,
+monica, False,494,470.0340497810,tap,s
+monica, False,494,470.4117262240,tap,l
+monica,False,495,470.7599679520,stimulus,
+monica, False,495,471.1299892420,tap,l
+monica,False,496,471.5100988250,stimulus,
+monica, False,496,471.8250563790,tap,l
+monica,False,497,472.2601929160,stimulus,
+monica, False,497,472.6351736330,tap,l
+monica,False,498,473.0103309630,stimulus,
+monica, False,498,473.4158081410,tap,l
+monica,False,499,473.7604673550,stimulus,
+monica, False,499,473.8992486810,tap,s
+monica,False,500,474.5105859620,stimulus,
+monica, False,500,474.5517700280,tap,s
+monica, False,500,475.1021883020,tap,l
+monica,False,501,475.2606625060,stimulus,
+monica, False,501,475.7007229960,tap,l
+monica,False,502,476.0107380990,stimulus,
+monica, False,502,476.3777049430,tap,l
+monica,False,503,476.7608307360,stimulus,
+monica, False,503,477.1718152840,tap,l
+monica,False,504,477.5109660900,stimulus,
+monica, False,504,477.9595404620,tap,l
+monica,False,505,478.2610585610,stimulus,
+monica, False,505,478.6475347480,tap,l
+monica,False,506,479.0111615510,stimulus,
+monica, False,506,479.3569241390,tap,s
+monica,False,507,479.7612851160,stimulus,
+monica, False,507,480.1434303530,tap,l
+monica,False,508,480.5113782670,stimulus,
+monica, False,508,480.8918419890,tap,l
+monica,False,509,481.2614932640,stimulus,
+monica, False,509,481.6564649140,tap,s
+monica,False,510,482.0115935470,stimulus,
+monica, False,510,482.2057102300,tap,l
+monica,False,511,482.7617238380,stimulus,
+monica, False,511,482.8354397890,tap,l
+monica, False,511,483.4003071640,tap,l
+monica,False,512,483.5118070520,stimulus,
+monica, False,512,483.8843761470,tap,s
+monica,False,513,484.2619380890,stimulus,
+monica, False,513,484.6838409080,tap,s
+monica,False,514,485.0120169220,stimulus,
+monica, False,514,485.3864660850,tap,s
+monica,False,515,485.7621168730,stimulus,
+monica, False,515,485.9626369450,tap,l
+monica,False,516,486.5122267410,stimulus,
+monica, False,516,486.6262751710,tap,l
+monica,False,517,487.2623158720,stimulus,
+monica, False,517,487.2694512500,tap,l
+monica, False,517,487.8932437220,tap,s
+monica,False,518,488.0124488630,stimulus,
+monica, False,518,488.7483924550,tap,s
+monica,False,519,488.7625344870,stimulus,
+monica, False,519,489.4789342090,tap,s
+monica,False,520,489.5126392080,stimulus,
+monica, False,520,490.1033554650,tap,l
+monica,False,521,490.2627533830,stimulus,
+monica, False,521,490.8809704790,tap,l
+monica,False,522,491.0128278670,stimulus,
+monica, False,522,491.7033244520,tap,l
+monica,False,523,491.7629147170,stimulus,
+monica, False,523,492.1930235490,tap,s
+monica,False,524,492.5130514030,stimulus,
+monica, False,524,493.0821044100,tap,s
+monica,False,525,493.2631602770,stimulus,
+monica,False,526,494.0132320230,stimulus,
+monica, False,526,494.0788845060,tap,s
+monica, False,526,494.7420343790,tap,s
+monica,False,527,494.7633160790,stimulus,
+monica, False,527,495.5078368420,tap,l
+monica,False,528,495.5133953820,stimulus,
+monica,False,529,496.2635266160,stimulus,
+monica, False,529,496.3706126820,tap,l
+monica,False,530,497.0136175460,stimulus,
+monica, False,530,497.0903126550,tap,l
+monica, False,530,497.7206942020,tap,l
+monica,False,531,497.7637357240,stimulus,
+monica, False,531,498.4929047060,tap,s
+monica,False,532,498.5138424200,stimulus,
+monica,False,533,499.2639441260,stimulus,
+monica, False,533,499.5776129780,tap,s
+monica,False,534,500.0140262330,stimulus,
+monica, False,534,500.2427370590,tap,s
+monica,False,535,500.7641621140,stimulus,
+monica, False,535,500.9018702120,tap,s
+monica, False,535,501.4764569210,tap,s
+monica,False,536,501.5142529730,stimulus,
+monica,False,537,502.2643339800,stimulus,
+monica, False,537,502.4233560450,tap,l
+monica,False,538,503.0144399840,stimulus,
+monica, False,538,503.1705679470,tap,l
+monica,False,539,503.7645841720,stimulus,
+monica,False,540,504.5146878810,stimulus,
+monica, False,540,504.7846916090,tap,l
+monica,False,541,505.2648078930,stimulus,
+monica, False,541,505.4472547500,tap,l
+monica,False,542,506.0149361030,stimulus,
+monica, False,542,506.1284761630,tap,l
+monica, False,542,506.7171715220,tap,l
+monica,False,543,506.7650266130,stimulus,
+monica, False,543,507.4305435780,tap,s
+monica,False,544,507.5151081670,stimulus,
+monica,False,545,508.2651873930,stimulus,
+monica, False,545,508.4551645370,tap,s
+monica,False,546,509.0152939110,stimulus,
+monica, False,546,509.1701970380,tap,s
+monica,False,547,509.7654072730,stimulus,
+monica, False,547,509.9850354230,tap,s
+monica,False,548,510.5154742720,stimulus,
+monica, False,548,510.6939653640,tap,l
+monica,False,549,511.2656009920,stimulus,
+monica, False,549,511.3374728180,tap,l
+monica,False,550,512.0157169910,stimulus,
+monica, False,550,512.1605104100,tap,l
+monica,False,551,512.7658468030,stimulus,
+monica, False,551,512.9228753160,tap,l
+monica,False,552,513.5159729090,stimulus,
+monica, False,552,513.5221315400,tap,s
+monica,False,553,514.2660804590,stimulus,
+monica, False,553,514.3484136350,tap,s
+monica, False,553,515.0000465900,tap,l
+monica,False,554,515.0161793600,stimulus,
+monica,False,555,515.7662811130,stimulus,
+monica, False,555,515.8121778330,tap,l
+monica,False,556,521.1070287200,probe_task,0
+monica, False,556,522.8092591290,probe_intention,1
+monica,False,557,526.5904086460,stimulus,
+monica, False,557,526.9817348010,tap,s
+monica,False,558,527.3403880840,stimulus,
+monica, False,558,527.5534252820,tap,s
+monica, False,558,528.0405157010,tap,l
+monica,False,559,528.0905025190,stimulus,
+monica, False,559,528.8174521710,tap,l
+monica,False,560,528.8405961880,stimulus,
+monica, False,560,529.3665042000,tap,s
+monica,False,561,529.5907291710,stimulus,
+monica, False,561,530.1395097370,tap,s
+monica,False,562,530.3407989530,stimulus,
+monica, False,562,530.8354834280,tap,s
+monica,False,563,531.0909011320,stimulus,
+monica, False,563,531.7632615970,tap,l
+monica,False,564,531.8410271850,stimulus,
+monica,False,565,532.5911383000,stimulus,
+monica, False,565,532.6762121590,tap,s
+monica, False,565,533.2940609350,tap,s
+monica,False,566,533.3412275210,stimulus,
+monica,False,567,534.0913241160,stimulus,
+monica, False,567,534.6751217560,tap,l
+monica,False,568,534.8414339120,stimulus,
+monica,False,569,535.5915705840,stimulus,
+monica,False,570,536.3416914630,stimulus,
+monica, False,570,536.6651751630,tap,l
+monica,False,571,537.0918220420,stimulus,
+monica, False,571,537.2500533050,tap,l
+monica, False,571,537.7453264310,tap,s
+monica,False,572,537.8419060050,stimulus,
+monica, False,572,538.3169909170,tap,s
+monica,False,573,538.5920285490,stimulus,
+monica, False,573,538.8227163640,tap,s
+monica,False,574,539.3422162920,stimulus,
+monica, False,574,539.6139834080,tap,l
+monica,False,575,540.0923596880,stimulus,
+monica, False,575,540.1068416290,tap,l
+monica, False,575,540.7549949870,tap,l
+monica,False,576,540.8424428460,stimulus,
+monica, False,576,541.4365688530,tap,l
+monica,False,577,541.5925143520,stimulus,
+monica, False,577,542.0920628160,tap,s
+monica,False,578,542.3426403390,stimulus,
+monica, False,578,542.6286985070,tap,s
+monica,False,579,543.0927419840,stimulus,
+monica, False,579,543.1920212540,tap,s
+monica,False,580,543.8428313430,stimulus,
+monica, False,580,544.0555177720,tap,s
+monica,False,581,544.5929430250,stimulus,
+monica,False,582,545.3430672720,stimulus,
+monica, False,582,545.9920971280,tap,l
+monica,False,583,546.0931689070,stimulus,
+monica, False,583,546.6603807530,tap,l
+monica,False,584,546.8432847320,stimulus,
+monica,False,585,547.5933774450,stimulus,
+monica, False,585,547.6735976110,tap,l
+monica, False,585,548.2333489510,tap,l
+monica,False,586,548.3434683390,stimulus,
+monica, False,586,548.9931101190,tap,s
+monica,False,587,549.0935683250,stimulus,
+monica, False,587,549.5792693620,tap,l
+monica,False,588,549.8436449110,stimulus,
+monica, False,588,550.1834779480,tap,l
+monica,False,589,550.5937878770,stimulus,
+monica, False,589,550.9784263530,tap,l
+monica,False,590,551.3439051140,stimulus,
+monica, False,590,551.6581452940,tap,l
+monica,False,591,552.0940309330,stimulus,
+monica, False,591,552.5384936010,tap,l
+monica,False,592,552.8441326110,stimulus,
+monica, False,592,553.1831354230,tap,s
+monica,False,593,553.5942200900,stimulus,
+monica, False,593,553.8748885620,tap,s
+monica,False,594,554.3443082580,stimulus,
+monica, False,594,554.6414058280,tap,s
+monica,False,595,555.0944437430,stimulus,
+monica, False,595,555.3210826430,tap,s
+monica,False,596,555.8445235200,stimulus,
+monica, False,596,555.9912212470,tap,l
+monica, False,596,556.5618798520,tap,l
+monica,False,597,556.5946306810,stimulus,
+monica,False,598,557.3447120950,stimulus,
+monica, False,598,557.3924484140,tap,l
+monica, False,598,557.9194156160,tap,s
+monica,False,599,558.0948196890,stimulus,
+monica, False,599,558.6160144550,tap,s
+monica,False,600,558.8449251120,stimulus,
+monica,False,601,559.5950252020,stimulus,
+monica, False,601,559.7860312050,tap,s
+monica, False,601,560.3198729920,tap,s
+monica,False,602,560.3450987290,stimulus,
+monica, False,602,561.0689764250,tap,l
+monica,False,603,561.0952468100,stimulus,
+monica, False,603,561.8337887950,tap,l
+monica,False,604,561.8453465730,stimulus,
+monica, False,604,562.5379354420,tap,l
+monica,False,605,562.5954539240,stimulus,
+monica, False,605,563.1628642320,tap,s
+monica,False,606,563.3455577530,stimulus,
+monica, False,606,563.9441159000,tap,s
+monica,False,607,564.0956658680,stimulus,
+monica, False,607,564.5856680550,tap,l
+monica,False,608,564.8458003810,stimulus,
+monica, False,608,565.3010101810,tap,l
+monica,False,609,565.5958811540,stimulus,
+monica, False,609,566.0876894410,tap,l
+monica,False,610,566.3459714870,stimulus,
+monica, False,610,566.8827418480,tap,s
+monica,False,611,567.0961029050,stimulus,
+monica, False,611,567.5742664410,tap,l
+monica,False,612,567.8462402040,stimulus,
+monica, False,612,568.5364195340,tap,l
+monica,False,613,568.5963481810,stimulus,
+monica, False,613,569.2974300040,tap,l
+monica,False,614,569.3464728330,stimulus,
+monica, False,614,569.7304721090,tap,s
+monica,False,615,570.0965740580,stimulus,
+monica, False,615,570.6743987180,tap,l
+monica,False,616,570.8467112150,stimulus,
+monica, False,616,571.2883333580,tap,l
+monica,False,617,571.5968038370,stimulus,
+monica, False,617,571.9100892020,tap,s
+monica,False,618,572.3469271990,stimulus,
+monica, False,618,572.6801993750,tap,s
+monica,False,619,573.0970217140,stimulus,
+monica, False,619,573.5047900660,tap,s
+monica,False,620,573.8471024380,stimulus,
+monica, False,620,574.4283047330,tap,s
+monica,False,621,574.5971872640,stimulus,
+monica, False,621,575.1719591130,tap,s
+monica,False,622,575.3473121030,stimulus,
+monica, False,622,575.8682180080,tap,s
+monica,False,623,576.0973828820,stimulus,
+monica, False,623,576.6509339750,tap,s
+monica,False,624,576.8474959410,stimulus,
+monica, False,624,577.2348749080,tap,l
+monica,False,625,577.5976118700,stimulus,
+monica, False,625,578.1608852480,tap,l
+monica,False,626,578.3477232720,stimulus,
+monica, False,626,578.9049105450,tap,l
+monica,False,627,579.0978225350,stimulus,
+monica, False,627,579.6261335050,tap,s
+monica,False,628,579.8479057380,stimulus,
+monica, False,628,580.3719902410,tap,s
+monica,False,629,580.5979964450,stimulus,
+monica, False,629,581.1578404460,tap,l
+monica,False,630,581.3480732070,stimulus,
+monica, False,630,581.8397565990,tap,l
+monica,False,631,582.0981905200,stimulus,
+monica, False,631,582.5896062370,tap,l
+monica,False,632,582.8483232730,stimulus,
+monica, False,632,583.3547574380,tap,l
+monica,False,633,583.5984046040,stimulus,
+monica, False,633,584.1305797460,tap,l
+monica,False,634,584.3485209300,stimulus,
+monica, False,634,584.7306553810,tap,s
+monica,False,635,585.0986165070,stimulus,
+monica, False,635,585.5699078200,tap,l
+monica,False,636,585.8487169540,stimulus,
+monica, False,636,586.5224611220,tap,l
+monica,False,637,586.5987965310,stimulus,
+monica, False,637,587.2093263950,tap,s
+monica,False,638,587.3488943230,stimulus,
+monica, False,638,587.9846326320,tap,s
+monica,False,639,588.0989986550,stimulus,
+monica, False,639,588.6852695220,tap,s
+monica,False,640,588.8491239650,stimulus,
+monica, False,640,589.4296567300,tap,s
+monica,False,641,589.5992628810,stimulus,
+monica, False,641,590.0670698940,tap,s
+monica,False,642,590.3493926510,stimulus,
+monica, False,642,590.9048765980,tap,s
+monica,False,643,591.0994830760,stimulus,
+monica, False,643,591.4535261140,tap,l
+monica,False,644,591.8495990270,stimulus,
+monica, False,644,592.3232809210,tap,s
+monica,False,645,592.5997235460,stimulus,
+monica, False,645,593.0833092570,tap,s
+monica, False,645,593.2850674710,tap,l
+monica,False,646,593.3498051240,stimulus,
+monica, False,646,594.0491812930,tap,s
+monica,False,647,594.0999381280,stimulus,
+monica, False,647,594.7843803630,tap,l
+monica,False,648,594.8500728700,stimulus,
+monica, False,648,595.5441412400,tap,l
+monica,False,649,595.6001527290,stimulus,
+monica, False,649,596.1983931560,tap,s
+monica,False,650,596.3502618670,stimulus,
+monica,False,651,597.1003520270,stimulus,
+monica, False,651,597.2129098180,tap,l
+monica,False,652,597.8504713830,stimulus,
+monica, False,652,597.8767422970,tap,l
+monica, False,652,598.5279045880,tap,l
+monica,False,653,598.6006047550,stimulus,
+monica, False,653,599.2333018290,tap,l
+monica,False,654,599.3507166970,stimulus,
+monica, False,654,599.9368265250,tap,s
+monica,False,655,600.1007783780,stimulus,
+monica, False,655,600.5487701650,tap,l
+monica,False,656,600.8509194170,stimulus,
+monica, False,656,601.2510315230,tap,s
+monica,False,657,601.6010057460,stimulus,
+monica, False,657,602.0427642490,tap,s
+monica,False,658,602.3510838780,stimulus,
+monica, False,658,602.9556533060,tap,s
+monica,False,659,603.1012162100,stimulus,
+monica, False,659,603.6007208370,tap,l
+monica,False,660,603.8513492800,stimulus,
+monica, False,660,604.3764665630,tap,l
+monica,False,661,604.6014509840,stimulus,
+monica, False,661,605.0225196000,tap,l
+monica,False,662,605.3515441220,stimulus,
+monica, False,662,605.6267679020,tap,s
+monica,False,663,608.7224771930,probe_task,0
+monica, False,663,608.7926877270,probe_intention,1
+monica,False,664,612.5721556180,stimulus,
+monica, False,664,612.9048840140,tap,l
+monica,False,665,613.3220902470,stimulus,
+monica, False,665,613.4526237960,tap,l
+monica,False,666,614.0721675660,stimulus,
+monica, False,666,614.0825830510,tap,l
+monica, False,666,614.7367353600,tap,s
+monica,False,667,614.8223087030,stimulus,
+monica, False,667,615.3491088690,tap,l
+monica,False,668,615.5724400270,stimulus,
+monica, False,668,616.1205999660,tap,l
+monica,False,669,616.3225643080,stimulus,
+monica, False,669,616.8296904820,tap,s
+monica,False,670,617.0726298580,stimulus,
+monica, False,670,617.7257017300,tap,s
+monica,False,671,617.8227619310,stimulus,
+monica, False,671,618.4147288550,tap,l
+monica,False,672,618.5728469400,stimulus,
+monica, False,672,619.1543406770,tap,l
+monica,False,673,619.3229746410,stimulus,
+monica, False,673,620.0183626160,tap,s
+monica,False,674,620.0730970960,stimulus,
+monica, False,674,620.6632002920,tap,s
+monica,False,675,620.8231986550,stimulus,
+monica, False,675,621.2479600800,tap,l
+monica,False,676,621.5732678520,stimulus,
+monica, False,676,622.0472253090,tap,l
+monica,False,677,622.3233809840,stimulus,
+monica, False,677,622.8222631320,tap,s
+monica,False,678,623.0734826590,stimulus,
+monica, False,678,623.6261499790,tap,s
+monica,False,679,623.8235653940,stimulus,
+monica, False,679,624.3333572050,tap,s
+monica,False,680,624.5736831010,stimulus,
+monica, False,680,625.0561778080,tap,s
+monica,False,681,625.3238214880,stimulus,
+monica, False,681,625.8740708840,tap,s
+monica,False,682,626.0739064520,stimulus,
+monica, False,682,626.5752187560,tap,l
+monica,False,683,626.8240175190,stimulus,
+monica, False,683,627.3092125360,tap,l
+monica,False,684,627.5741104270,stimulus,
+monica, False,684,628.1968986350,tap,s
+monica,False,685,628.3241937800,stimulus,
+monica, False,685,628.7963697040,tap,l
+monica,False,686,629.0743108510,stimulus,
+monica, False,686,629.6258129110,tap,l
+monica,False,687,629.8244241100,stimulus,
+monica, False,687,630.4068796200,tap,l
+monica,False,688,630.5745402860,stimulus,
+monica, False,688,631.0912463390,tap,l
+monica,False,689,631.3246155040,stimulus,
+monica, False,689,631.6658987730,tap,s
+monica,False,690,632.0746949540,stimulus,
+monica, False,690,632.4472107260,tap,s
+monica,False,691,632.8247724610,stimulus,
+monica, False,691,633.1237025520,tap,l
+monica,False,692,633.5748652940,stimulus,
+monica, False,692,634.1993342970,tap,l
+monica,False,693,634.3250027690,stimulus,
+monica, False,693,634.9807009860,tap,l
+monica,False,694,635.0751447910,stimulus,
+monica, False,694,635.7168021900,tap,l
+monica,False,695,635.8252814340,stimulus,
+monica, False,695,636.3887999710,tap,s
+monica,False,696,636.5753691500,stimulus,
+monica, False,696,637.1522308560,tap,s
+monica,False,697,637.3254669440,stimulus,
+monica, False,697,637.8786569700,tap,s
+monica,False,698,638.0755586980,stimulus,
+monica, False,698,638.6289067230,tap,s
+monica,False,699,638.8257469150,stimulus,
+monica, False,699,639.2705933990,tap,l
+monica,False,700,639.5757847500,stimulus,
+monica, False,700,640.0598595960,tap,s
+monica,False,701,640.3258818630,stimulus,
+monica, False,701,640.7873453540,tap,s
+monica,False,702,641.0759643850,stimulus,
+monica, False,702,641.4457691030,tap,l
+monica,False,703,641.8260625210,stimulus,
+monica, False,703,642.4206016040,tap,l
+monica,False,704,642.5761570090,stimulus,
+monica, False,704,643.1314439880,tap,l
+monica,False,705,643.3262934860,stimulus,
+monica, False,705,643.6693230020,tap,s
+monica,False,706,644.0763713870,stimulus,
+monica, False,706,644.7384073810,tap,s
+monica,False,707,644.8264440200,stimulus,
+monica, False,707,645.4243118750,tap,s
+monica,False,708,645.5765806770,stimulus,
+monica, False,708,646.1489207540,tap,s
+monica,False,709,646.3266952690,stimulus,
+monica, False,709,646.8270909580,tap,l
+monica,False,710,647.0768106450,stimulus,
+monica, False,710,647.5831417510,tap,s
+monica,False,711,647.8269305390,stimulus,
+monica, False,711,648.3897183270,tap,s
+monica,False,712,648.5770229980,stimulus,
+monica, False,712,649.0358950480,tap,s
+monica,False,713,649.3271108010,stimulus,
+monica, False,713,650.0132450810,tap,s
+monica,False,714,650.0772200270,stimulus,
+monica, False,714,650.6682371660,tap,s
+monica,False,715,650.8273114560,stimulus,
+monica, False,715,651.3941915710,tap,s
+monica,False,716,651.5773978560,stimulus,
+monica, False,716,652.1827016050,tap,l
+monica,False,717,652.3275081070,stimulus,
+monica, False,717,652.9326921210,tap,l
+monica,False,718,653.0776051940,stimulus,
+monica, False,718,653.6791494130,tap,l
+monica,False,719,653.8277179510,stimulus,
+monica, False,719,654.3120824050,tap,s
+monica,False,720,654.5778412390,stimulus,
+monica, False,720,655.0177697230,tap,l
+monica,False,721,655.3279461490,stimulus,
+monica, False,721,655.7892447900,tap,l
+monica,False,722,656.0780724840,stimulus,
+monica, False,722,656.6787094110,tap,l
+monica,False,723,656.8281507640,stimulus,
+monica, False,723,657.3002078860,tap,s
+monica,False,724,657.5782940160,stimulus,
+monica, False,724,658.0956923170,tap,s
+monica,False,725,658.3283866150,stimulus,
+monica, False,725,658.7462785630,tap,l
+monica,False,726,659.0785119030,stimulus,
+monica, False,726,659.5674254890,tap,l
+monica,False,727,659.8286173300,stimulus,
+monica, False,727,660.3508964360,tap,l
+monica,False,728,660.5787153000,stimulus,
+monica, False,728,661.0077453010,tap,l
+monica,False,729,661.3288194800,stimulus,
+monica, False,729,661.7264403220,tap,l
+monica,False,730,662.0789095590,stimulus,
+monica, False,730,662.2722745290,tap,s
+monica,False,731,662.8290169110,stimulus,
+monica, False,731,662.9263404690,tap,s
+monica, False,731,663.3857010120,tap,l
+monica,False,732,663.5791373440,stimulus,
+monica, False,732,664.2445875630,tap,s
+monica,False,733,664.3292742340,stimulus,
+monica, False,733,664.9241966380,tap,s
+monica,False,734,665.0793529510,stimulus,
+monica, False,734,665.6152817860,tap,l
+monica,False,735,665.8294853630,stimulus,
+monica, False,735,666.3889829140,tap,l
+monica,False,736,666.5795964010,stimulus,
+monica, False,736,667.0966561480,tap,l
+monica,False,737,667.3296941040,stimulus,
+monica, False,737,667.8271295890,tap,l
+monica,False,738,668.0798119290,stimulus,
+monica, False,738,668.5954152010,tap,l
+monica,False,739,668.8299485810,stimulus,
+monica, False,739,669.4430090770,tap,l
+monica,False,740,669.5800679960,stimulus,
+monica, False,740,670.2818077510,tap,s
+monica,False,741,670.3302029340,stimulus,
+monica,False,742,671.0802954170,stimulus,
+monica, False,742,671.0910216270,tap,s
+monica, False,742,671.7367111810,tap,s
+monica,False,743,671.8304084430,stimulus,
+monica, False,743,672.3200704230,tap,l
+monica,False,744,672.5805210300,stimulus,
+monica, False,744,673.1196983840,tap,s
+monica,False,745,673.3306008740,stimulus,
+monica, False,745,673.9003166550,tap,s
+monica,False,746,674.0806883260,stimulus,
+monica, False,746,674.6156698060,tap,l
+monica,False,747,674.8307903260,stimulus,
+monica, False,747,675.4001667320,tap,l
+monica,False,748,675.5809282220,stimulus,
+monica, False,748,676.2074610500,tap,l
+monica,False,749,676.3310450140,stimulus,
+monica, False,749,676.9249172740,tap,s
+monica,False,750,677.0811821200,stimulus,
+monica, False,750,677.6357354710,tap,s
+monica,False,751,677.8313211430,stimulus,
+monica, False,751,678.3667030610,tap,s
+monica,False,752,678.5814057940,stimulus,
+monica, False,752,679.0284397990,tap,s
+monica,False,753,679.3315123530,stimulus,
+monica, False,753,679.7247087730,tap,l
+monica,False,754,680.0816095320,stimulus,
+monica, False,754,680.6244866760,tap,l
+monica,False,755,680.8316976250,stimulus,
+monica, False,755,681.4635510980,tap,l
+monica,False,756,681.5818164870,stimulus,
+monica, False,756,682.1661793480,tap,s
+monica,False,757,682.3319175400,stimulus,
+monica, False,757,682.8227594510,tap,s
+monica,False,758,683.0819870230,stimulus,
+monica, False,758,683.5755539470,tap,s
+monica,False,759,683.8321112730,stimulus,
+monica, False,759,684.2735331710,tap,s
+monica,False,760,684.5822314010,stimulus,
+monica, False,760,685.1112432310,tap,s
+monica,False,761,685.3323638850,stimulus,
+monica, False,761,685.6916716830,tap,s
+monica,False,762,686.0824386820,stimulus,
+monica, False,762,686.4772336400,tap,l
+monica,False,763,686.8325800810,stimulus,
+monica, False,763,687.2112501370,tap,l
+monica,False,764,687.5826754470,stimulus,
+monica, False,764,687.9509986500,tap,s
+monica,False,765,688.3327638310,stimulus,
+monica, False,765,688.7716748550,tap,s
+monica,False,766,689.0828934520,stimulus,
+monica, False,766,689.5049387810,tap,l
+monica,False,767,689.8330378720,stimulus,
+monica, False,767,690.2770242620,tap,s
+monica,False,768,690.5831047850,stimulus,
+monica, False,768,691.0770272600,tap,s
+monica,False,769,693.8375623230,probe_task,0
+monica, False,769,693.8452307970,probe_intention,1
+monica,False,770,697.6214927090,stimulus,
+monica, False,770,697.8797655160,tap,s
+monica, False,770,697.9163105210,tap,l
+monica,False,771,698.3714924660,stimulus,
+monica, False,771,698.3922381280,tap,s
+monica, False,771,698.9693551090,tap,l
+monica,False,772,699.1215721410,stimulus,
+monica, False,772,699.6223725270,tap,l
+monica,False,773,699.8716984560,stimulus,
+monica, False,773,700.2921090720,tap,s
+monica,False,774,700.6218097600,stimulus,
+monica, False,774,701.0992889240,tap,l
+monica,False,775,701.3719470500,stimulus,
+monica, False,775,701.9294787760,tap,l
+monica,False,776,702.1220408430,stimulus,
+monica, False,776,702.7593017680,tap,s
+monica,False,777,702.8721321360,stimulus,
+monica, False,777,703.3955350710,tap,s
+monica,False,778,703.6222113400,stimulus,
+monica, False,778,703.9890973410,tap,l
+monica,False,779,704.3723423110,stimulus,
+monica, False,779,704.9702475280,tap,l
+monica,False,780,705.1224183790,stimulus,
+monica, False,780,705.5329231530,tap,s
+monica,False,781,705.8725381440,stimulus,
+monica, False,781,706.2639951360,tap,l
+monica,False,782,706.6226281480,stimulus,
+monica, False,782,707.1340034210,tap,l
+monica,False,783,707.3727140200,stimulus,
+monica, False,783,707.8331950100,tap,l
+monica,False,784,708.1228163540,stimulus,
+monica, False,784,708.5628563770,tap,s
+monica,False,785,708.8729095920,stimulus,
+monica, False,785,709.2332867830,tap,s
+monica,False,786,709.6230224320,stimulus,
+monica, False,786,710.1079210430,tap,l
+monica,False,787,710.3731113810,stimulus,
+monica, False,787,710.7779615200,tap,l
+monica,False,788,711.1232352200,stimulus,
+monica, False,788,711.5446377730,tap,s
+monica,False,789,711.8733350050,stimulus,
+monica, False,789,712.2756447060,tap,l
+monica,False,790,712.6234351460,stimulus,
+monica, False,790,712.9667369550,tap,l
+monica,False,791,713.3735393030,stimulus,
+monica, False,791,713.8408045750,tap,s
+monica,False,792,714.1236611330,stimulus,
+monica, False,792,714.5414772970,tap,s
+monica,False,793,714.8737628580,stimulus,
+monica, False,793,715.2027359090,tap,l
+monica,False,794,715.6238312100,stimulus,
+monica, False,794,716.0164790100,tap,s
+monica,False,795,716.3739307520,stimulus,
+monica, False,795,716.7846211150,tap,s
+monica,False,796,717.1240040090,stimulus,
+monica, False,796,717.4333930920,tap,l
+monica,False,797,717.8741089670,stimulus,
+monica, False,797,718.2755776550,tap,l
+monica,False,798,718.6242077960,stimulus,
+monica, False,798,718.9783093450,tap,s
+monica,False,799,719.3743513940,stimulus,
+monica, False,799,719.6929178250,tap,s
+monica,False,800,722.6040534510,probe_task,0
+monica, False,800,722.6118942940,probe_intention,1
