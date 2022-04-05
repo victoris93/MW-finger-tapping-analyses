@@ -108,11 +108,13 @@ data.nback <- data.nback %>%
          age = probe_data$age,
          sex =probe_data$sex)
 
-data.nback$intention_factor[data.nback$intention >= 2] <- "intentional"
-data.nback$intention_factor[data.nback$intention <= 1] <- "spontaneous"
+data.nback$intention <- as.integer(data.nback$intention) + 1
+data.nback$intention_factor[data.nback$intention >= 3] <- "intentional"
+data.nback$intention_factor[data.nback$intention <= 2] <- "spontaneous"
 data.nback$sex[data.nback$sex == FALSE] <- 1
 data.nback$sex[data.nback$sex == "M"] <- 0
 data.nback$intention_factor <- as.factor(data.nback$intention_factor)
+data.nback$sex <- as.factor(data.nback$sex)
 
 data.nback <- data.nback %>%
   mutate(condition = case_when(str_detect(condition, "baseline") ~ "baseline",
@@ -125,12 +127,18 @@ data.nback <- data.nback %>%
 ####################################################### SANITY CHECK
 
 data.nback_z <- data.nback %>%
-  reshape2::melt(id.vars = c("focus", "subj"), measure.vars = c("zlog.apen", "zbv"), varnames = c("Variable", "Z-score"))
+  reshape2::melt(id.vars = c("focus", "subj"), measure.vars = c("zlog.apen", "zbv"))
 
-data.table::setnames(data.nback_z, old = c('focus', "subj",'variable', "value"), new = c('Focus',"Subject",'Measure', "Z-score"))
+data.table::setnames(data.nback_z, old = c("focus", "subj",'variable', "value"), new = c('Focus', "Subject",'Measure', "Z-score"))
 
 data.nback_z %>%
-  ggplot(aes(x= `Focus`, y =`Z-score`,  group = `Measure`, color=`Measure`)) + 
+  ggplot(aes(x= `Focus`, y =`Score`,  group = `Measure`, color=`Measure`)) + 
+  geom_pointrange( stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
+  scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red"))
+
+data.nback_z %>%
+  ggplot(aes(x= `Focus`, y =`Score`,  group = `Measure`, color=`Measure`)) + 
   geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
   geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
   scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red")) +
