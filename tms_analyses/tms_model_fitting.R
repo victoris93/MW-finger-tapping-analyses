@@ -6,7 +6,7 @@ library(purrr)
 library(dplyr)
 library(ggplot2)
 library(tidyverse)
-theme_set(theme_bw())
+theme_set(theme_classic())
 setwd("/Users/VictoriaShevchenko/Documents/STAGE_M2/Analyses/tms_analyses")
 
 bname="tms_analyses"
@@ -23,8 +23,11 @@ models_task <- list(
   formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + (1|subj/condition)),
   formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + randomization + (1|subj/condition)),
   formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + (1|subj/condition)),
-  formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition))
+  formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition)),
+  formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition/visit)),
+  formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + (1|subj/condition/visit))
 )
+
 
 descriptions_task=c(
   "BV x AE", 
@@ -33,7 +36,9 @@ descriptions_task=c(
   "BV x AE + trial + block + condition",
   "BV x AE + trial + block + condition + randomization",
   "BV x AE + trial + block + condition + visit",
-  "BV x AE + trial + block + condition + visit + randomization"
+  "BV x AE + trial + block + condition + visit + randomization",
+  "BV x AE + trial + block + condition + visit + randomization + visit(subj.nested)",
+  "BV x AE + trial + block + condition + visit + visit(subj.nested)"
   )
 
 
@@ -178,7 +183,7 @@ mod_task.weights %>%
                                strategy=="waic" ~ "WAIC",
                                strategy=="stacking" ~ "pseudo-BMA"),
                      c("LOO","WAIC","pseudo-BMA"))) %>%
-  filter(strategy!="WAIC") %>% droplevels %>%
+  filter(strategy!="WAIC" & strategy!="pseudo-BMA") %>% droplevels %>%
   group_by(strategy) %>%
   mutate(win=if_else(prob==max(prob), T,F)) %>%
   ungroup %>%
@@ -302,8 +307,8 @@ map(1:npages,
 dev.off()
 
 ####
-mod=models.fitted[["mod22"]]
-mcmc_intervals_data(as.matrix(mod), prob_outer = 0.9 ) %>%
+mod=models.fitted[["task_mod05"]]
+mcmc_intervals_data(as.matrix(mod), prob_outer = 0.9) %>%
   filter(parameter!="lp__", !str_detect(parameter, "subj")) %>%
   filter(!str_detect(parameter, "Intercept")) %>%
   ggplot(aes(y=m, ymin=ll,ymax=hh,x=parameter))+
@@ -311,19 +316,49 @@ mcmc_intervals_data(as.matrix(mod), prob_outer = 0.9 ) %>%
   coord_flip()+geom_hline(yintercept = 0, color="red")+
   labs(y="Coefficient")
 
+## MCMC Areas
+color_scheme_set("viridisE")
+mcmc_intervals(mod, pars = c("b_zbv",
+                         "b_zlog.apen",
+                         "b_block_num",
+                         "b_probeix",
+                         "b_zbv:zlog.apen",
+                         "b_visit2",
+                         "b_conditionsham_rhTMS",
+                         "b_conditionsham_arrhTMS",
+                         "b_conditionactive_rhTMS",
+                         "b_conditionbaseline"
+                         )) +
+  ggplot2::scale_y_discrete(labels = c("b_zbv" = "BV"§,
+                                       "b_zlog.apen" = "AE",
+                                       "b_block_num" = "Block",
+                                       "b_probeix" = "Probe number",
+                                       "b_zbv:zlog.apen" = "BV x AE",
+                                       "b_visit2" = "Visit",
+                                       "b_conditionsham_rhTMS" = "Sham rhTMS",
+                                       "b_conditionsham_arrhTMS" = "Sham arrhTMS",
+                                       "b_conditionactive_rhTMS" = "Active rhTMS",
+                                       "b_conditionbaseline" = "Baseline"))
+#labs(y="Coefficient",x="Predictor") +
+#geom_hline(yintercept = 0.0, color="red", size=2, alpha=0.2)
+
+
 ## nya SfN
 mcmc_intervals_data(as.matrix(mod), prob_outer = 0.9 ) %>%
-  filter(parameter!="lp__", !str_detect(parameter, "subj")) %>%
+  filter(parameter!="lp__", !str_detect(parameter, "subj"), parameter != "disc") %>%
   filter(!str_detect(parameter, "Intercept")) %>%
   mutate(parameter=fct_relevel(parameter, "b_zbv:zlog.apen", after=5)) %>%
   mutate(parameter=fct_recode(parameter, 
-                              `Variability`="b_zbv",
-                              `Entropy`="b_zlog.apen",
-                              `Block`="b_partstimulation",
-                              `Trial`="b_probeix",
-                              `Stimulation`="b_conditionreal",
-                              `Variability x Entropy`="b_zbv:zlog.apen",
-                              `Block x Stimulation`="b_partstimulation:conditionreal")) %>%
+                              `BV`="b_zbv",
+                              `AE`="b_zlog.apen",
+                              `Block`="b_block_num",
+                              `Probe number`="b_probeix",
+                              `BV x AE`="b_zbv:zlog.apen",
+                              `Visit` = "b_visit2",
+                              `Sham rhTMS` = "b_conditionsham_rhTMS",
+                              `Sham arrhTMS` = "b_conditionsham_arrhTMS",
+                              `Active rhTMS` = "b_conditionactive_rhTMS",
+                              `Baseline` = "b_conditionbaseline")) %>%
   ggplot(aes(y=m, x=parameter))+
   geom_pointrange(aes(ymin=l,ymax=h), position=position_dodge(width=0.2), color="black", size=2,fatten=0.8)+
   geom_pointrange(aes(ymin=ll,ymax=hh), position=position_dodge(width=0.2))+
