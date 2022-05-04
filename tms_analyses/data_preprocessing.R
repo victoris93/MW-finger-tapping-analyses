@@ -147,9 +147,14 @@ tms_data.nback <- tms_data.nback %>%
                                str_detect(condition, "active_arrhTMS") ~ "active_arrhTMS",
                                str_detect(condition, "sham_arrhTMS") ~ "sham_arrhTMS",
                                TRUE ~ as.character(condition))))
+tms_data.nback$condition <- relevel(tms_data.nback$condition, ref = "baseline")
 
+#Save data
+save(tms_data.nback, file = "tms_data_preprocessed.Rdata")
 
 # PLOTS
+
+
 
 ## MW distribution
 
@@ -183,18 +188,18 @@ tms_data.nback %>%
   ggplot(aes(x = apen, y = probe.response)) +
   geom_point() + 
   geom_smooth(method = "lm") + 
-  facet_wrap(~subj)
+  facet_wrap(~condition)
 
 cor.test(x = all_data_nback$apen,
     y = all_data_nback$probe.response, "two.sided", method = "spearman")
 
 ## Cor(BV x MW)
 
-all_data_nback %>%
+tms_data.nback %>%
   ggplot(aes(x = bv, y = probe.response)) +
   geom_point() + 
-  geom_smooth(method = "lm") #+
-  #facet_wrap(~subj)
+  geom_smooth(method = "lm") +
+  facet_wrap(~condition)
 
 cor.test(x = all_data_nback$bv,
          y = all_data_nback$probe.response, "two.sided", method = "spearman")
@@ -222,20 +227,25 @@ tms_data.nback_z <- tms_data.nback %>%
 data.table::setnames(tms_data.nback_z, old = c("focus", "condition", "visit", "subj",'variable', "value"), new = c('Focus',"Condition", "Visit", "Subject",'Measure', "Score"))
 
 tms_data.nback_probes_long <- tms_data.nback %>%
-  reshape2::melt(id.vars = c("block_num","probeix","focus", "condition", "visit", "subj"), measure.vars = c("probe.response", "intention"))
+  reshape2::melt(id.vars = c("block_num","probeix","focus", "condition", "visit", "subj"), measure.vars = c("probe.response"))
 
-data.table::setnames(tms_data.nback_probes_long, old = c("block_num", "probeix","focus", "condition", "visit", "subj",'variable', "value"), new = c("Block","NProbe", 'Focus',"Condition", "Visit", "Subject",'Measure', "Score"))
+data.table::setnames(tms_data.nback_probes_long, old = c("block_num", "probeix","focus", "condition", "visit", "subj",'variable', "value"), new = c("Block","NProbe", 'Focus',"Condition", "Visit", "Subject",'Measure', "MW Score"))
 
 tms_data.nback_z %>%
   filter(`Measure` == c("zlog.apen", "zbv")) %>%
-  ggplot(aes(x= `Condition`, y =`Score`,  group = `Measure`, color=`Measure`)) + 
+  ggplot(aes(x= `Focus`, y =`Score`,  group = `Measure`, color=`Measure`)) + 
   geom_pointrange(aes(shape = `Condition`),stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
   geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
   scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red")) +
-  facet_wrap(~c(`Subject`, `Block`))
+  facet_wrap(~ `Condition`)
 
 tms_data.nback_probes_long %>%
-  filter(Subject == "clonesa_g2_002") %>%
+  ggplot(aes(x= `Condition`, y =`MW Score`, group =1, shape = `Condition`)) + 
+  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2))
+
+tms_data.nback_probes_long %>%
+  filter(Subject == "clonesa_g2_010") %>%
   ggplot(aes(x= NProbe, y = Score,  group = Measure, color=Measure)) + 
   geom_point(position=position_dodge(width = 0.7)) +
   geom_line(position=position_dodge(width = 1)) +
@@ -262,4 +272,5 @@ tms_data.nback_z %>% filter(`Subject` != "polya") %>%
   geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
   scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red")) 
 ##############################################################################################
+
 

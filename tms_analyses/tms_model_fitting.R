@@ -24,8 +24,12 @@ models_task <- list(
   formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + randomization + (1|subj/condition)),
   formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + (1|subj/condition)),
   formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition)),
-  formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition/visit)),
-  formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + (1|subj/condition/visit))
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition/visit)),
+ # formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + (1|subj/condition/visit)),
+  formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + condition:zlog.apen + condition:zbv + (1|subj/condition))#,
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + condition:zlog.apen + condition:zbv + (1|subj/condition)),
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition +  condition:zlog.apen + condition:zbv + (1|subj/condition)),
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num * condition + (1|subj/condition))
 )
 
 
@@ -37,8 +41,12 @@ descriptions_task=c(
   "BV x AE + trial + block + condition + randomization",
   "BV x AE + trial + block + condition + visit",
   "BV x AE + trial + block + condition + visit + randomization",
-  "BV x AE + trial + block + condition + visit + randomization + visit(subj.nested)",
-  "BV x AE + trial + block + condition + visit + visit(subj.nested)"
+  #"BV x AE + trial + block + condition + visit + randomization + visit(subj.nested)",
+  #"BV x AE + trial + block + condition + visit + visit(subj.nested)",
+  "BV x AE + trial + block + condition + visit + condition : AE + condition : BV"#,
+  #"BV x AE + trial + block + condition + condition : AE + condition : BV"
+  #"BV x AE + trial + block + condition + condition : AE + condition : BV",
+  #"BV x AE + trial + block x condition"
   )
 
 
@@ -50,7 +58,7 @@ model_task_5 <- formula(probe.response ~ zbv * zlog.apen + probeix + block_num +
 
 model_task_6 <- formula(probe.response ~ zbv * zlog.apen + probeix * condition + (1|subj/condition)) #bad Pareto-k
 model_task_7 <- formula(probe.response ~ zbv * zlog.apen + probeix + condition + (1|subj/condition))
-model_task_8 <- formula(probe.response ~ zbv * zlog.apen + probeix + condition + visit + (1|subj/condition))
+model_task_8 <- formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + (1|subj/condition))
 
 model_task_9 <- formula(probe.response ~ zbv * zlog.apen + probeix + condition:visit + block_num + (1|subj/condition)) #bad Pareto-k
 model_task_10 <- formula(probe.response ~ zbv * zlog.apen + probeix + condition + block_num + randomization + (1|subj/condition))
@@ -161,7 +169,6 @@ mod_task.weights = if.cached.load("mod_task.weights",
                                bind_cols(strategy = strat, data.frame(t(r)))
                              }), bname)
 
-print(loos_task)
 print(loo_compare(x=loos_task$loos))
 as.data.frame(loos_task$ic_diffs__) %>% rownames_to_column() %>% 
   mutate(z=LOOIC/SE) %>% print
@@ -172,7 +179,8 @@ mod.desc=data.frame(mod=names(models_task.fitted), descriptions_task)
 map_df(c("loo","stacking","waic"), ~ cbind(strategy=.x,mod.desc)) %>%
   spread(strategy,descriptions_task) %>%
   #mutate(loo2="",waic="") %>%
-  gather(strategy,descriptions,loo,stacking,waic) -> mod.desc
+  #pivot_longer(names_to = strategy, values_to = descriptions_task)
+  gather(strategy,descriptions_task,loo,stacking,waic) -> mod.desc
 
 mod_task.weights %>%
   gather(mod, prob, starts_with("mod")) %>% 
@@ -191,7 +199,7 @@ mod_task.weights %>%
   geom_bar(stat = "identity", position =
              position_dodge()) + coord_flip() +
   scale_fill_manual(values=c("lightblue", "orange"))+
-  geom_text(mapping=aes(fill=NULL, label=descriptions), y=0, hjust="left")+
+  geom_text(mapping=aes(fill=NULL, label=descriptions_task), y=0, hjust="left")+
   labs(x="",y="Posterior Probability")+
   facet_wrap(~strategy)+
   theme(axis.ticks.y = element_blank(),
@@ -236,13 +244,14 @@ ggsave("task_rel_looic.png", last_plot(), width=12,height=9)
 ## inspection of the model
 #========================
 stop()
-test.models = c("mod_task05")
+test.models = c("mod_task05", "mod_task07")
 map2_df(test.models,
         models_task.fitted[test.models],
         ~ bind_cols(
           mod = .x,
-          hypothesis(.y, "conditionactive_rhTMS>0", alpha = .05)$hypothesis
+          hypothesis(.y, "conditionactive_rhTMS > 0", alpha = .05)$hypothesis
         ))
+
 
 
 ## all models that have the interaction
@@ -307,7 +316,7 @@ map(1:npages,
 dev.off()
 
 ####
-mod=models.fitted[["task_mod05"]]
+mod=models_task.fitted$mod_task05
 mcmc_intervals_data(as.matrix(mod), prob_outer = 0.9) %>%
   filter(parameter!="lp__", !str_detect(parameter, "subj")) %>%
   filter(!str_detect(parameter, "Intercept")) %>%
@@ -316,9 +325,9 @@ mcmc_intervals_data(as.matrix(mod), prob_outer = 0.9) %>%
   coord_flip()+geom_hline(yintercept = 0, color="red")+
   labs(y="Coefficient")
 
-## MCMC Areas
+## MCMC Intervals
 color_scheme_set("viridisE")
-mcmc_intervals(mod, pars = c("b_zbv",
+mcmc_intervals(models_task.fitted$mod_task05, pars = c("b_zbv",
                          "b_zlog.apen",
                          "b_block_num",
                          "b_probeix",
@@ -327,9 +336,9 @@ mcmc_intervals(mod, pars = c("b_zbv",
                          "b_conditionsham_rhTMS",
                          "b_conditionsham_arrhTMS",
                          "b_conditionactive_rhTMS",
-                         "b_conditionbaseline"
+                         "b_conditionactive_arrhTMS"
                          )) +
-  ggplot2::scale_y_discrete(labels = c("b_zbv" = "BV"§,
+  ggplot2::scale_y_discrete(labels = c("b_zbv" = "BV",
                                        "b_zlog.apen" = "AE",
                                        "b_block_num" = "Block",
                                        "b_probeix" = "Probe number",
@@ -338,11 +347,51 @@ mcmc_intervals(mod, pars = c("b_zbv",
                                        "b_conditionsham_rhTMS" = "Sham rhTMS",
                                        "b_conditionsham_arrhTMS" = "Sham arrhTMS",
                                        "b_conditionactive_rhTMS" = "Active rhTMS",
-                                       "b_conditionbaseline" = "Baseline"))
-#labs(y="Coefficient",x="Predictor") +
+                                       "b_conditionactive_arrhTMS" = "Active arrhTMS"))
+ #labs(y="Coefficient",x="Predictor") +
 #geom_hline(yintercept = 0.0, color="red", size=2, alpha=0.2)
 
 
+######Model with interaction measures x stim
+
+mcmc_intervals(models_task.fitted$mod_task07, pars = c("b_zbv",
+                                                       "b_zlog.apen",
+                                                       "b_block_num",
+                                                       "b_probeix",
+                                                       "b_zbv:zlog.apen",
+                                                       #"b_visit2",
+                                                       "b_conditionsham_rhTMS",
+                                                       "b_conditionsham_arrhTMS",
+                                                       "b_conditionactive_rhTMS",
+                                                       "b_conditionactive_arrhTMS",
+                                                       "b_zlog.apen:conditionactive_rhTMS",
+                                                       "b_zlog.apen:conditionsham_rhTMS",
+                                                       "b_zlog.apen:conditionactive_arrhTMS",
+                                                       "b_zlog.apen:conditionsham_arrhTMS",
+                                                       "b_zbv:conditionactive_rhTMS",
+                                                       "b_zbv:conditionsham_rhTMS",
+                                                       "b_zbv:conditionactive_arrhTMS",
+                                                       "b_zbv:conditionsham_arrhTMS"
+                                                       )) +
+  ggplot2::scale_y_discrete(labels = c("b_zbv" = "BV",
+                                       "b_zlog.apen" = "AE",
+                                       "b_block_num" = "Block",
+                                       "b_probeix" = "Probe number",
+                                       "b_zbv:zlog.apen" = "BV x AE",
+                                       #"b_visit2" = "Visit",
+                                       "b_conditionsham_rhTMS" = "Sham rhTMS",
+                                       "b_conditionsham_arrhTMS" = "Sham arrhTMS",
+                                       "b_conditionactive_rhTMS" = "Active rhTMS",
+                                       "b_conditionactive_arrhTMS" = "Active arrhTMS",
+                                       "b_zlog.apen:conditionactive_rhTMS" = "AE x Active rhTMS",
+                                       "b_zlog.apen:conditionsham_rhTMS" = "AE x Sham rhTMS",
+                                       "b_zlog.apen:conditionactive_arrhTMS" = "AE x Active arrhTMS",
+                                       "b_zlog.apen:conditionsham_arrhTMS" = "AE x Sham arrhTMS",
+                                       "b_zbv:conditionactive_rhTMS" = "BV x Active rhTMS",
+                                       "b_zbv:conditionsham_rhTMS"= "BV x Sham rhTMS",
+                                       "b_zbv:conditionactive_arrhTMS" = "BV x Active arrhTMS",
+                                       "b_zbv:conditionsham_arrhTMS" = "BV x Sham arrhTMS"))
+               
 ## nya SfN
 mcmc_intervals_data(as.matrix(mod), prob_outer = 0.9 ) %>%
   filter(parameter!="lp__", !str_detect(parameter, "subj"), parameter != "disc") %>%
@@ -397,73 +446,6 @@ descriptions_intention=c(
   "BV x AE + trial + block + condition x visit + randomization",
   "BV x AE + trial + block + condition + visit + randomization"
 )
-
-
-model_intention_1 <- formula(intention ~ zbv * zlog.apen + (1|subj/condition))
-model_intention_2 <- formula(intention ~ zbv * zlog.apen + probeix + (1|subj/condition))
-model_intention_3 <- formula(intention ~ zbv * zlog.apen + probeix + condition + (1|subj/condition))
-model_intention_4 <- formula(intention ~ zbv * zlog.apen + probeix + block_num + (1|subj/condition))
-model_intention_5 <- formula(intention ~ zbv * zlog.apen + probeix + block_num + condition + (1|subj/condition))
-
-#model_intention_6 <- formula(intention ~ zbv * zlog.apen + probeix * condition + (1|subj/condition)) #doesn't fit
-
-model_intention_8 <- formula(intention ~ zbv * zlog.apen + probeix + condition + visit + (1|subj/condition))
-
-model_intention_9 <- formula(intention ~ zbv * zlog.apen + probeix + condition:visit + block_num + (1|subj/condition)) #bad Pareto-k
-model_intention_10 <- formula(intention ~ zbv * zlog.apen + probeix + condition + block_num + randomization + (1|subj/condition))
-
-model_intention_11 <- fosrmula(intention ~ zbv * zlog.apen + probeix + condition*visit + block_num + (1|subj/condition)) 
-
-model_intention_12 <- formula(intention ~ zbv * zlog.apen + probeix + block_num+ condition*visit + randomization + (1|subj/condition)) 
-
-model_intention_1_fit <- fit_and_plot("model_intention_1", model_intention_1, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_intention_1_fit)
-
-model_intention_2_fit <- fit_and_plot("model_intention_2", model_intention_2, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_intention_2_fit)
-
-model_intention_3_fit <- fit_and_plot("model_intention_3", model_intention_3, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_intention_3_fit)
-
-model_intention_4_fit <- fit_and_plot("model_intention_4", model_intention_4, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_intention_4_fit)
-brms::loo(model_intention_4_fit)
-
-model_intention_5_fit <- fit_and_plot("model_intention_5", model_intention_5, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_intention_5_fit)
-brms::loo(model_intention_5_fit)
-conditional_effects(model_intention_5_fit)
-
-model_intention_6_fit <- fit_and_plot("model_intention_6", model_intention_6, load.only=T,plot.only.new=F, dataset = tms_data.nback) #bad Pareto-k, doesn't fit
-bayes_R2(model_intention_6_fit)
-brms::loo(model_intention_6_fit)
-
-
-model_intention_7_fit <- fit_and_plot("model_intention_7", model_intention_7, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_intention_7_fit)
-brms::loo(model_intention_7_fit)
-
-
-model_intention_8_fit <- fit_and_plot("model_intention_8", model_intention_8, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_intention_8_fit)
-brms::loo(model_intention_8_fit)
-
-model_intention_9_fit <- fit_and_plot("model_intention_9", model_intention_9, load.only=T,plot.only.new=F, dataset = tms_data.nback) #bad Pareto-k
-bayes_R2(model_intention_9_fit)
-brms::loo(model_intention_9_fit)
-
-model_intention_10_fit <- fit_and_plot("model_intention_10", model_intention_10, load.only=T,plot.only.new=F, dataset = tms_data.nback) 
-bayes_R2(model_intention_10_fit)
-
-model_intention_11_fit <- fit_and_plot("model_intention_11", model_intention_11, load.only=T,plot.only.new=F, dataset = tms_data.nback) 
-bayes_R2(model_intention_11_fit)
-brms::loo(model_intention_9_fit)
-
-model_intention_12_fit <- fit_and_plot("model_intention_12", model_intention_12, load.only=T,plot.only.new=F, dataset = tms_data.nback) 
-bayes_R2(model_intention_12_fit)
-brms::loo(model_intention_12_fit)
-conditional_effects(models_task.fitted$mod_task05)
-
 
 pp_check(model_intention_8_fit, "ecdf_overlay") #posterior predictive check
 
