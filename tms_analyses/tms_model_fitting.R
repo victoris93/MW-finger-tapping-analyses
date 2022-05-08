@@ -16,6 +16,9 @@ if( "--force" %in% options) {
   uncache.all(base = bname)
 }
 
+
+############################################### FITTING LIST OF MODELS ON TASK PROBE
+
 models_task <- list(
   formula(probe.response ~ zbv * zlog.apen + (1|subj/condition)),
   formula(probe.response ~ zbv * zlog.apen + probeix + (1|subj/condition)),
@@ -25,8 +28,9 @@ models_task <- list(
   formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + (1|subj/condition)),
   formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition)),
   #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition/visit)),
- # formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + (1|subj/condition/visit)),
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + condition:zlog.apen + condition:zbv + (1|subj/condition)),
   formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + condition:zlog.apen + condition:zbv + (1|subj/condition))#,
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + randomization + condition:zlog.apen + condition:zbv + (1|subj/condition))#,
   #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + condition:zlog.apen + condition:zbv + (1|subj/condition)),
   #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition +  condition:zlog.apen + condition:zbv + (1|subj/condition)),
   #formula(probe.response ~ zbv * zlog.apen + probeix + block_num * condition + (1|subj/condition))
@@ -43,77 +47,12 @@ descriptions_task=c(
   "BV x AE + trial + block + condition + visit + randomization",
   #"BV x AE + trial + block + condition + visit + randomization + visit(subj.nested)",
   #"BV x AE + trial + block + condition + visit + visit(subj.nested)",
+  #"BV x AE + trial + block + condition + condition : AE + condition : BV",
   "BV x AE + trial + block + condition + visit + condition : AE + condition : BV"#,
-  #"BV x AE + trial + block + condition + condition : AE + condition : BV"
+  #"BV x AE + trial + block + condition + randomization + condition : AE + condition : BV"#,
   #"BV x AE + trial + block + condition + condition : AE + condition : BV",
   #"BV x AE + trial + block x condition"
   )
-
-
-model_task_1 <- formula(probe.response ~ zbv * zlog.apen + (1|subj/condition))
-model_task_2 <- formula(probe.response ~ zbv * zlog.apen + probeix + (1|subj/condition))
-model_task_3 <- formula(probe.response ~ zbv * zlog.apen + probeix + condition + (1|subj/condition))
-model_task_4 <- formula(probe.response ~ zbv * zlog.apen + probeix + block_num + (1|subj/condition))
-model_task_5 <- formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + (1|subj/condition))
-
-model_task_6 <- formula(probe.response ~ zbv * zlog.apen + probeix * condition + (1|subj/condition)) #bad Pareto-k
-model_task_7 <- formula(probe.response ~ zbv * zlog.apen + probeix + condition + (1|subj/condition))
-model_task_8 <- formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + (1|subj/condition))
-
-model_task_9 <- formula(probe.response ~ zbv * zlog.apen + probeix + condition:visit + block_num + (1|subj/condition)) #bad Pareto-k
-model_task_10 <- formula(probe.response ~ zbv * zlog.apen + probeix + condition + block_num + randomization + (1|subj/condition))
-
-model_task_11 <- formula(probe.response ~ zbv * zlog.apen + probeix + condition*visit + block_num + (1|subj/condition)) 
-
-model_task_12 <- formula(probe.response ~ zbv * zlog.apen + probeix + block_num+ condition*visit + randomization + (1|subj/condition)) 
-model_task_13 <- formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + zbv : condition + zlog.apen : condition + (1|subj/condition))
-
-model_task_1_fit <- fit_and_plot("model_task_1", model_task_1, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_task_1_fit)
-
-model_task_2_fit <- fit_and_plot("model_task_2", model_task_2, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_task_2_fit)
-
-model_task_3_fit <- fit_and_plot("model_task_3", model_task_3, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_task_3_fit)
-
-model_task_4_fit <- fit_and_plot("model_task_4", model_task_4, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_task_4_fit)
-brms::loo(model_task_4_fit)
-
-model_task_5_fit <- fit_and_plot("model_task_5", model_task_5, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_task_5_fit)
-brms::loo(model_task_5_fit)
-conditional_effects(model_task_5_fit)
-
-model_task_6_fit <- fit_and_plot("model_task_6", model_task_6, load.only=T,plot.only.new=F, dataset = tms_data.nback) #bad Pareto-k, doesn't fit
-bayes_R2(model_task_6_fit)
-brms::loo(model_task_6_fit)
-
-
-model_task_7_fit <- fit_and_plot("model_task_7", model_task_7, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_task_7_fit)
-brms::loo(model_task_7_fit)
-
-
-model_task_8_fit <- fit_and_plot("model_task_8", model_task_8, load.only=T,plot.only.new=F, dataset = tms_data.nback)
-bayes_R2(model_task_8_fit)
-brms::loo(model_task_8_fit)
-
-model_task_9_fit <- fit_and_plot("model_task_9", model_task_9, load.only=T,plot.only.new=F, dataset = tms_data.nback) #bad Pareto-k
-bayes_R2(model_task_9_fit)
-brms::loo(model_task_9_fit)
-
-model_task_10_fit <- fit_and_plot("model_task_10", model_task_10, load.only=T,plot.only.new=F, dataset = tms_data.nback) 
-bayes_R2(model_task_10_fit)
-
-model_task_11_fit <- fit_and_plot("model_task_11", model_task_11, load.only=T,plot.only.new=F, dataset = tms_data.nback) 
-bayes_R2(model_task_11_fit)
-brms::loo(model_task_9_fit)
-
-model_task_12_fit <- fit_and_plot("model_task_12", model_task_12, load.only=T,plot.only.new=F, dataset = tms_data.nback) 
-bayes_R2(model_task_12_fit)
-brms::loo(model_task_12_fit)
 
 conditional_effects(models_task.fitted[7]$mod_task06)
 
@@ -144,9 +83,6 @@ mcmc_parcoord(posterior_model_task_5, np = np_task_model_5)
 
 pairs(models_task.fitted[6], variable = c("condition"))
 
-
-############################################### FITTING LIST OF MODELS ON TASK PROBE
-
 names(models_task) <- sprintf("mod_task%02i", 0:(length(models_task)-1))
 
 models_task.wrap <- map2(names(models_task), models_task, ~ list(mod.name=.x, mod=.y))
@@ -154,20 +90,20 @@ models_task.fitted=lapply(models_task.wrap, function(lmod){ fit_and_plot(lmod$mo
 names(models_task.fitted) <- names(models_task)
 
 loos_task=if.cached.load("loos",
-                    invoke(loo_wrapper, .x = models_task.fitted, model_names = names(models_task.fitted)),
-                    base=bname)
+                         invoke(loo_wrapper, .x = models_task.fitted, model_names = names(models_task.fitted)),
+                         base=bname)
 
 r2s=lapply(models_task.fitted, bayes_R2, cl=22)
-mod_task.weights = if.cached.load("mod_task.weights",
-                             map_df(c("loo", "waic", "stacking"), function(strat) {
-                               r = invoke(
-                                 model_weights_wrapper,
-                                 .x = models_task.fitted,
-                                 weights = strat,
-                                 model_names = names(models_task.fitted)
-                               )
-                               bind_cols(strategy = strat, data.frame(t(r)))
-                             }), bname)
+mod_intention.weights = if.cached.load("mod_task.weights",
+                                       map_df(c("loo", "waic", "stacking"), function(strat) {
+                                         r = invoke(
+                                           model_weights_wrapper,
+                                           .x = models_task.fitted,
+                                           weights = strat,
+                                           model_names = names(models_task.fitted)
+                                         )
+                                         bind_cols(strategy = strat, data.frame(t(r)))
+                                       }), bname)
 
 print(loo_compare(x=loos_task$loos))
 as.data.frame(loos_task$ic_diffs__) %>% rownames_to_column() %>% 
@@ -210,13 +146,213 @@ mod_task.weights %>%
         strip.text = element_text(size=12),
         strip.placement = "inside") 
 
-ggsave("model_task_weights.png", plot = last_plot(), width=10,height=5)
+#ggsave("model_task_weights.png", plot = last_plot(), width=10,height=5)
 
-mod.weights[,-1] %>% as.matrix %>% t %>% data.frame %>% 
-  setNames(mod.weights$strategy) %>%
-  rownames_to_column() -> modw.df
-modw.df %>% arrange(desc(loo)) %>% head(2)
-modw.df %>% arrange(desc(loo2)) %>% head(2)
+############################################### MODELLING TASK PERFORMANCE
+
+models_bv <- list(
+  formula(zbv ~ probeix + (1|subj/condition)),
+  formula(zbv ~ probeix + block_num + (1|subj/condition)),
+  formula(zbv ~ probeix + block_num + condition + (1|subj/condition)),
+  formula(zbv ~ probeix + block_num + condition + visit + (1|subj/condition))
+)
+
+
+descriptions_bv=c(
+  "trial", 
+  "trial + block", 
+  "trial + block + condition",
+  "trial + block + condition + visit"
+)
+
+
+names(models_bv) <- sprintf("mod_bv%02i", 0:(length(models_bv)-1))
+
+models_bv.wrap <- map2(names(models_bv), models_bv, ~ list(mod.name=.x, mod=.y))
+models_bv.fitted=lapply(models_bv.wrap, function(lmod){ fit_and_plot(lmod$mod.name, lmod$mod, load.only=T,plot.only.new=F, dataset = tms_data.nback, family = student(link = "identity", link_sigma = "log", link_nu = "logm1"))})
+names(models_bv.fitted) <- names(models_bv)
+
+loos_bv=if.cached.load("loos_bv",
+                       invoke(loo_wrapper, .x = models_bv.fitted, model_names = names(models_bv.fitted)),
+                       base=bname)
+
+lapply(models_bv.fitted, bayes_R2, cl=22)
+mod_bv.weights = if.cached.load("mod_bv.weights",
+                                       map_df(c("loo", "waic", "stacking"), function(strat) {
+                                         r = invoke(
+                                           model_weights_wrapper,
+                                           .x = models_bv.fitted,
+                                           weights = strat,
+                                           model_names = names(models_bv.fitted)
+                                         )
+                                         bind_cols(strategy = strat, data.frame(t(r)))
+                                       }), bname)
+
+print(loo_compare(x=loos_bv$loos))
+as.data.frame(loos_bv$ic_diffs__) %>% rownames_to_column() %>% 
+  mutate(z=LOOIC/SE) %>% print
+
+print(mod_bv.weights)
+
+mod.desc=data.frame(mod=names(models_bv.fitted), descriptions_bv)
+map_df(c("loo","stacking","waic"), ~ cbind(strategy=.x,mod.desc)) %>%
+  spread(strategy,descriptions_bv) %>%
+  #mutate(loo2="",waic="") %>%
+  #pivot_longer(names_to = strategy, values_to = descriptions_bv)
+  gather(strategy,descriptions_bv,loo,stacking,waic) -> mod.desc
+
+mod_bv.weights %>%
+  gather(mod, prob, starts_with("mod")) %>% 
+  full_join(mod.desc) %>%
+  mutate(
+    strategy=ordered(strategy, c("loo", "waic","stacking")),
+    strategy=ordered(case_when(strategy=="loo" ~ "LOO",
+                               strategy=="waic" ~ "WAIC",
+                               strategy=="stacking" ~ "pseudo-BMA"),
+                     c("LOO","WAIC","pseudo-BMA"))) %>%
+  filter(strategy!="WAIC" & strategy!="pseudo-BMA") %>% droplevels %>%
+  group_by(strategy) %>%
+  mutate(win=if_else(prob==max(prob), T,F)) %>%
+  ungroup %>%
+  ggplot(aes(mod, prob, fill = win)) +
+  geom_bar(stat = "identity", position =
+             position_dodge()) + coord_flip() +
+  scale_fill_manual(values=c("lightblue", "orange"))+
+  geom_text(mapping=aes(fill=NULL, label=descriptions_bv), y=0, hjust="left")+
+  labs(x="",y="Posterior Probability")+
+  facet_wrap(~strategy)+
+  theme(axis.ticks.y = element_blank(),
+        legend.position = "none",
+        axis.text.y=element_blank(),
+        panel.grid = element_blank(),
+        strip.background = element_blank(),
+        strip.text = element_text(size=12),
+        strip.placement = "inside") 
+
+## BV: MCMC Intervals
+
+color_scheme_set("viridisE")
+
+mcmc_intervals(models_bv.fitted$mod_bv03, pars = c("b_block_num",
+                                                       "b_probeix",
+                                                       "b_visit2",
+                                                       "b_conditionsham_rhTMS",
+                                                       "b_conditionsham_arrhTMS",
+                                                       "b_conditionactive_rhTMS",
+                                                       "b_conditionactive_arrhTMS"
+)) +
+  ggplot2::scale_y_discrete(labels = c("b_block_num" = "Block",
+                                       "b_probeix" = "Probe number",
+                                       "b_visit2" = "Visit",
+                                       "b_conditionsham_rhTMS" = "Sham rhTMS",
+                                       "b_conditionsham_arrhTMS" = "Sham arrhTMS",
+                                       "b_conditionactive_rhTMS" = "Active rhTMS",
+                                       "b_conditionactive_arrhTMS" = "Active arrhTMS"))
+
+
+################################### FINTTING MODELS ON AE
+
+models_apen <- list(
+  formula(zlog.apen ~ probeix + (1|subj/condition)),
+  formula(zlog.apen ~ probeix + block_num + (1|subj/condition)),
+  formula(zlog.apen ~ probeix + block_num + condition + (1|subj/condition)),
+  formula(zlog.apen ~ probeix + block_num + condition + visit + (1|subj/condition))
+)
+
+
+descriptions_apen=c(
+  "trial", 
+  "trial + block", 
+  "trial + block + condition",
+  "trial + block + condition + visit"
+)
+
+
+names(models_apen) <- sprintf("mod_apen%02i", 0:(length(models_apen)-1))
+
+models_apen.wrap <- map2(names(models_apen), models_apen, ~ list(mod.name=.x, mod=.y))
+models_apen.fitted=lapply(models_apen.wrap, function(lmod){ fit_and_plot(lmod$mod.name, lmod$mod, load.only=T,plot.only.new=F, dataset = tms_data.nback, family = student(link = "identity", link_sigma = "log", link_nu = "logm1"))})
+names(models_apen.fitted) <- names(models_apen)
+
+loos_apen=if.cached.load("loos_apen",
+                         invoke(loo_wrapper, .x = models_apen.fitted, model_names = names(models_apen.fitted)),
+                         base=bname)
+
+lapply(models_apen.fitted, bayes_R2, cl=22)
+mod_apen.weights = if.cached.load("mod_apen.weights",
+                                  map_df(c("loo", "waic", "stacking"), function(strat) {
+                                    r = invoke(
+                                      model_weights_wrapper,
+                                      .x = models_apen.fitted,
+                                      weights = strat,
+                                      model_names = names(models_apen.fitted)
+                                    )
+                                    bind_cols(strategy = strat, data.frame(t(r)))
+                                  }), bname)
+
+print(loo_compare(x=loos_apen$loos))
+as.data.frame(loos_apen$ic_diffs__) %>% rownames_to_column() %>% 
+  mutate(z=LOOIC/SE) %>% print
+
+print(mod_apen.weights)
+
+mod.desc=data.frame(mod=names(models_apen.fitted), descriptions_apen)
+map_df(c("loo","stacking","waic"), ~ cbind(strategy=.x,mod.desc)) %>%
+  spread(strategy,descriptions_apen) %>%
+  #mutate(loo2="",waic="") %>%
+  #pivot_longer(names_to = strategy, values_to = descriptions_apen)
+  gather(strategy,descriptions_apen,loo,stacking,waic) -> mod.desc
+
+mod_apen.weights %>%
+  gather(mod, prob, starts_with("mod")) %>% 
+  full_join(mod.desc) %>%
+  mutate(
+    strategy=ordered(strategy, c("loo", "waic","stacking")),
+    strategy=ordered(case_when(strategy=="loo" ~ "LOO",
+                               strategy=="waic" ~ "WAIC",
+                               strategy=="stacking" ~ "pseudo-BMA"),
+                     c("LOO","WAIC","pseudo-BMA"))) %>%
+  filter(strategy!="WAIC" & strategy!="pseudo-BMA") %>% droplevels %>%
+  group_by(strategy) %>%
+  mutate(win=if_else(prob==max(prob), T,F)) %>%
+  ungroup %>%
+  ggplot(aes(mod, prob, fill = win)) +
+  geom_bar(stat = "identity", position =
+             position_dodge()) + coord_flip() +
+  scale_fill_manual(values=c("lightblue", "orange"))+
+  geom_text(mapping=aes(fill=NULL, label=descriptions_apen), y=0, hjust="left")+
+  labs(x="",y="Posterior Probability")+
+  facet_wrap(~strategy)+
+  theme(axis.ticks.y = element_blank(),
+        legend.position = "none",
+        axis.text.y=element_blank(),
+        panel.grid = element_blank(),
+        strip.background = element_blank(),
+        strip.text = element_text(size=12),
+        strip.placement = "inside") 
+
+## AE: MCMC Intervals
+
+color_scheme_set("viridisE")
+
+mcmc_intervals(models_apen.fitted$mod_apen03, pars = c("b_block_num",
+                                                       "b_probeix",
+                                                       "b_visit2",
+                                                       "b_conditionsham_rhTMS",
+                                                       "b_conditionsham_arrhTMS",
+                                                       "b_conditionactive_rhTMS",
+                                                       "b_conditionactive_arrhTMS"
+)) +
+  ggplot2::scale_y_discrete(labels = c("b_block_num" = "Block",
+                                       "b_probeix" = "Probe number",
+                                       "b_visit2" = "Visit",
+                                       "b_conditionsham_rhTMS" = "Sham rhTMS",
+                                       "b_conditionsham_arrhTMS" = "Sham arrhTMS",
+                                       "b_conditionactive_rhTMS" = "Active rhTMS",
+                                       "b_conditionactive_arrhTMS" = "Active arrhTMS"))
+
+
+
 
 ## LOOIC
 loo_compare(x = loos$loos) %>% data.frame %>% rownames_to_column(var = "mod") %>%
@@ -430,10 +566,15 @@ models_intention <- list(
   formula(intention ~ zbv * zlog.apen + probeix + block_num + condition + (1|subj/condition)),
   formula(intention ~ zbv * zlog.apen + probeix + block_num + condition + randomization + (1|subj/condition)),
   formula(intention ~ zbv * zlog.apen + probeix + block_num + condition + visit + (1|subj/condition)),
-  formula(intention ~ zbv * zlog.apen + probeix + block_num + condition * visit + (1|subj/condition)),
-  formula(intention ~ zbv * zlog.apen + probeix + block_num+ condition*visit + randomization + (1|subj/condition)),
-  formula(intention ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition))
+  formula(intention ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition)),
+  formula(intention ~ zbv * zlog.apen + probeix + block_num + condition + condition:zlog.apen + condition:zbv + (1|subj/condition)),
+  formula(intention ~ zbv * zlog.apen + probeix + block_num + condition + visit + condition:zlog.apen + condition:zbv + (1|subj/condition))#,
+  #formula(intention ~ zbv * zlog.apen + probeix + block_num + condition + randomization + condition:zlog.apen + condition:zbv + (1|subj/condition))#,
+  #formula(intention ~ zbv * zlog.apen + probeix + block_num + condition + condition:zlog.apen + condition:zbv + (1|subj/condition)),
+  #formula(intention ~ zbv * zlog.apen + probeix + block_num + condition +  condition:zlog.apen + condition:zbv + (1|subj/condition)),
+  #formula(intention ~ zbv * zlog.apen + probeix + block_num * condition + (1|subj/condition))
 )
+
 
 descriptions_intention=c(
   "BV x AE", 
@@ -442,28 +583,33 @@ descriptions_intention=c(
   "BV x AE + trial + block + condition",
   "BV x AE + trial + block + condition + randomization",
   "BV x AE + trial + block + condition + visit",
-  "BV x AE + trial + block + condition x visit",
-  "BV x AE + trial + block + condition x visit + randomization",
-  "BV x AE + trial + block + condition + visit + randomization"
+  "BV x AE + trial + block + condition + visit + randomization",
+  #"BV x AE + trial + block + condition + visit + randomization + visit(subj.nested)",
+  #"BV x AE + trial + block + condition + visit + visit(subj.nested)",
+  #"BV x AE + trial + block + condition + condition : AE + condition : BV",
+  "BV x AE + trial + block + condition + condition : AE + condition : BV",
+  "BV x AE + trial + block + condition + visit + condition : AE + condition : BV"
+  #,
+  #"BV x AE + trial + block + condition + randomization + condition : AE + condition : BV"#,
+  #"BV x AE + trial + block + condition + condition : AE + condition : BV",
+  #"BV x AE + trial + block x condition"
 )
-
-pp_check(model_intention_8_fit, "ecdf_overlay") #posterior predictive check
 
 ############################################### FITTING LIST OF MODELS ON TASK PROBE
 
 names(models_intention) <- sprintf("mod_intention%02i", 0:(length(models_intention)-1))
 
 models_intention.wrap <- map2(names(models_intention), models_intention, ~ list(mod.name=.x, mod=.y))
-models_intention.fitted=lapply(models_intention.wrap, function(lmod){ fit_and_plot(lmod$mod.name, lmod$mod, load.only=T,plot.only.new=F, dataset = tms_data.nback)})
+models_intention.fitted=lapply(models_intention.wrap, function(lmod){fit_and_plot(lmod$mod.name, lmod$mod, load.only=T,plot.only.new=F, dataset = tms_data.nback)})
 names(models_intention.fitted) <- names(models_intention)
 
-loos_intention=if.cached.load("loos",
+loos_intention=if.cached.load("loos_intention",
                               invoke(loo_wrapper, .x = models_intention.fitted, model_names = names(models_intention.fitted)),
                               base=bname)
 
 r2s=lapply(models_intention.fitted, bayes_R2, cl=22)
 mod_intention.weights = if.cached.load("mod.weights",
-                                       map_df(c("loo", "waic", "loo2"), function(strat) {
+                                       map_df(c("loo", "waic", "stacking"), function(strat) {
                                          r = invoke(
                                            model_weights_wrapper,
                                            .x = models_intention.fitted,
@@ -481,21 +627,21 @@ as.data.frame(loos_intention$ic_diffs__) %>% rownames_to_column() %>%
 print(mod_intention.weights)
 
 mod.desc=data.frame(mod=names(models_intention.fitted), descriptions_intention)
-map_df(c("loo","loo2","waic"), ~ cbind(strategy=.x,mod.desc)) %>%
-  spread(strategy,descriptions) %>%
+map_df(c("loo","stacking","waic"), ~ cbind(strategy=.x,mod.desc)) %>%
+  spread(strategy,descriptions_intention) %>%
   #mutate(loo2="",waic="") %>%
-  gather(strategy,descriptions,loo,loo2,waic) -> mod.desc
+  gather(strategy,descriptions_intention,loo,stacking,waic) -> mod.desc
 
 mod.weights %>%
   gather(mod, prob, starts_with("mod")) %>% 
   full_join(mod.desc) %>%
   mutate(
-    strategy=ordered(strategy, c("loo", "waic","loo2")),
+    strategy=ordered(strategy, c("loo", "waic","stacking")),
     strategy=ordered(case_when(strategy=="loo" ~ "LOO",
                                strategy=="waic" ~ "WAIC",
-                               strategy=="loo2" ~ "pseudo-BMA"),
+                               strategy=="stacking" ~ "pseudo-BMA"),
                      c("LOO","WAIC","pseudo-BMA"))) %>%
-  filter(strategy!="WAIC") %>% droplevels %>%
+  filter(strategy==c("LOO")) %>% droplevels %>%
   group_by(strategy) %>%
   mutate(win=if_else(prob==max(prob), T,F)) %>%
   ungroup %>%
@@ -503,7 +649,7 @@ mod.weights %>%
   geom_bar(stat = "identity", position =
              position_dodge()) + coord_flip() +
   scale_fill_manual(values=c("lightblue", "orange"))+
-  geom_text(mapping=aes(fill=NULL, label=descriptions), y=0, hjust="left")+
+  geom_text(mapping=aes(fill=NULL, label=descriptions_intention), y=0, hjust="left")+
   labs(x="",y="Posterior Probability")+
   facet_wrap(~strategy)+
   theme(axis.ticks.y = element_blank(),
@@ -521,6 +667,104 @@ mod.weights[,-1] %>% as.matrix %>% t %>% data.frame %>%
   rownames_to_column() -> modw.df
 modw.df %>% arrange(desc(loo)) %>% head(2)
 modw.df %>% arrange(desc(loo2)) %>% head(2)
+
+
+
+####################################################### MODELLING ALERTNESS
+
+
+models_somnolence <- list(
+  formula(somnolence ~ zbv * zlog.apen + (1|subj/condition)),
+  formula(somnolence ~ zbv * zlog.apen + probeix + (1|subj/condition)),
+  formula(somnolence ~ zbv * zlog.apen + probeix + block_num + (1|subj/condition)),
+  formula(somnolence ~ zbv * zlog.apen + probeix + block_num + condition + (1|subj/condition)),
+  formula(somnolence ~ zbv * zlog.apen + probeix + block_num + condition + randomization + (1|subj/condition)),
+  formula(somnolence ~ zbv * zlog.apen + probeix + block_num + condition + visit + (1|subj/condition)),
+  formula(somnolence ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition)),
+  formula(somnolence ~ zbv * zlog.apen + probeix + block_num + condition + condition:zlog.apen + condition:zbv + (1|subj/condition)),
+  formula(somnolence ~ zbv * zlog.apen + probeix + block_num + condition + visit + condition:zlog.apen + condition:zbv + (1|subj/condition))#,
+  #formula(somnolence ~ zbv * zlog.apen + probeix + block_num + condition + randomization + condition:zlog.apen + condition:zbv + (1|subj/condition))#,
+  #formula(somnolence ~ zbv * zlog.apen + probeix + block_num + condition + condition:zlog.apen + condition:zbv + (1|subj/condition)),
+  #formula(somnolence ~ zbv * zlog.apen + probeix + block_num + condition +  condition:zlog.apen + condition:zbv + (1|subj/condition)),
+  #formula(somnolence ~ zbv * zlog.apen + probeix + block_num * condition + (1|subj/condition))
+)
+
+
+descriptions_somnolence=c(
+  "BV x AE", 
+  "BV x AE + trial", 
+  "BV x AE + trial + block", 
+  "BV x AE + trial + block + condition",
+  "BV x AE + trial + block + condition + randomization",
+  "BV x AE + trial + block + condition + visit",
+  "BV x AE + trial + block + condition + visit + randomization",
+  #"BV x AE + trial + block + condition + visit + randomization + visit(subj.nested)",
+  #"BV x AE + trial + block + condition + visit + visit(subj.nested)",
+  #"BV x AE + trial + block + condition + condition : AE + condition : BV",
+  "BV x AE + trial + block + condition + condition : AE + condition : BV",
+  "BV x AE + trial + block + condition + visit + condition : AE + condition : BV"
+  #,
+  #"BV x AE + trial + block + condition + randomization + condition : AE + condition : BV"#,
+  #"BV x AE + trial + block + condition + condition : AE + condition : BV",
+  #"BV x AE + trial + block x condition"
+)
+
+
+names(models_somnolence) <- sprintf("mod_somnolence%02i", 0:(length(models_somnolence)-1))
+
+models_somnolence.wrap <- map2(names(models_somnolence), models_somnolence, ~ list(mod.name=.x, mod=.y))
+models_somnolence.fitted=lapply(models_somnolence.wrap, function(lmod){fit_and_plot(lmod$mod.name, lmod$mod, load.only=T,plot.only.new=F, dataset = tms_data.nback)})
+names(models_somnolence.fitted) <- names(models_somnolence)
+
+loos_somnolence=if.cached.load("loos_somnolence",
+                               invoke(loo_wrapper, .x = models_somnolence.fitted, model_names = names(models_somnolence.fitted)),
+                               base=bname)
+
+r2s_somnolence=lapply(models_somnolence.fitted, bayes_R2, cl=22)
+mod_somnolence.weights = if.cached.load("mod.weights",
+                                        map_df(c("loo", "waic", "stacking"), function(strat) {
+                                          r = invoke(
+                                            model_weights_wrapper,
+                                            .x = models_somnolence.fitted,
+                                            weights = strat,
+                                            model_names = names(models_somnolence.fitted)
+                                          )
+                                          bind_cols(strategy = strat, data.frame(t(r)))
+                                        }), bname)
+
+mod.desc=data.frame(mod=names(models_somnolence.fitted), descriptions_somnolence)
+map_df(c("loo","stacking","waic"), ~ cbind(strategy=.x,mod.desc)) %>%
+  spread(strategy,descriptions_somnolence) %>%
+  #mutate(loo2="",waic="") %>%
+  gather(strategy,descriptions_somnolence,loo,stacking,waic) -> mod.desc
+
+mod.weights %>%
+  gather(mod, prob, starts_with("mod")) %>% 
+  full_join(mod.desc) %>%
+  mutate(
+    strategy=ordered(strategy, c("loo", "waic","stacking")),
+    strategy=ordered(case_when(strategy=="loo" ~ "LOO",
+                               strategy=="waic" ~ "WAIC",
+                               strategy=="stacking" ~ "pseudo-BMA"),
+                     c("LOO","WAIC","pseudo-BMA"))) %>%
+  filter(strategy==c("LOO")) %>% droplevels %>%
+  group_by(strategy) %>%
+  mutate(win=if_else(prob==max(prob), T,F)) %>%
+  ungroup %>%
+  ggplot(aes(mod, prob, fill = win)) +
+  geom_bar(stat = "identity", position =
+             position_dodge()) + coord_flip() +
+  scale_fill_manual(values=c("lightblue", "orange"))+
+  geom_text(mapping=aes(fill=NULL, label=descriptions_somnolence), y=0, hjust="left")+
+  labs(x="",y="Posterior Probability")+
+  facet_wrap(~strategy)+
+  theme(axis.ticks.y = element_blank(),
+        legend.position = "none",
+        axis.text.y=element_blank(),
+        panel.grid = element_blank(),
+        strip.background = element_blank(),
+        strip.text = element_text(size=12),
+        strip.placement = "inside") 
 
 ## LOOIC
 loo_compare(x = loos$loos) %>% data.frame %>% rownames_to_column(var = "mod") %>%

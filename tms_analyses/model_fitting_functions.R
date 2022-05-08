@@ -74,11 +74,11 @@ model_weights_wrapper <- function(...) {
 }
 
 
-fit_and_plot <- function(mod.name,frm,load.only=T,plot.only.new=F,init="random", dataset){
+fit_and_plot <- function(mod.name,frm,load.only=T,plot.only.new=F,init="random", dataset, family = cumulative("probit")){
   #mod.name = formula.name.fname(frm)
   is.new=TRUE
   if(!is.cached.var(mod.name, base=bname)){
-    mod <- brm(frm, data = dataset, family =cumulative("probit"), init=init, iter = 5000, control = list(adapt_delta = 0.99, max_treedepth = 12)) %>% #control = list(adapt_delta = 0.99, max_treedepth = 12)
+    mod <- brm(frm, data = dataset, family =family, init=init, iter = 5000, control = list(adapt_delta = 0.99, max_treedepth = 12)) %>% #control = list(adapt_delta = 0.99, max_treedepth = 12)
       add_criterion(c("loo"))
     assign(mod.name, mod, envir=.GlobalEnv)
     cache.var(mod.name, bname)

@@ -139,7 +139,7 @@ tms_data.nback$sex[tms_data.nback$sex == "M"] <- 0
 tms_data.nback$intention_factor <- as.factor(tms_data.nback$intention_factor)
 tms_data.nback$sex <- as.factor(tms_data.nback$sex)
 tms_data.nback$visit <- as.factor(tms_data.nback$visit)
-  
+tms_data.nback$somnolence <- as.integer(tms_data.nback$somnolence) + 1
 tms_data.nback <- tms_data.nback %>%
   mutate(condition = as.factor(case_when(str_detect(condition, "baseline") ~ "baseline",
                                str_detect(condition, "active_rhTMS") ~ "active_rhTMS",
@@ -220,11 +220,11 @@ tms_data.nback_probes_long %>%
   
 
 
-
+### LONG 
 tms_data.nback_z <- tms_data.nback %>%
-  reshape2::melt(id.vars = c( "focus", "condition", "visit", "subj"), measure.vars = c("zlog.apen", "zbv"), varnames = c("Variable", "Score"))
+  reshape2::melt(id.vars = c( "focus", "probe.response", "intention", "somnolence", "condition", "visit", "subj"), measure.vars = c("zlog.apen", "zbv"), varnames = c("Variable", "Score"))
 
-data.table::setnames(tms_data.nback_z, old = c("focus", "condition", "visit", "subj",'variable', "value"), new = c('Focus',"Condition", "Visit", "Subject",'Measure', "Score"))
+data.table::setnames(tms_data.nback_z, old = c("focus", "probe.response", "intention", "somnolence", "condition", "visit", "subj",'variable', "value"), new = c('Focus', "MW Score", "Intention", "Alertness", "Condition", "Visit", "Subject",'Measure', "Score"))
 
 tms_data.nback_probes_long <- tms_data.nback %>%
   reshape2::melt(id.vars = c("block_num","probeix","focus", "condition", "visit", "subj"), measure.vars = c("probe.response"))
@@ -232,12 +232,40 @@ tms_data.nback_probes_long <- tms_data.nback %>%
 data.table::setnames(tms_data.nback_probes_long, old = c("block_num", "probeix","focus", "condition", "visit", "subj",'variable', "value"), new = c("Block","NProbe", 'Focus',"Condition", "Visit", "Subject",'Measure', "MW Score"))
 
 tms_data.nback_z %>%
-  filter(`Measure` == c("zlog.apen", "zbv")) %>%
   ggplot(aes(x= `Focus`, y =`Score`,  group = `Measure`, color=`Measure`)) + 
   geom_pointrange(aes(shape = `Condition`),stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
   geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
   scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red")) +
   facet_wrap(~ `Condition`)
+
+tms_data.nback_z %>%
+  ggplot(aes(x= `Condition`, y =`Score`, group = `Measure`, shape = `Condition`, color = `Measure`)) + 
+  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
+  scale_color_manual(labels = c("AE", "BV"), values = c("#F8766D", "#00BFC4")) +
+  theme_set(theme_bw())
+
+tms_data.nback_z %>%
+  ggplot(aes(x= `MW Score`, y =`Score`, group = `Measure`, color = `Measure`)) + 
+  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
+  facet_wrap(~`Condition` + `Subject`) +
+  scale_color_manual(labels = c("AE", "BV"), values = c("#F8766D", "#00BFC4")) +
+  theme_set(theme_bw())
+
+tms_data.nback_z %>%
+  ggplot(aes(x= `MW Score`, y =`Score`, group = `Measure`, color = `Measure`)) + 
+  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
+  facet_wrap(~`Condition` + `Subject`) +
+  scale_color_manual(labels = c("AE", "BV"), values = c("#F8766D", "#00BFC4"))
+
+tms_data.nback_z %>%
+  ggplot(aes(x= `MW Score`, y =`Score`, group = `Measure`, color = `Measure`)) + 
+  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
+  facet_wrap(~`Condition`) +
+  scale_color_manual(labels = c("AE", "BV"), values = c("#F8766D", "#00BFC4"))
 
 tms_data.nback_probes_long %>%
   ggplot(aes(x= `Condition`, y =`MW Score`, group =1, shape = `Condition`)) + 
