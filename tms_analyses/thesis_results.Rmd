@@ -1,0 +1,749 @@
+---
+title: 'MW & online TMS: Results'
+author: "Victoria Shevchenko"
+date: "06/05/2022"
+output:
+  html_document:
+    toc: false
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, 
+                      results="asis",
+                      #out.extra = 'style="display:block; margin: auto"',
+                      fig.align = "center", dpi=200)
+
+library(brms)
+library(bayesplot)
+library(tidybayes)
+library(tidyr)
+library(purrr)
+library(dplyr)
+library(ggplot2)
+library(tidyverse)
+library(kableExtra)
+library(scales)
+
+theme_set(theme_bw())
+```
+
+```{r, include = F, echo = F}
+cache.get.fname <- function(varname, base){
+  if(is.null(base))
+    bname<-tools::file_path_sans_ext(basename(this.file.name()))
+  else
+    bname<-tools::file_path_sans_ext(basename(base))
+  fname<-file.path('cache', 'vars', sprintf("%s_%s.RData",bname,varname))
+  fname  
+}
+if.cached.load <- function(vname, expr,base=bname){
+  if(!is.cached.var(vname, base=bname)){
+    val=eval.parent(expr)
+    assign(vname, val, envir=.GlobalEnv)
+    cache.var(vname, bname)
+  } else {
+    val <- load.cache.var(vname,bname)
+  }
+  return(val)
+}
+is.cached.var <- function(varname, base=NULL){
+  fname<-cache.get.fname(varname, base)
+  file.exists(fname)
+}
+cache.var <- function(varname, base=NULL){
+  fname<-cache.get.fname(varname, base)
+  print(fname)
+  printf("CACHE> saving %s to %s\n", varname, fname)
+  dir.create(dirname(fname), showWarnings = FALSE)
+  save(list = varname, envir = .GlobalEnv, file = fname)
+}
+uncache.var <- function(varname, base=NULL){
+  fname<-cache.get.fname(varname, base)
+  cat(sprintf("Deleting %s\n", fname))
+  unlink(fname)
+}
+
+uncache.all <- function(base=NULL){
+  if(is.null(base))
+    bname<-tools::file_path_sans_ext(basename(this.file.name()))
+  else
+    bname<-tools::file_path_sans_ext(basename(base))
+  fnames=list.files(file.path('cache', 'vars'), pattern = sprintf("%s*", bname), full.names=T)
+  for(fname in fnames){
+    cat(sprintf("Deleting %s\n", fname))
+    unlink(fname)
+  }
+}
+
+load.cache.var <- function(varname, base=NULL){
+  fname<-cache.get.fname(varname, base)
+  printf("CACHE> loading %s from %s\n", varname, fname)
+  load(fname)
+  return(eval(parse(text=varname)))
+}
+
+printf <- function(s, ...){
+  cat(sprintf(s, ...))
+}
+
+loo_wrapper <- function(...) {
+  dots <- list(...)
+  if (!"x" %in% names(dots)) {
+    names(dots)[1] <- "x"
+  }
+  do.call(brms::loo, dots)
+}
+model_weights_wrapper <- function(...) {
+  dots <- list(...)
+  if (!"x" %in% names(dots)) {
+    names(dots)[1] <- "x"
+  }
+  do.call(brms::model_weights, dots)
+}
+
+
+fit_and_plot <- function(mod.name,frm,load.only=T,plot.only.new=F,init="random", dataset, family = cumulative("probit")){
+  #mod.name = formula.name.fname(frm)
+  is.new=TRUE
+  if(!is.cached.var(mod.name, base=bname)){
+    mod <- brm(frm, data = dataset, family =family, init=init, iter = 5000, control = list(adapt_delta = 0.99, max_treedepth = 12)) %>% #control = list(adapt_delta = 0.99, max_treedepth = 12)
+      add_criterion(c("loo"))
+    assign(mod.name, mod, envir=.GlobalEnv)
+    cache.var(mod.name, bname)
+  } else {
+    mod <- load.cache.var(mod.name,bname)
+    is.new=FALSE
+  }
+  if(!load.only & ((is.new & plot.only.new) | (!plot.only.new))  ){
+    pdf(plot.filename(sprintf("diag_%s.pdf", mod.name),bname), width=5, height=5)
+    mcmc_rhat(brms::rhat(mod)) %>% print
+    mcmc_neff(brms::neff_ratio(mod)) %>% print
+    #dev.off()
+    
+    
+    mcmc_intervals_data(as.matrix(mod), prob_outer = 0.95) %>%
+      filter(parameter!="lp__", !str_detect(parameter, "subj")) %>%
+      ggplot(aes(y=m, ymin=ll,ymax=hh,x=parameter))+
+      geom_pointrange(position=position_dodge(width=0.2))+
+      coord_flip()
+    ggsave(plot.filename(sprintf("coef_%s.pdf",mod.name),bname), width=9,height=6)
+    
+    fit=mod
+    nrep=100
+    pred=predict(fit)
+    
+    dataset %>%
+      cbind(
+        replicate(n=nrep, apply(pred, 1, function(x){sample(1:4,1, prob=x)})) 
+      )   %>%
+      gather(sim.n,sim.response, 13:(13+nrep-1)) %>%
+      group_by(randomization, condition, sim.n) %>%
+      do({
+        tibble(response=1:4,n=tabulate(.$sim.response, nbins=4))
+      }) -> dataset.pred
+    
+    d.tab=dataset %>% group_by(randomization, condition) %>%
+      do({
+        v=as.numeric(data.frame(.)[,"probe.response"])
+        tibble(response=1:4,n=tabulate(v, nbins=4))
+      })
+    
+    dataset.pred %>% ungroup %>% 
+      ggplot(aes(x=factor(response),y=n,color=condition))+
+      geom_bar(data=d.tab, mapping=aes(fill=condition), stat="identity",position = position_dodge(width=1), alpha=0.2)+
+      #geom_violin(aes(group=interaction(stim_setting,response),color=NULL),fill="grey",color=0, alpha=1, position=position_dodge(width=1))+
+      stat_summary(fun.data = mean_qi,  position=position_dodge(width=1), geom="pointrange") +
+      #facet_wrap(~question,ncol=1) +
+      facet_grid(condition~.) +
+      labs(x="Response",y="Number of subjects",
+           title=sprintf("%s: Posterior predictive", fit$formula$resp), 
+           subtitle=toString(capture.output(fit$formula)))
+    
+    #ggsave(plot.filename(sprintf("ppred_%s.pdf",mod.name),bname), width=9,height=6)
+  }
+  return(mod)
+}
+
+
+```
+
+# Mind-Wandering
+
+```{r, include = F, echo = F}
+setwd("/Users/VictoriaShevchenko/Documents/STAGE_M2/Analyses/tms_analyses")
+load("tms_data_preprocessed.Rdata")
+
+bname = "tms_analyses"
+
+models_task <- list(
+  formula(probe.response ~ zbv * zlog.apen + (1|subj/condition)),
+  formula(probe.response ~ zbv * zlog.apen + probeix + (1|subj/condition)),
+  formula(probe.response ~ zbv * zlog.apen + probeix + block_num + (1|subj/condition)),
+  formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + (1|subj/condition)),
+  formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + randomization + (1|subj/condition))#,
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + (1|subj/condition)),
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition))#,
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + randomization + (1|subj/condition/visit)),
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + condition:zlog.apen + condition:zbv + (1|subj/condition)),
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + visit + condition:zlog.apen + condition:zbv + (1|subj/condition)),
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + randomization + condition:zlog.apen + condition:zbv + (1|subj/condition))#,
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition + condition:zlog.apen + condition:zbv + (1|subj/condition)),
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num + condition +  condition:zlog.apen + condition:zbv + (1|subj/condition)),
+  #formula(probe.response ~ zbv * zlog.apen + probeix + block_num * condition + (1|subj/condition))
+)
+
+
+descriptions_task=c(
+  "BV x AE", 
+  "BV x AE + trial", 
+  "BV x AE + trial + block", 
+  "BV x AE + trial + block + condition",
+  "BV x AE + trial + block + condition + randomization"#,
+  #"BV x AE + trial + block + condition + visit",
+  #"BV x AE + trial + block + condition + visit + randomization"#,
+  #"BV x AE + trial + block + condition + visit + randomization + visit(subj.nested)",
+  #"BV x AE + trial + block + condition + visit + visit(subj.nested)",
+  #"BV x AE + trial + block + condition + condition : AE + condition : BV",
+  #"BV x AE + trial + block + condition + visit + condition : AE + condition : BV"#,
+  #"BV x AE + trial + block + condition + randomization + condition : AE + condition : BV"#,
+  #"BV x AE + trial + block + condition + condition : AE + condition : BV",
+  #"BV x AE + trial + block x condition"
+  )
+
+
+```
+
+
+### Model Diagnostics
+
+```{r, echo = F, warning = F}
+
+loos_task <- load.cache.var("loos_task", base = bname)
+
+```
+
+
+```{r, output = 'asis', results = "hold",comment = ""}
+loos_task$diffs
+mod_selection_res <- as.data.frame(loos_task$diffs) %>% select(c(elpd_diff, se_diff))
+models_elpd_diff <- c(
+  "BV x AE + probe + block",
+  "BV x AE + probe + block + condition",
+  "BV x AE + probe + block + condition + randomization",
+  "BV x AE + probe",
+  "BV x AE"
+  )
+mod_selection_res <- data.frame(models_elpd_diff, mod_selection_res$elpd_diff, mod_selection_res$se_diff)
+names(mod_selection_res) <- c("Model", "elpd_diff", "se_diff")
+
+mod_selection_res = mod_selection_res  %>% 
+  mutate(across(where(is.numeric), ~comma(., accuracy=0.01))) %>% 
+  rename_all(~gsub("\\.", " ", .)) 
+
+alignment= map_chr(mod_selection_res, ~ifelse(class(.x)=="numeric", "r","l"))
+
+
+```
+
+```{r, output = 'asis', results = "hold",comment = "", out.width="120%",out.height="120%"}
+mod_selection_res %>% 
+  kbl(caption="LOO-CV: MW", align=alignment) %>% 
+  kable_classic(full_width=TRUE, html_font="Times") %>% 
+  row_spec(2, bold = TRUE, color = "red")
+```
+
+
+### Model Coefficients: lots of uncertainty around stimulation (90%-intervals)
+
+```{r, echo = F, fig.show = "hold", comment = "", output = 'asis', out.width="70%",out.height="70%", fig.align='center', echo = F,  warning = FALSE, fig.cap = "Fig. 1. Model 7: On-task Score: coefficients for all parameters of interest."}
+color_scheme_set("viridisE")
+bayesplot_theme_set(theme_bw(base_size = 15, base_family = "sans"))
+
+mod_task03 <- load.cache.var("mod_task03", base = bname)
+mcmc_intervals(mod_task03, prob_outer = 0.95, pars = c("b_zbv",
+                         "b_zlog.apen",
+                         "b_block_num",
+                         "b_probeix",
+                         "b_zbv:zlog.apen",
+                        # "b_visit2",
+                         "b_conditionsham_rhTMS",
+                         "b_conditionsham_arrhTMS",
+                         "b_conditionactive_rhTMS",
+                         "b_conditionactive_arrhTMS"
+                         )) +
+  ggplot2::scale_y_discrete(labels = c("b_zbv" = "BV",
+                                       "b_zlog.apen" = "AE",
+                                       "b_block_num" = "Block",
+                                       "b_probeix" = "Probe number",
+                                       "b_zbv:zlog.apen" = "BV x AE",
+                                      # "b_visit2" = "Visit",
+                                       "b_conditionsham_rhTMS" = "Sham rhTMS",
+                                       "b_conditionsham_arrhTMS" = "Sham arrhTMS",
+                                       "b_conditionactive_rhTMS" = "Active rhTMS",
+                                       "b_conditionactive_arrhTMS" = "Active arrhTMS")) + 
+geom_vline(xintercept = 0,color = "red", size=0.75)  + theme(axis.text.y = element_text(size=18, face = "plain", colour = c('black','black', 'black', 'black', 'black', 'black', 'black', 'red', 'black'))) + ggtitle("Model Coefficients: MW")
+
+```
+
+```{r, echo = F, include = F}
+mw_hyp = hypothesis(mod_task03, c("zbv<0", "zlog.apen>0", "block_num<0", "probeix<0", "zbv:zlog.apen<0", "conditionactive_rhTMS>0", "conditionsham_rhTMS>0", "conditionactive_arrhTMS>0", "conditionsham_arrhTMS>0"), alpha = 0.025)
+mw_hyp_table <- mw_hyp$hypothesis %>% select(-Star)
+  
+alignment= map_chr(mw_hyp_table, ~ifelse(class(.x)=="numeric", "r","l"))
+hypotheses <- c("BV < 0", "AE > 0", "Block < 0", "Probe number < 0", "BV x AE< 0", "Active rhTMS > 0", "Sham rhTMS > 0", "Active arrhTMS > 0", "Sham arrhTMS > 0")
+mw_hyp_table = mw_hyp_table  %>% 
+  mutate(across(where(is.numeric), ~comma(., accuracy=0.01)), Hypothesis = hypotheses) %>% 
+  rename_all(~gsub("\\.", " ", .)) 
+
+```
+
+```{r, echo = F, warning = F, fig.show = "hold", out.width="120%",out.height="120%"}
+mw_hyp_table %>% 
+  kbl(caption="Results: MW", align=alignment) %>% 
+  kable_classic(full_width=TRUE, html_font="Times") %>% 
+  row_spec(c(7, 8, 9), bold = TRUE) %>% 
+  row_spec(6, bold = TRUE, color = "red")
+```
+
+
+```{r long-data-frame, echo = F,  warning = FALSE}
+tms_data.nback_z <- tms_data.nback %>%
+  reshape2::melt(id.vars = c( "focus", "probe.response", "intention", "somnolence", "condition", "visit", "subj"), measure.vars = c("zlog.apen", "zbv"), varnames = c("Variable", "Score"))
+
+data.table::setnames(tms_data.nback_z, old = c("focus", "probe.response", "intention", "somnolence", "condition", "visit", "subj",'variable', "value"), new = c('Focus', "On-task Score", "Intention", "Alertness", "Condition", "Visit", "Subject",'Measure', "Z-score"))
+
+```
+
+### On-task Score Across Conditons
+
+
+```{r, echo = F,  warning = FALSE,fig.show = "hold",out.width="50%",out.height="50%", fig.width=6, fig.cap = "Fig. 2. MW Mean ± 1SE  across conditions."}
+tms_data.nback_z %>%
+  ggplot(aes(x= `Condition`, y =`On-task Score`, group = 1)) + 
+  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
+  theme_set(theme_bw()) +
+  geom_vline(xintercept = "active_rhTMS", color = "red", size=0.5, linetype= "dotdash") +
+  theme(text = element_text(size = 18)) +
+  theme(axis.text.x = element_text(angle = 20, vjust = 0.5, hjust=0.4))
+
+```
+
+### Sanity check: A Closer Look at Task Performance
+
+```{r, echo = F,  warning = FALSE, fig.show = "hold", out.width="70%",out.height="70%", fig.cap = "Fig. 3. Mean ± 1SE changes of AE and BV across conditions."}
+
+tms_data.nback_z %>%
+  ggplot(aes(x= `Condition`, y =`Z-score`, group = `Measure`, shape = `Condition`, color = `Measure`)) + 
+  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
+  scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red")) +
+  theme_set(theme_bw()) +
+  theme(text = element_text(size = 15)) +
+  theme(axis.text.x = element_text(angle = 20,  vjust = 0.5, hjust=0.4)) 
+
+```
+
+```{r, echo = F,  warning = FALSE, fig.cap = "Fig. 4. AE & BV versus On-task score: Mean ± 1SE across conditions. Our subjects are either bad at tapping with the metronome or misunderstood this part of the task."}
+
+tms_data.nback_z %>%
+  ggplot(aes(x= `On-task Score`, y =`Z-score`, group = `Measure`, color = `Measure`)) + 
+  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
+  facet_wrap(~`Condition`) +
+  scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red")) +
+  theme(text = element_text(size = 12)) 
+
+```
+
+
+### AE x BV Interaction Across Conditions
+
+
+```{r, echo = F, warning = FALSE, fig.cap = "Fig. 5. AE & BV versus On-task score: BV x AE interaction versus on-off task states. acrive rhTMS seems to flip the interaction: subjects have worse performance when they think they are on task and vice-versa."} 
+
+tms_data.nback_z %>%
+  ggplot(aes(x= `Focus`, y =`Z-score`,  group = `Measure`, color=`Measure`)) + 
+  geom_pointrange(aes(shape = `Condition`),stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
+  scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red")) +
+  facet_wrap(~ `Condition`)
+
+```
+
+
+# Model fitting: BV
+
+### Model Diagnostics
+
+```{r, echo = F, warning = FALSE}
+loos_bv=load.cache.var("loos_bv", base=bname)
+
+```
+
+```{r, output = 'asis', results = "hold",comment = "", warning = FALSE}
+loos_bv
+```
+
+```{r}
+as.data.frame(loos_bv$diffs)
+loos_bv$diffs
+mod_selection_res <- as.data.frame(loos_bv$diffs) %>% select(c(elpd_diff, se_diff))
+models_elpd_diff <- c(
+  "probe + block + condition + visit",
+  "probe + block",
+  "probe + block + condition",
+  "probe"
+  )
+mod_selection_res <- data.frame(models_elpd_diff, mod_selection_res$elpd_diff, mod_selection_res$se_diff)
+names(mod_selection_res) <- c("Model", "elpd_diff", "se_diff")
+
+mod_selection_res = mod_selection_res  %>% 
+  mutate(across(where(is.numeric), ~comma(., accuracy=0.01))) %>% 
+  rename_all(~gsub("\\.", " ", .)) 
+
+alignment= map_chr(mod_selection_res, ~ifelse(class(.x)=="numeric", "r","l"))
+
+
+```
+
+```{r, echo = F, warning = F, fig.show = "hold", out.width="120%",out.height="120%"}
+mod_selection_res %>% 
+  kbl(caption="LOO-CV: BV", align=alignment) %>% 
+  kable_classic(full_width=TRUE, html_font="Times") %>% 
+  row_spec(1, bold = TRUE, color = "red")
+```
+
+### Model Coefficients: lots of uncertainty around stimulation (90%-intervals)
+
+```{r, echo = F, fig.show = "hold", out.width="60%",out.height="60%", fig.align='center', warning = FALSE, fig.cap = "Fig. 4. Model 7: On-task Score: coefficients for all parameters of interest."}
+color_scheme_set("viridisE")
+bayesplot_theme_set(theme_bw(base_size = 15, base_family = "sans"))
+
+mod_bv03 <- load.cache.var("mod_bv03", base = bname)
+mcmc_intervals(mod_bv03, prob_outer = 0.95, pars = c(
+                         "b_block_num",
+                         "b_probeix",
+                          "b_visit2",
+                         "b_conditionsham_rhTMS",
+                         "b_conditionsham_arrhTMS",
+                         "b_conditionactive_rhTMS",
+                         "b_conditionactive_arrhTMS"
+                         )) +
+  ggplot2::scale_y_discrete(labels = c("b_block_num" = "Block",
+                                       "b_probeix" = "Probe number",
+                                       "b_visit2" = "Visit",
+                                       "b_conditionsham_rhTMS" = "Sham rhTMS",
+                                       "b_conditionsham_arrhTMS" = "Sham arrhTMS",
+                                       "b_conditionactive_rhTMS" = "Active rhTMS",
+                                       "b_conditionactive_arrhTMS" = "Active arrhTMS")) + 
+geom_vline(xintercept = 0,color = "red", size=0.75)  + theme(axis.text.y = element_text(size=18, face = "plain", colour = c('black', 'black', 'black', 'black', 'black', 'red', 'black'))) + ggtitle("Model Coefficients: BV")
+
+```
+
+```{r, echo = F, include = F}
+bv_hyp = hypothesis(mod_bv03, c("block_num>0", "probeix>0", "conditionactive_rhTMS>0", "conditionsham_rhTMS>0", "conditionactive_arrhTMS>0", "conditionsham_arrhTMS>0"), alpha = 0.025)
+bv_hyp_table <- bv_hyp$hypothesis %>% select(-Star)
+  
+alignment= map_chr(bv_hyp_table, ~ifelse(class(.x)=="numeric", "r","l"))
+hypotheses <- c("Block > 0", "Probe number > 0", "Active rhTMS > 0", "Sham rhTMS > 0", "Active arrhTMS > 0", "Sham arrhTMS > 0")
+bv_hyp_table = bv_hyp_table  %>% 
+  mutate(across(where(is.numeric), ~comma(., accuracy=0.01)), Hypothesis = hypotheses) %>% 
+  rename_all(~gsub("\\.", " ", .)) 
+
+```
+
+```{r, echo = F, warning = F, fig.show = "hold", out.width="120%",out.height="120%"}
+bv_hyp_table %>% 
+  kbl(caption="Results: BV", align=alignment) %>% 
+  kable_classic(full_width=TRUE, html_font="Times") %>% 
+  row_spec(c(4, 5, 6), bold = TRUE) %>% 
+  row_spec(3, bold = TRUE, color = "red")
+```
+
+# Model fitting: AE
+
+### Model Diagnostics
+
+```{r, output = 'asis', results = "hold",comment = "", warning = FALSE}
+loos_apen=load.cache.var("loos_apen", base=bname)
+loos_apen
+```
+
+
+### Model Coefficients: lots of uncertainty around stimulation (90%-intervals)
+
+```{r}
+as.data.frame(loos_apen$diffs)
+loos_apen$diffs
+mod_selection_res <- as.data.frame(loos_apen$diffs) %>% select(c(elpd_diff, se_diff))
+models_elpd_diff <- c(
+  "probe + block",
+  "probe",
+  "probe + block + condition",
+  "probe + block + condition + visit"
+  )
+mod_selection_res <- data.frame(models_elpd_diff, mod_selection_res$elpd_diff, mod_selection_res$se_diff)
+names(mod_selection_res) <- c("Model", "elpd_diff", "se_diff")
+
+mod_selection_res = mod_selection_res  %>% 
+  mutate(across(where(is.numeric), ~comma(., accuracy=0.01))) %>% 
+  rename_all(~gsub("\\.", " ", .)) 
+
+alignment= map_chr(mod_selection_res, ~ifelse(class(.x)=="numeric", "r","l"))
+
+
+```
+
+```{r, echo = F, warning = F, fig.show = "hold", out.width="120%",out.height="120%"}
+mod_selection_res %>% 
+  kbl(caption="LOO-CV: AE", align=alignment) %>% 
+  kable_classic(full_width=TRUE, html_font="Times") %>% 
+  row_spec(4, bold = TRUE, color = "red")
+```
+
+```{r, echo = F, fig.show = "hold", out.width="70%",out.height="70%", fig.align='center', echo = F,  warning = FALSE, fig.cap = "Fig. 4. Model 7: On-task Score: coefficients for all parameters of interest."}
+color_scheme_set("viridisE")
+bayesplot_theme_set(theme_bw(base_size = 15, base_family = "sans"))
+
+mod_apen03 <- load.cache.var("mod_apen03", base = bname)
+mcmc_intervals(mod_apen03, prob_outer = 0.95, pars = c(
+                         "b_block_num",
+                         "b_probeix",
+                          "b_visit2",
+                         "b_conditionsham_rhTMS",
+                         "b_conditionsham_arrhTMS",
+                         "b_conditionactive_rhTMS",
+                         "b_conditionactive_arrhTMS"
+                         )) +
+  ggplot2::scale_y_discrete(labels = c("b_block_num" = "Block",
+                                       "b_probeix" = "Probe number",
+                                       "b_visit2" = "Visit",
+                                       "b_conditionsham_rhTMS" = "Sham rhTMS",
+                                       "b_conditionsham_arrhTMS" = "Sham arrhTMS",
+                                       "b_conditionactive_rhTMS" = "Active rhTMS",
+                                       "b_conditionactive_arrhTMS" = "Active arrhTMS")) + 
+geom_vline(xintercept = 0,color = "red", size=0.75)  + theme(axis.text.y = element_text(size=18, face = "plain", colour = c('black', 'black', 'black', 'black', 'black', 'red', 'black'))) + ggtitle("Model Coefficients: AE")
+
+```
+
+```{r, echo = F, include = F}
+apen_hyp = hypothesis(mod_apen03, c("block_num<0", "probeix<0", "conditionactive_rhTMS<0", "conditionsham_rhTMS<0", "conditionactive_arrhTMS<0", "conditionsham_arrhTMS<0"), alpha = 0.025)
+apen_hyp_table <- apen_hyp$hypothesis %>% select(-Star)
+  
+alignment= map_chr(apen_hyp_table, ~ifelse(class(.x)=="numeric", "r","l"))
+hypotheses <- c("Block < 0", "Probe number < 0", "Active rhTMS < 0", "Sham rhTMS < 0", "Active arrhTMS < 0", "Sham arrhTMS < 0")
+apen_hyp_table = apen_hyp_table  %>% 
+  mutate(across(where(is.numeric), ~comma(., accuracy=0.01)), Hypothesis = hypotheses) %>% 
+  rename_all(~gsub("\\.", " ", .)) 
+
+```
+
+```{r, echo = F, warning = F, fig.show = "hold", out.width="120%",out.height="120%"}
+apen_hyp_table %>% 
+  kbl(caption="Results: AE", align=alignment) %>% 
+  kable_classic(full_width=TRUE, html_font="Times") %>% 
+  row_spec(c(4, 5, 6), bold = TRUE) %>% 
+  row_spec(3, bold = TRUE, color = "red")
+```
+
+# Non-Parametric ANOVA
+
+## Shapiro Test
+
+```{r, output = 'asis', results = "hold",comment = ""}
+### Non-parametric ANOVA (Kruskal-Wallis rank sum test)
+
+shapiro.test(tms_data.nback$probe.response)
+shapiro.test(tms_data.nback$zlog.apen)
+shapiro.test(tms_data.nback$bv)
+```
+
+Distributions are non-normal
+
+## MW: Kruskal-Wallis Test & Post-Hoc Multiple Comparisons
+
+```{r, output = 'asis', results = "hold",comment = ""}
+
+kruskal.test(probe.response ~ condition, data = tms_data.nback) # groups are different
+
+```
+
+## MW: Wilcoxon test to zoom in at the significant contrast
+
+```{r, echo = F, warning = F, output = 'asis', results = "hold",comment = ""}
+tms_data.nback$condition <- fct_relevel(tms_data.nback$condition, "baseline", "active_rhTMS", "active_arrhTMS", "sham_rhTMS", "sham_arrhTMS")
+tms_comparison_list <- list(c("baseline", "active_rhTMS"), c("baseline", "active_arrhTMS"), c("baseline", "sham_rhTMS"), c("baseline", "sham_arrhTMS"), c("active_rhTMS", "active_arrhTMS"), c("active_rhTMS", "sham_rhTMS"), c("active_rhTMS", "sham_arrhTMS"), c("active_arrhTMS", "sham_rhTMS"), c("active_arrhTMS", "sham_arrhTMS"), c("sham_rhTMS", "sham_arrhTMS"))
+
+pairwise_wilcox_results <- data.frame(matrix(ncol = 4, nrow = 10))
+colnames(pairwise_wilcox_results) <- c("Comparison", "W-statistic", "p-value", "Effect size, r")
+pairwise_wilcox_results$Comparison <- tms_comparison_list
+eff_sizes_mw <- rstatix::wilcox_effsize(tms_data.nback, probe.response ~ condition, paired = FALSE)
+i = 1
+ for (comparison in tms_comparison_list) {
+   r <- wilcox.test(filter(tms_data.nback, condition == comparison[1])$probe.response, filter(tms_data.nback, condition == comparison[2])$probe.response, paired = FALSE)
+  pairwise_wilcox_results[i, 2:4] <- rbind(bind_cols(r$statistic, r$p.value, eff_sizes_mw$effsize[[i]]))
+  i = i + 1
+  
+ }
+
+comparisons <- c("baseline vs. active rhTMS", "baseline vs. active arrhTMS", "baseline vs. sham rhTMS", "baseline vs. sham arrhTMS", "active rhTMS vs. active arrhTMS", "active rhTMS vs. sham rhTMS", "active rhTMS vs. sham arrhTMS", "active arrhTMS vs. sham rhTMS", "active arrhTMS vs. sham arrhTMS", "sham rhTMS vs. sham arrhTMS")
+
+pairwise_wilcox_results <- pairwise_wilcox_results %>% 
+  mutate(across("p-value", ~comma(., accuracy=0.01)), across("Effect size, r", ~comma(., accuracy=0.01)),Comparison = comparisons) %>% 
+  rename_all(~gsub("\\.", " ", .)) 
+
+```
+
+```{r, output = 'asis', results = "hold",comment = ""}
+pairwise_wilcox_results %>% 
+  kbl(caption="Pairwise Wilcoxon test: MW", align=alignment) %>% 
+  kable_classic(full_width=TRUE, html_font="Times") %>% 
+  row_spec(c(3, 4, 6, 7), bold = TRUE) %>% 
+  row_spec(1, color = "red")
+```
+
+## AE: Kruskal-Wallis Test & Post-Hoc Multiple Comparisons
+
+```{r, output = 'asis', results = "hold",comment = ""}
+
+kruskal.test(zlog.apen ~ condition, data = tms_data.nback) # groups are different
+
+```
+
+```{r, echo = F, warning = F, output = 'asis', results = "hold",comment = ""}
+
+pairwise_wilcox_results <- data.frame(matrix(ncol = 4, nrow = 10))
+colnames(pairwise_wilcox_results) <- c("Comparison", "W-statistic", "p-value", "Effect size, r")
+pairwise_wilcox_results$Comparison <- tms_comparison_list
+eff_sizes_mw <- rstatix::wilcox_effsize(tms_data.nback, zlog.apen ~ condition, paired = FALSE)
+i = 1
+ for (comparison in tms_comparison_list) {
+   r <- wilcox.test(filter(tms_data.nback, condition == comparison[1])$zlog.apen, filter(tms_data.nback, condition == comparison[2])$zlog.apen, paired = FALSE)
+  pairwise_wilcox_results[i, 2:4] <- rbind(bind_cols(r$statistic, r$p.value, eff_sizes_mw$effsize[[i]]))
+  i = i + 1
+  
+ }
+
+pairwise_wilcox_results <- pairwise_wilcox_results %>% 
+  mutate(across("p-value", ~comma(., accuracy=0.01)), across("Effect size, r", ~comma(., accuracy=0.01)),Comparison = comparisons) %>% 
+  rename_all(~gsub("\\.", " ", .)) 
+```
+
+```{r, output = 'asis', results = "hold",comment = ""}
+pairwise_wilcox_results %>% 
+  kbl(caption="Pairwise Wilcoxon test: AE", align=alignment) %>% 
+  kable_classic(full_width=TRUE, html_font="Times") %>% 
+  row_spec(c(1, 2), bold = TRUE) %>% 
+  row_spec(1, color = "red")
+```
+
+```{r, output = 'asis', results = "hold",comment = ""}
+pairwise_wilcox_results <- data.frame(matrix(ncol = 3, nrow = 10))
+colnames(pairwise_wilcox_results) <- c("Comparison", "W-statistic", "p-value")
+pairwise_wilcox_results$Comparison <- tms_comparison_list
+
+i = 1
+ for (comparison in tms_comparison_list) {
+   r <- wilcox.test(filter(tms_data.nback, condition == comparison[1])$zbv, filter(tms_data.nback, condition == comparison[2])$zbv, paired = FALSE)
+  pairwise_wilcox_results[i, 2:3] <- rbind( bind_cols(r$statistic, r$p.value))
+  i = i + 1
+  
+ }
+
+pairwise_wilcox_results <- pairwise_wilcox_results %>% 
+  mutate(across("p-value", ~comma(., accuracy=0.01)), Comparison = comparisons) %>% 
+  rename_all(~gsub("\\.", " ", .)) 
+```
+
+```{r, output = 'asis', results = "hold",comment = ""}
+pairwise_wilcox_results %>% 
+  kbl(caption="Pairwise Wilcoxon test: BV", align=alignment) %>% 
+  kable_classic(full_width=TRUE, html_font="Times") %>% 
+  row_spec(c(2), bold = TRUE) %>% 
+  row_spec(1, color = "red")
+```
+
+## AE: Wilcoxon test to zoom in at the significant contrast
+
+```{r, output = 'asis', results = "hold",comment = ""}
+wilcox.test(filter(tms_data.nback_z, (`Condition` == "baseline" & `Measure` == "zlog.apen"))$`Z-score`,
+            filter(tms_data.nback_z, (`Condition` == "active_rhTMS" & `Measure` == "zlog.apen"))$`Z-score`,
+            paired = FALSE)
+
+rstatix::wilcox_effsize(tms_data.nback, zlog.apen ~ condition, paired = FALSE)
+```
+
+## BV: Kruskal-Wallis Test & Post-Hoc Multiple Comparisons
+
+```{r, output = 'asis', results = "hold",comment = ""}
+kruskal.test(zbv ~ condition, data = tms_data.nback) # groups are NOT different
+tms_data.nback$bv_ranks <- rank(tms_data.nback$zbv)
+by(tms_data.nback$bv_ranks, tms_data.nback$condition, mean) # where the difference lies
+pgirmess::kruskalmc(zbv ~ condition, data = tms_data.nback, cont = "two-tailed")
+pgirmess::kruskalmc(zbv ~ condition, data = tms_data.nback)
+
+```
+
+# Appendices
+
+## Histograms
+
+```{r, echo = F,  warning = FALSE,fig.show = "hold", out.width="60%",out.height="60%", fig.width=6, fig.cap = "AE and BV distributions"}
+tms_data.nback %>%
+  ggplot(aes(x = zbv)) +
+  geom_histogram(binwidth = 0.1) +
+  labs(y = "Count", x = "Z-score: BV") +
+  theme(text = element_text(size = 18)) 
+
+tms_data.nback %>%
+  ggplot(aes(x = zlog.apen)) +
+  geom_histogram(binwidth = 0.1) +
+  labs(y = "Count", x = "Z-score: AE")  +
+  theme(text = element_text(size = 18)) 
+
+tms_data.nback %>%
+  ggplot(aes(x = probe.response)) +
+  geom_histogram(binwidth = 0.5) +
+  labs(y = "Count", x = "On-task score")  +
+  theme(text = element_text(size = 18)) 
+
+```
+
+
+## Subject-wise. Better zoom in RStudio output 
+
+```{r, echo = F,  warning = FALSE, fig.width=6, fig.cap = "AE and BV distributions"}
+
+tms_data.nback_z %>%
+  ggplot(aes(x= `Condition`, y =`On-task Score`, group = 1)) + 
+  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
+  facet_wrap(~ `Subject`, scales = "free", ncol = 2, as.table = FALSE) +
+  theme_set(theme_bw()) +
+  geom_vline(xintercept = "active_rhTMS", color = "red", size=0.5, linetype= "dotdash") +
+  theme(axis.text.x = element_text(angle = 20,  vjust = 0.5, hjust=0.4)) +
+  theme(plot.margin = margin(1,1,1.5,1.2, "cm"))
+```
+
+```{r, output = 'asis', results = "hold",comment = ""}
+tms_data.nback_z %>%
+  ggplot(aes(x= `On-task Score`, y =`Z-score`, group = `Measure`, color = `Measure`)) + 
+  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
+  facet_wrap(~`Condition`) +
+  scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red")) +
+  theme(text = element_text(size = 15)) 
+
+tms_data.nback_z %>%
+  ggplot(aes(x= `Focus`, y =`Z-score`,  group = `Measure`, color=`Measure`)) + 
+  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
+  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
+  scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red")) +
+  facet_wrap(~ `Condition`)+
+  theme(text = element_text(size = 18)) 
+
+```
