@@ -154,8 +154,6 @@ save(tms_data.nback, file = "tms_data_preprocessed.Rdata")
 
 # PLOTS
 
-
-
 ## MW distribution
 
 tms_data.nback %>%
@@ -190,8 +188,8 @@ tms_data.nback %>%
   geom_smooth(method = "lm") + 
   facet_wrap(~condition)
 
-cor.test(x = all_data_nback$apen,
-    y = all_data_nback$probe.response, "two.sided", method = "spearman")
+cor.test(x = tms_data.nback$apen,
+    y = tms_data.nback$probe.response, "two.sided", method = "spearman")
 
 ## Cor(BV x MW)
 
@@ -201,35 +199,41 @@ tms_data.nback %>%
   geom_smooth(method = "lm") +
   facet_wrap(~condition)
 
-cor.test(x = all_data_nback$bv,
-         y = all_data_nback$probe.response, "two.sided", method = "spearman")
+cor.test(x = tms_data.nback$bv,
+         y = tms_data.nback$probe.response, "two.sided", method = "spearman")
 
-## AE x BV interaction
-tms_data.nback_probes_long %>%
-  order_by(`Measure`, `Probe Number`)
+### Non-parametric ANOVA (Kruskal-Wallis rank sum test)
 
-  group_by(condition) 
+shapiro.test(tms_data.nback$probe.response)
+shapiro.test(tms_data.nback$zlog.apen)
+shapiro.test(tms_data.nback$bv)
+
+kruskal.test(probe.response ~ condition, data = tms_data.nback) # groups are different
+tms_data.nback$apen_ranks <- rank(tms_data.nback$probe.response)
+by(tms_data.nback$apen_ranks, tms_data.nback$condition, mean) # where the difference lies
+pgirmess::kruskalmc(probe.response ~ condition, data = tms_data.nback, cont = "two-tailed")
+pgirmess::kruskalmc(probe.response ~ condition, data = tms_data.nback)
+
+wilcox.test(filter(tms_data.nback_z, `Condition` == "sham_arrhTMS")$`MW Score`,
+            filter(tms_data.nback_z, `Condition` == "active_rhTMS")$`MW Score`,
+            paired = FALSE)
+
+kruskal.test(zlog.apen ~ condition, data = tms_data.nback) # groups are different
+tms_data.nback$apen_ranks <- rank(tms_data.nback$zlog.apen)
+by(tms_data.nback$apen_ranks, tms_data.nback$condition, mean) # where the difference lies
+pgirmess::kruskalmc(zlog.apen ~ condition, data = tms_data.nback)
+
+kruskal.test(zbv ~ condition, data = tms_data.nback) # groups are different
+tms_data.nback$bv_ranks <- rank(tms_data.nback$zbv)
+by(tms_data.nback$bv_ranks, tms_data.nback$condition, mean) # where the difference lies
+pgirmess::kruskalmc(zbv ~ condition, data = tms_data.nback)
 
 
-%>%
-  ggplot(aes(x = probeix, y = probe.response, group = subj, colour = subj)) +
-  geom_point() +
-  geom_line() +
-  scale_x_continuous(breaks = tms_data.nback$probeix) +
-  facet_wrap(~ condition) 
-  
-
-
-### LONG 
+### LONG DATA FRAME
 tms_data.nback_z <- tms_data.nback %>%
   reshape2::melt(id.vars = c( "focus", "probe.response", "intention", "somnolence", "condition", "visit", "subj"), measure.vars = c("zlog.apen", "zbv"), varnames = c("Variable", "Score"))
 
 data.table::setnames(tms_data.nback_z, old = c("focus", "probe.response", "intention", "somnolence", "condition", "visit", "subj",'variable', "value"), new = c('Focus', "MW Score", "Intention", "Alertness", "Condition", "Visit", "Subject",'Measure', "Score"))
-
-tms_data.nback_probes_long <- tms_data.nback %>%
-  reshape2::melt(id.vars = c("block_num","probeix","focus", "condition", "visit", "subj"), measure.vars = c("probe.response"))
-
-data.table::setnames(tms_data.nback_probes_long, old = c("block_num", "probeix","focus", "condition", "visit", "subj",'variable', "value"), new = c("Block","NProbe", 'Focus',"Condition", "Visit", "Subject",'Measure', "MW Score"))
 
 tms_data.nback_z %>%
   ggplot(aes(x= `Focus`, y =`Score`,  group = `Measure`, color=`Measure`)) + 
@@ -238,7 +242,7 @@ tms_data.nback_z %>%
   scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red")) +
   facet_wrap(~ `Condition`)
 
-tms_data.nback_z %>%
+ tms_data.nback_z %>%
   ggplot(aes(x= `Condition`, y =`Score`, group = `Measure`, shape = `Condition`, color = `Measure`)) + 
   geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
   geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
@@ -249,53 +253,12 @@ tms_data.nback_z %>%
   ggplot(aes(x= `MW Score`, y =`Score`, group = `Measure`, color = `Measure`)) + 
   geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
   geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
-  facet_wrap(~`Condition` + `Subject`) +
-  scale_color_manual(labels = c("AE", "BV"), values = c("#F8766D", "#00BFC4")) +
-  theme_set(theme_bw())
-
-tms_data.nback_z %>%
-  ggplot(aes(x= `MW Score`, y =`Score`, group = `Measure`, color = `Measure`)) + 
-  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
-  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
-  facet_wrap(~`Condition` + `Subject`) +
-  scale_color_manual(labels = c("AE", "BV"), values = c("#F8766D", "#00BFC4"))
-
-tms_data.nback_z %>%
-  ggplot(aes(x= `MW Score`, y =`Score`, group = `Measure`, color = `Measure`)) + 
-  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
-  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
   facet_wrap(~`Condition`) +
-  scale_color_manual(labels = c("AE", "BV"), values = c("#F8766D", "#00BFC4"))
-
-tms_data.nback_probes_long %>%
-  ggplot(aes(x= `Condition`, y =`MW Score`, group =1, shape = `Condition`)) + 
-  geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
-  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2))
-
-tms_data.nback_probes_long %>%
-  filter(Subject == "clonesa_g2_010") %>%
-  ggplot(aes(x= NProbe, y = Score,  group = Measure, color=Measure)) + 
-  geom_point(position=position_dodge(width = 0.7)) +
-  geom_line(position=position_dodge(width = 1)) +
-  scale_x_continuous(labels = as.character(tms_data.nback_probes_long$NProbe), breaks = tms_data.nback_probes_long$NProbe) +
-  #geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
-  scale_color_manual(labels = c("Task", "Intention"), values = c("blue", "red")) +
-  facet_wrap(~Block + Condition)
-
-tms_data.nback_probes_long_task <- tms_data.nback_probes_long %>%
-  filter(Condition == "baseline" & Subject == "clonesa_g2_001", Measure == "probe.response")
-
-plot(tms_data.nback_probes_long_task$NProbe, tms_data.nback_probes_long_task$Score)
-tms_data.nback_z %>%
-  filter(`Measure` == c("probe.response", "intention")) %>%
-  ggplot(aes(x= `Condition`, y =`Score`,  group = `Measure`, color=`Measure`)) + 
-  geom_pointrange(aes(shape = `Condition`),stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
-  geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
-  scale_color_manual(labels = c("Task Response", "Intention Response"), values = c("blue", "red")) +
+  scale_color_manual(labels = c("AE", "BV"), values = c("#F8766D", "#00BFC4")) +
   facet_wrap(~`Subject`)
 
 tms_data.nback_z %>% filter(`Subject` != "polya") %>%
-  ggplot(aes(x= `Focus`, y =`Z-score`,  group = `Measure`, color=`Measure`)) + 
+  ggplot(aes(x= `Focus`, y =`Score`,  group = `Measure`, color=`Measure`)) + 
   geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
   geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
   scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red")) 

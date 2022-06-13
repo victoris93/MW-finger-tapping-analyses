@@ -18,6 +18,10 @@ if.cached.load <- function(vname, expr,base=bname){
   }
   return(val)
 }
+
+printf <- function(s, ...){
+  cat(sprintf(s, ...))
+}
 is.cached.var <- function(varname, base=NULL){
   fname<-cache.get.fname(varname, base)
   file.exists(fname)
@@ -29,13 +33,8 @@ cache.var <- function(varname, base=NULL){
   dir.create(dirname(fname), showWarnings = FALSE)
   save(list = varname, envir = .GlobalEnv, file = fname)
 }
-uncache.var <- function(varname, base=NULL){
-  fname<-cache.get.fname(varname, base)
-  cat(sprintf("Deleting %s\n", fname))
-  unlink(fname)
-}
 
-uncache.all <- function(base=NULL){
+uncache.all <- function(base=NULL){ # remove all cached files. you can also go straight to the directory and delete them
   if(is.null(base))
     bname<-tools::file_path_sans_ext(basename(this.file.name()))
   else
@@ -47,18 +46,14 @@ uncache.all <- function(base=NULL){
   }
 }
 
-load.cache.var <- function(varname, base=NULL){
+load.cache.var <- function(varname, base=NULL){ # load cached objects
   fname<-cache.get.fname(varname, base)
   printf("CACHE> loading %s from %s\n", varname, fname)
   load(fname)
   return(eval(parse(text=varname)))
 }
 
-printf <- function(s, ...){
-  cat(sprintf(s, ...))
-}
-
-loo_wrapper <- function(...) {
+loo_wrapper <- function(...) { # 
   dots <- list(...)
   if (!"x" %in% names(dots)) {
     names(dots)[1] <- "x"
