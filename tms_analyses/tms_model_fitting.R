@@ -8,7 +8,7 @@ library(ggplot2)
 library(tidyverse)
 library(stringr)
 theme_set(theme_classic())
-setwd("/Users/VictoriaShevchenko/Documents/STAGE_M2/Analyses/tms_analyses")
+setwd(getwd())
 
 bname="tms_analyses"
 options <- commandArgs(trailingOnly = TRUE)
@@ -16,6 +16,7 @@ if( "--force" %in% options) {
   uncache.all(base = bname)
 }
 
+dir.create("cache/vars", recursive = TRUE)
 ############################################### MODELING MW
 
 models_task <- list( # models commented out didn't fit

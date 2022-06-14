@@ -10,8 +10,8 @@ library(scales)
 library(stringr)
 theme_set(theme_bw())
 
-setwd("/Users/VictoriaShevchenko/Documents/STAGE_M2/Analyses/tms_analyses")
-sourceCpp("/Users/VictoriaShevchenko/Documents/STAGE_M2/Analyses/apen.cpp")
+setwd(getwd())
+sourceCpp("apen.cpp")
 
 tms_data_v1.path="/Users/VictoriaShevchenko/Documents/STAGE_M2/Analyses/tms_analyses/data/G2/Visit_1"
 tms_data_v2.path="/Users/VictoriaShevchenko/Documents/STAGE_M2/Analyses/tms_analyses/data/G2/Visit_2"
