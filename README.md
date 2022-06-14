@@ -1,5 +1,6 @@
 FT-RSGT: Data Analysis
 =========
+The analyses associated with the TMS-EEG experiment are available in `tms_analyses`. The folder should not be renamed.
 
 ## Preprocessing
 
