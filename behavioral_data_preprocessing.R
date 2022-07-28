@@ -10,9 +10,10 @@ library(scales)
 library(stringr)
 theme_set(theme_bw())
 
-sourceCpp("/Users/VictoriaShevchenko/Documents/STAGE_M2/Analyses/apen.cpp")
+setwd(getwd())
+sourceCpp("apen.cpp")
 
-data.path="/Users/VictoriaShevchenko/Documents/STAGE_M2/Analyses/data/behavioral"
+data.path="data/behavioral"
 
 data_files=list.files(path=data.path, full.names = T )
 data <- do.call(rbind,
@@ -28,7 +29,7 @@ data$response[data$response == "l"] <- "rctrl"
 
 get.nback <- function(d, nback=20, which.apen.m=3, on.task.crit=1){
   if( !("condition" %in% names(d))){
-    d$condition=1 ## this is for pilot2
+    d$condition=1 
   }
   d %>% filter(stimulus == "probe_task") %>% 
     mutate(attention=if_else(as.integer(response)>on.task.crit, "on-task", "off-task")) %>%
@@ -126,26 +127,26 @@ data.nback <- data.nback %>%
 
 ####################################################### SANITY CHECK
 
+
 data.nback_z <- data.nback %>%
   reshape2::melt(id.vars = c("focus", "subj"), measure.vars = c("zlog.apen", "zbv"))
 
 data.table::setnames(data.nback_z, old = c("focus", "subj",'variable', "value"), new = c('Focus', "Subject",'Measure', "Z-score"))
 
 data.nback_z %>%
-  ggplot(aes(x= `Focus`, y =`Score`,  group = `Measure`, color=`Measure`)) + 
+  ggplot(aes(x= `Focus`, y =`Z-score`,  group = `Measure`, color=`Measure`)) + 
   geom_pointrange( stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
   geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
   scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red"))
 
 data.nback_z %>%
-  ggplot(aes(x= `Focus`, y =`Score`,  group = `Measure`, color=`Measure`)) + 
+  ggplot(aes(x= `Focus`, y =`Z-score`,  group = `Measure`, color=`Measure`)) + 
   geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
   geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +
   scale_color_manual(labels = c("AE", "BV"), values = c("blue", "red")) +
   facet_wrap(~ `Subject`)
 
-
-all_data_nback_z %>% filter(`Subject` != "polya") %>%
+data.nback_z %>% filter(`Subject` != "polya") %>%
   ggplot(aes(x= `Focus`, y =`Z-score`,  group = `Measure`, color=`Measure`)) + 
   geom_pointrange(stat="summary", fun.data=mean_se, fun.args = list(mult=1), position=position_dodge(0.05)) +
   geom_line(stat="summary", fun.data=mean_se, fun.args = list(mult=2)) +

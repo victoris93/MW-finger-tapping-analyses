@@ -2,6 +2,9 @@ FT-RSGT: Data Analysis
 =========
 The analyses associated with the TMS-EEG experiment are available in `tms_analyses`. The folder should not be renamed.
 
+## NB!
+`data_preprocessing_behavioral.R` and `model_fitting_behavioral.R` were designed to analyse pilot data, i.e., for early stage analyses. The final code is in the folder `tms_analyses`.
+
 ## Preprocessing
 
 `data_preprocessing.R` preprocesses raw .csv files: it computes approximate entropy (AE) and behavioral variability (BV) for each probe trial based on the preceding 25 trials. It also changes some variable types and saves the preprocessed dataset as an `.Rdata` file. The script also returns a long data frame and outputs some graphs.

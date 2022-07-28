@@ -7,9 +7,9 @@ library(dplyr)
 library(ggplot2)
 library(tidyverse)
 theme_set(theme_bw())
+setwd("/Users/VictoriaShevchenko/Documents/STAGE_M2/Analyses")
 
 bname="model_fitting"
-dir.create(bname)
 #bname="model_fitting"
 #options(mc.cores=parallel::detectCores())
 options <- commandArgs(trailingOnly = TRUE)
@@ -170,10 +170,11 @@ models <- list(
   formula(probe.response ~ zbv * zlog.apen + (1|subj)),
   formula(probe.response ~ zbv * zlog.apen + probeix + (1|subj)),
   formula(probe.response ~ zbv * zlog.apen + block_num +(1|subj)),
-  formula(probe.response ~ zbv * zlog.apen + block_num + probeix + (1|subj))
+  formula(probe.response ~ zbv * zlog.apen + block_num + probeix + (1|subj)),
+  formula(probe.response ~ zbv * zlog.apen + block_num + probeix + (1|subj/age))
 )
 
-model_data <- data.nback %>% filter(subj != "polya") #& condition == "baseline")
+# model_data <- data.nback %>% filter(subj != "polya") #& condition == "baseline")
 
 
 ########### SPECIFYING MODELS SEPARATELY
@@ -227,7 +228,7 @@ model_9 <- formula(probe.response ~ zbv*zlog.apen + zbv*zlog.apen*condition + pr
 
 #### FITTING ONE BY ONE ####
 
-model_1_fit <- fit_and_plot("model_1", model_1, dataset = data)
+model_1_fit <- fit_and_plot("model_1", model_1, dataset = data.nback)
 bayes_R2(model_1_fit)
 
 model_2_fit <- fit_and_plot("model_2", model_2, dataset = model_data)
